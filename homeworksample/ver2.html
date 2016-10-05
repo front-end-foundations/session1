@@ -1,0 +1,412 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cleveland Eats: Matsu</title>
+<style type="text/css">
+* {padding: 0; margin: 0; list-style: none; text-decoration: none;}
+
+@font-face {
+	font-family: lobster;
+	src: url('fonts/Lobster.ttf');
+}
+
+@font-face {
+	font-family: ultra;
+	src: url('fonts/Ultra.ttf');
+}
+
+body {
+	background: #555;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .1)), color-stop(.5, transparent), to(transparent));
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, .1) 50%, transparent 50%, transparent);
+	background-image: linear-gradient(rgba(255, 255, 255, .1) 50%, transparent 50%, transparent);
+	-webkit-background-size: 4px 4px;
+	-moz-background-size: 4px 4px;
+	background-size: 4px 4px;
+}
+
+#wrapper {
+	width: 900px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#brand {
+	display block;
+	padding: 5px;
+	width: 200px;
+	height: 120px;
+	background: #E14000;
+	-webkit-box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow: 2px 2px 2px #000;
+	box-shadow: 2px 2px 2px #000;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	margin: 0 0 10px 0;
+	float: right;
+}
+
+#brand div:first-child {
+	display: block;
+	width: 178px;
+	height: 98px;
+	border: 1px dashed #fff;
+	padding: 10px;
+	text-align: right;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#brand div h1 {
+	font-size: 28px;
+	line-height: 90%;
+	font-family: ultra;
+	color: #121212;
+	font-weight: light;
+}
+
+#brand div h2 {
+	margin-top:10px;
+	border-top: 1px dashed #fff;
+	padding-top: 5px;
+	font-size: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: light;
+	color: #fff;
+	letter-spacing: .02em;
+}
+
+.secondary {
+	float: left;
+	display:inline;
+
+}
+
+.primary {
+	float: right;
+	display:inline;
+
+}
+
+#wrapper .secondary {
+	width: 230px;
+	margin: 20px 0 0 0;
+
+}
+
+#wrapper .primary {
+	width: 660px;
+	margin: 20px 0 80px 0;
+}
+
+#review {
+	width: 600px;
+	padding: 5px;
+	background: #f9f9f9;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	display: block;
+	-webkit-box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow: 2px 2px 2px #000;
+	box-shadow: 2px 2px 2px #000;
+}
+
+#review div:first-child {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px dashed #999;
+	padding: 5px 20px 40px 20px;
+}
+
+#review a {
+	color:#F30;
+	font-weight: bold;
+}
+
+#review a:hover {
+	text-decoration: underline;
+}
+
+#review p {
+	line-height: 130%;
+	text-indent: 1em;
+	font-size: 14px;
+	margin-bottom: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #111;
+}
+
+#review p:first-of-type:first-letter {
+	float: left;
+	font-family: lobster;
+	font-size: 85px;
+	padding-right: 8px;
+	padding-top:5px;
+	line-height: 60px;
+	color: #F90;
+}
+
+#review p:first-of-type {
+	text-indent:0;
+	
+}
+
+#review h1 {
+	font-family: lobster;
+	font-size: 35px;
+	letter-spacing: .05em;
+}
+
+#review h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #333;
+	padding: 0 0 5px 0;
+	border-bottom: 1px dashed #333;
+	margin: 0 0 10px 0;
+}
+
+#review blockquote {
+	margin: 10px 60px;
+	padding: 10px 0;
+	border-top: 1px dashed #333;
+	border-bottom: 1px dashed #333;
+	font-size: 24px;
+	font-family: lobster;
+	color: #F90;
+	letter-spacing: .07em;
+}
+
+#review img {
+	float: right;
+	padding: 5px;
+	border: 1px dashed #999;
+	margin: 10px 0 10px 20px;
+}
+
+
+#main-nav ul {
+
+	text-align: center;
+	width: 80px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px dashed #fff;
+	padding: 10px 0;
+}
+
+
+#main-nav ul li a {
+	color: #fff;
+	font-family: lobster;
+	font-size: 14px;
+	letter-spacing: .1em;
+}
+
+#main-nav ul li a:hover {
+	color: #fff;
+	text-decoration: line-through;
+}
+
+#main-nav {
+	padding: 5px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	background: #660;
+	float: right;
+	display: inline;
+	margin: 0 10px 0 0;
+	-webkit-box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow: 2px 2px 2px #000;
+	box-shadow: 2px 2px 2px #000;
+}
+
+#nav ul {
+	text-align: center;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px dashed #fff;
+}
+
+#nav ul li a {
+	padding: 5px 0;
+	display: block;
+	font-family: lobster;
+	font-size: 22px;
+	color: #fff;
+	letter-spacing: .1em;
+}
+
+.p-reviews #t-reviews a, #nav ul li a:hover {
+	background: #FFF;
+	color: #F90;
+ }
+
+#nav {
+	float: right;
+	width: 100px;
+	padding: 5px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	display: inline;
+	background: #F90;
+	-webkit-box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow: 2px 2px 2px #000;
+	box-shadow: 2px 2px 2px #000;
+}
+
+#info {
+	padding: 5px;
+	background: #bbb;
+	float: right;
+	display: inline;
+	margin: 10px 0 0 0;
+	width: 200px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow: 2px 2px 2px #000;
+	-moz-box-shadow: 2px 2px 2px #000;
+	box-shadow: 2px 2px 2px #000;
+}
+
+#info div:first-child {
+	border: 1px dashed #fff;
+	padding: 10px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#detail li:first-child {
+	font-family: Lobster;
+	font-size: 18px;
+	border-top: 1px dashed #fff;
+	padding: 5px 0 0 0;
+	margin: 5px 0 0 0;
+	letter-spacing: .05em;
+}
+
+#detail li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 130%;
+}
+
+#detail a {
+	font-weight: bold;
+	color: #F30;
+}
+
+#detail a:hover {
+	text-decoration: underline;
+}
+
+.rating1 {
+	text-align: right;
+	font-family: lobster;
+	font-size: 16px;
+	color: #444;
+	letter-spacing: .1em;
+}
+
+.rating2 {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #111;
+	font-style: italic;
+}
+
+</style>
+
+</head>
+
+<body class="p-reviews">
+<div id="wrapper">
+
+<div class="secondary">
+
+<div id="brand">
+<div>
+<h1>Cleveland Eats</h1>
+<h2>A Guide to Fine Northeast Ohio Dining</h2>
+</div>
+</div><!-- end brand -->
+<div id="nav">
+<ul>
+	<li id="t-cuisines"><a href="ver1.html">Cuisines</a></li>
+    <li id="t-chefs"><a href="ver1.html">Chefs</a></li>
+    <li id="t-reviews"><a href="ver2.html">Reviews</a></li>
+    <li id="t-delivery"><a href="ver1.html">Delivery</a></li>
+</ul>
+</div>
+<div id="main-nav">
+<ul>
+	<li><a href="ver1.html">my profile</a></li>
+	<li><a href="ver1.html">logout</a></li>
+	<li><a href="ver1.html">top 10</a></li>
+	<li><a href="ver1.html">search</a></li>
+	<li><a href="ver1.html">contact us</a></li>
+</ul>
+</div>
+
+	<div id="info">
+    <div>
+		<table>
+			<tbody>
+				<tr>
+					<th class="rating1">Cuisine:</th>
+					<td class="rating2">Japanese</td>
+				</tr>
+				<tr>
+					<th class="rating1">Cost:</th>
+					<td class="rating2">$$ - $$$</td>
+				</tr>
+				<tr>
+					<th class="rating1">Region:</th>
+					<td class="rating2">East side</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<ul id="detail">
+			<li>Matsu</li>
+			<li>20126 Chagrin Blvd</li>
+			<li>Shaker Heights, OH 44122</li>
+			<li><a href="#">Map</a> | <a href="#">Directions</a></li>
+			<li>(216) 767-1111</li>
+			<li><a href="#">Web site</a></li>
+		</ul>
+        </div>
+        </div><!-- end info div -->
+</div>
+
+<div class="primary">
+<div id="review">
+<div>
+	<h1>Matsu</h1>
+	<h2><strong>Bottom Line:</strong> Friendly, cozy, and oh so tasty</h2>
+
+
+	<p> If there's one <a href="#">Asian cuisine</a> we truly love, it's sushi (although dim sum comes a close second). Prepared correctly, sushi can be a work of sublime art to both the eyes and the tongue. There's nothing quite like the taste of a fresh piece of suzuki (sea bass) or salmon artfully combined with special rice and a hint of wasabi (Japanese horseradish). "Fresh fish in Cleveland?" we hear you asking. Absolutely. There are several very good sushi restaurants in the area, but for our money, Matsu is at the head of the pack. <em>It's so good, it beats out most of the San Francisco-area sushi places we've tried.</em></p>
+	
+	<blockquote> It's so good, it beats out most of the San Francisco-area sushi places we've tried.</blockquote>
+	
+	<p>On a recent visit, we checked out the specials and were delighted to see that escolar, a mild white fish, was available. The toro, on the other had, was sold out, so we had to put it off until another time. We ordered a sampling of nigiri (escolar, alabacore, suzuki, and smoked salmon), a couple of maki rolls, two bowls of miso soup, and gyoza (small dumplings steamed and then pan-fried). While we waited, we took a look around at the small dining room, which can seat about 30 people without making them feel at all cramped; another ten or so seats are available at the sushi bar along one side of the dining room. Between the intimate feel of the room and its subtle decoration, we felt comfortable right away.</p>
+	
+	<p>The miso came out first, and was quite good, hot and pungent, perfect for a cool evening or whenever you're feeling under the weather. The gyoza followed soon thereafter, and were nicely prepared, warm and soft without being too greasy or mushy. The meal really got underway, though, when our sushi arrived. Each nigiri portion featured a generous slice of fish on top of perfectly-sized rice ball, hand-made and formed by the chefs. One of the keys to nigiri is the wasabi smear between the rice and fish: too much, and it overpowers everything else; too little, and the tastes feel bland. Happily, every one of our nigiri pieces had exactly the right amount of wasabi to add a subtle zing to every mouthful. The maki rolls were also nicely prepared, with an appropriate balance of ingredients.</p>
+	
+	<img src="i/sushi-a.jpg">
+	
+	<p>For dessert, we decided to order strawberry mochi balls, which are small spheres of ice cream surrounded by a glutinous rice coating. Our order came out with the balls cut in half, which was a particularly nice touch since it made the dish easier to share. We ended the evening with some sweet sake recommended to us by our server—a perfect note to close out the meal.</p>
+	
+	<p>Husband-and-wife team Scott and Brenda Kim, who opened up Matsu in late 2000, are there almost every day of the week and help make every customer feel at home. When we returned on a later night, we were immediately recognized and greeted almost like family. The servers generally keep a close eye on the tables, which is one benefit of the limited seating. Scott is often behind the sushi bar, tending to orders himself, or else in the kitchen doing the same. Brenda, as hostess, oversees the servers and seating with efficiency and charm.</p>
+	<p>If you're looking for a good Japanese experience but can't foot the bill for a flight to Tokyo, then Matsu is an excellent backup plan. We'll be back again soon.</p>
+    <div>
+</div><!-- end review -->
+</div>
+
+
+</div><!-- wrapper -->
+</body>
+</html>
