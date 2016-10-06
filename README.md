@@ -11,9 +11,9 @@ A doctype is the first piece of text in an HTML document and the first thing a b
 
 ###Block and Inline
 
-HTML tags or elements all have a default property - “display“ - which is either block or inline.
+HTML tags or elements all have a default `display` property which is either `block` or `inline`.
 
-Most HTML elements are block elements which means that they create a rectangular region in the browser. These are part of the box model upon which all web page rendering is based. We'll see these boxes using the inspector.
+Most HTML elements are block elements which means that they create a rectangular region in the browser. These are part of the box model upon which all web page rendering is based. We can see these boxes using the inspector.
 
 The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. The paragraph tag - `<p>` - creates a box and typically has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
@@ -21,15 +21,14 @@ A `<div>` tag is a special block tag which is used to create a logical division 
 
 A `<span>` tag is used to create arbitrary inline elements.
 
-We shall see examples of these tags in action shortly.
 
 ###The Box Model
 
-Block elements are interpreted as a box by the browser. But boxes have other characteristics such as spacing, borders and margins. Taken together these elements form what is called the box model.
+Block elements are interpreted as a box by the browser. But boxes have other characteristics such as spacing, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
 
 ##The Browser and Developer Tools
 
-Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their excellent developer tools. 
+Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their traditionally superior developer tools. 
 
 You should take some time to familiarize yourself with thier full functionality. For now the only piece of functionality you need is to be able to right or control click on a portion of the page in the browser and select Inspect from the resulting pop up menu.
 
@@ -55,7 +54,13 @@ width: 300px;
 ```
 
 Refresh the page and inspect the paragraph again. You should see the changes in the inspector’s Style and Layout tabs.
-Add `box-sizing: border-box/content-box` to review box model options. (We will use the box-sizing property in future lessons.)
+
+###Box Sizing
+
+Boxes are additive by default. This means their width will be a combination of width, padding and border (margin is outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
+
+Add `box-sizing: border-box/content-box` to review box model options.
+
 ```html
 <style type="text/css" media="screen">
 p { 
@@ -94,10 +99,12 @@ The selector determines which HTML tag will be selected. The properties (there a
 Note the border property:
 
 ```css
-p { border:1px solid #333; }
+p { 
+	border:1px solid #333; 
+	}
 ```
 
-This is a shortcut and could also be written in long form.
+This is a CSS shortcut and could also be written in long form.
 
 ```css
 border-style: solid; 
