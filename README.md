@@ -3,26 +3,9 @@
 
 ##The Doctype
 
-A doctype is the first piece of text in an HTML document and the first thing a browser sees when it attempts to display or parse your page. It tells the browser which version of HTML your are using and how it should render the code.
-Common examples include:
+A doctype is the first piece of text in an HTML document and the first thing a browser sees when it attempts to display (or 'parse') your page. It tells the browser which version of HTML your are using and how it should render the code. 
 
-###HTML 4
-
-```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-XHTML
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-```
-
-and the simplest of all - HTML 5:
-
-```html
-<!DOCTYPE html>
-```
-
-As long as an HTML page has a doctype you will be able to apply the concepts as presented. The one important exception is when there is no doctype at all - such as when `<html>` is the first line of code in the page.
-
-In this case the browser has no way of knowing which version of HTML you are using. Since this is an older method of coding pages (it dates from a time before standards had been established) Internet Explorer switches to a different way of calculating sizes known as quirks mode. This is known as "quirks mode."
+```<!doctype html>```
 
 ###Block and Inline
 
