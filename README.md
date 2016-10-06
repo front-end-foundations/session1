@@ -165,8 +165,13 @@ Edit the nav CSS rule to position it
 	list-style:none;
 	position: absolute;
 	right:0;
-	top:60px; }
-Add a div around the table and list and give it an ID info then add the following CSS
+	top:60px; 
+	}
+```
+
+Add a div around the table and list and give it an ID info then add the following CSS:
+
+```css
 #info {
   position: absolute; 
   top: 120px; 
