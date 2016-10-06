@@ -11,11 +11,11 @@ A doctype is the first piece of text in an HTML document and the first thing a b
 
 HTML tags or elements all have a default property - “display“ - which is either block or inline.
 
-Most HTML elements are block elements which means that they create a rectangular region in the browser. These are part of the box model upon which all web page rendering is based. It is easy to see the boxes using the inspector.
-￼
+Most HTML elements are block elements which means that they create a rectangular region in the browser. These are part of the box model upon which all web page rendering is based. We'll see these boxes using the inspector.
+
 The "opposite" of block in HTML is inline. An example might be a piece of italicized text or a link inside a paragraph. The paragraph tag - `<p>` - creates a box and typically has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
-A `<div> `tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. 
+A `<div>` tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. 
 
 A `<span>` tag is used to create arbitrary inline elements.
 
@@ -23,11 +23,11 @@ We shall see examples of these tags in action shortly.
 
 ###The Box Model
 
-Paragraphs, headers, lists, almost everything is interpreted as a box by the browser. But boxes have other characteristics such as spacing, borders and margins. Taken together these elements form what is called the box model.
+Block elements are interpreted as a box by the browser. But boxes have other characteristics such as spacing, borders and margins. Taken together these elements form what is called the box model.
 
 ##The Browser and Developer Tools
 
-Despite recent moves by Microsoft, Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their excellent developer tools. 
+Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their excellent developer tools. 
 
 You should take some time to familiarize yourself with thier full functionality. For now the only piece of functionality you need is to be able to right or control click on a portion of the page in the browser and select Inspect from the resulting pop up menu.
 
