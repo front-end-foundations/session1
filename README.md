@@ -74,25 +74,22 @@ box-sizing:border-box;
 CSS rules consist of a selector, a set of curly braces, and a series of property(s) and values separated by a full colon and terminated by a semi colon.
 
 ```css
-selector { property1: value; property2: value; }
+selector { 
+	property1: value; 
+	property2: value; 
+	}
 ```
 e.g.
 
 ```css
-p { color:#000; font-family:verdana, sans-serif; }
+p { 
+	color:#000; 
+	font-family:verdana, sans-serif;
+	border:1px solid #333; 
+	}
 ```
 
 The selector determines which HTML tag will be selected. The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit when used for measurements.
-
-Whitespace and line breaks can be used to make the CSS rule more readable but are often removed before release to optimize file size.
-
-```css
-selector { 
-  property1: value;
-  /* property2: value; */
-  property3: value;
-}
-```
 
 Note the border property:
 
@@ -103,10 +100,10 @@ p { border:1px solid #333; }
 This is a shortcut and could also be written in long form.
 
 ```css
-border-style: solid; 	border-color: #f00; 	border-width: 4px;
+border-style: solid; 
+border-color: #f00; 	
+border-width: 4px;
 ```
-
-We will see many CSS shortcuts as we proceed.
 
 #Exercise - Converting to Standards
 
