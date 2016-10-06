@@ -405,7 +405,7 @@ Remove the CSS from the head of the document and paste it into a new text docume
 
 ##Converting the layout to use floats
 
-We used absolute positioning to create our layout. Now that you have been introduced to floats we will convert our layout to use them instead of absolute positioning. To do so we will need to change the HTML ordering of the layout.
+We used absolute positioning to create our layout. Now that you have been introduced to floats we will use them our layout to see what the effects are.
 
 * Remove the `position:relative; declaration` from the wrapper CSS so the absolutely positioned items are now positioned relative to the browser window.
 
@@ -416,27 +416,35 @@ We used absolute positioning to create our layout. Now that you have been introd
 Float the info div to the left
 
 ```css
+...
 float:left;
+...
 ```
 
-There are some additional adjustments required to correct the layout.
+We will need to perform some additional adjustments to correct the layout.
+
 
 ##Some simple CSS 3 Enhancements
 
-As work on a new version of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee (http://W3C.org) decided to break the process into modules. (For compatibility and advise see http://CanIuse.com.)
+As work on a new version of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee (http://W3C.org) decided to break the process into modules. (For compatibility and advice see http://CanIuse.com.)
 
 Some of the earlier CSS 3 specifications include provisions for visual effects such as rounded corners, drop shadows and gradients. Let's add some to our page. (A useful page that allows you to become familiar with these enhancements is http://css3generator.com/.)
 
 Add a drop shadow to the CSS for the info div. (See https://developer.mozilla.org/en/CSS/-moz-box-shadow for specifications)
 
 ```css
-#info { 	... 	border-radius: 6px; }
+#info { 	
+	... 	border-radius: 6px; 
+}
 ```
 
 Add rounded corners to the info div. (See https://developer.mozilla.org/en/CSS/border-radius for specifications.)
 
 ```css
-#info { 	... 	border-radius: 6px; 	box-shadow: 5px 5px 5px #ddd; }
+#info { 
+	... 	
+	box-shadow: 5px 5px 5px #ddd; 
+}
 ```
 
 Add a box shadow to the wrapper's CSS
@@ -444,11 +452,13 @@ Add a box shadow to the wrapper's CSS
 ```css
 box-shadow: 10px 10px 20px #ddd;
 ```
-To make these work in very old browsers you need to add vendor prefixes:
+Note: to make these work in very old browsers you need to add vendor prefixes:
 
 ```css
+...
 -webkit-box-shadow: 10px 10px 150px #666;
 -moz-box-shadow: 10px 10px 150px #666;
+...
 ```
 
 If you use vendor prefixes always make sure that the non-prefixed line appears last.
@@ -474,13 +484,13 @@ This is a simple way to create color coded navigation on a web site.
 Add a class to body tag so we know what kind of page this is.
 
 ```html
-<body class="review-page">
+<body class="p-review">
 ```
 
 Add a list item to the nav list with a class of review-link.
 
 ```html
-<li><a class="review-link" href="#">Reviews</a></li>
+<li><a class="t-review" href="#">Reviews</a></li>
 ```
 Add the following to our CSS block:
 
@@ -499,7 +509,10 @@ An elements margins may stick out from its containing elements. Combined with th
 Add a simple reset to the CSS style sheet:
 
 ```css
-* {  margin:0;  padding:0; }
+* { 
+	margin:0;  
+	padding:0; 
+}
 ```
 
 ##Google font
