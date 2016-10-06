@@ -3,7 +3,7 @@
 
 ##The Doctype
 
-A doctype is the first piece of text in an HTML document and the first thing a browser sees when it attempts to display or parse your page. They tell the browser which version of HTML your are using and how it should render the code.
+A doctype is the first piece of text in an HTML document and the first thing a browser sees when it attempts to display or parse your page. It tells the browser which version of HTML your are using and how it should render the code.
 Common examples include:
 
 ###HTML 4
