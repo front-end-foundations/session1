@@ -3,6 +3,8 @@
 
 ##The Doctype
 
+Open box-model.html in Chrome, right click on the text and select Inspect.
+
 A doctype is the first piece of text in an HTML document and the first thing a browser sees when it attempts to display (or 'parse') your page. It tells the browser which version of HTML your are using and how it should render the code. 
 
 ```<!doctype html>```
@@ -13,7 +15,7 @@ HTML tags or elements all have a default property - “display“ - which is eit
 
 Most HTML elements are block elements which means that they create a rectangular region in the browser. These are part of the box model upon which all web page rendering is based. We'll see these boxes using the inspector.
 
-The "opposite" of block in HTML is inline. An example might be a piece of italicized text or a link inside a paragraph. The paragraph tag - `<p>` - creates a box and typically has space above and below it while the italicized text does not and simply flows along with the rest of the text.
+The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. The paragraph tag - `<p>` - creates a box and typically has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
 A `<div>` tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. 
 
@@ -36,8 +38,6 @@ The inspector is your first line of defense when troubleshooting.
 ###User Agent Styles
 
 User agent styles are the default styles for HTML elements.
-
-Open box-model.html in Chrome, right click on the text and select Inspect.
 ￼
 By default the browser has placed a 16px margin above and below the paragraph. 
 Let's add padding, border and override the margins.
