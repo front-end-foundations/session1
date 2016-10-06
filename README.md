@@ -208,7 +208,7 @@ article {
 }
 ```
 
-(This is another CSS short cut - the four values for margin run clockwise from the top.
+(This is another CSS short cut - the four values for margin run clockwise from the top.)
 
 Format the pull quote and image:
 
@@ -292,7 +292,6 @@ h1, h2 {
 }
 h2 {
   font-size: 24px;
-  /* or 1em - target / context = result */
 }
 ```
 
@@ -512,4 +511,8 @@ $font-family: 'Lato', sans-serif;
 
 ##Homework
 
-1.  
+1. Examine the provided homework samples for inspiration and try your hand at redesigning the page usings the CSS techniques described in class.
+
+
+##Reading 
+* CSS Mastery: Advanced Web Standards Solutions - chapters 1-3 and chapter 8
