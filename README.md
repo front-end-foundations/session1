@@ -403,7 +403,7 @@ Remove the CSS from the head of the document and paste it into a new text docume
 </style>
 ```
 
-##Converting the layout to use floats
+###Converting the layout to use floats (optional)
 
 We used absolute positioning to create our layout. Now that you have been introduced to floats we will use them our layout to see what the effects are.
 
@@ -424,17 +424,32 @@ float:left;
 We will need to perform some additional adjustments to correct the layout.
 
 
+###Using Flexbox (optional)
+
+```css
+.nav {
+	display: flex;
+}
+.nav li { 
+	flex: 1;
+	background-color: #f0dfb4;
+	list-style: none;
+}
+```
+
+
 ##Some simple CSS 3 Enhancements
 
 As work on a new version of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee (http://W3C.org) decided to break the process into modules. (For compatibility and advice see http://CanIuse.com.)
 
-Some of the earlier CSS 3 specifications include provisions for visual effects such as rounded corners, drop shadows and gradients. Let's add some to our page. (A useful page that allows you to become familiar with these enhancements is http://css3generator.com/.)
+Some of the earlier CSS 3 specifications include provisions for visual effects such as rounded corners, drop shadows and gradients. A useful page that allows you to become familiar with these enhancements is http://css3generator.com/.
 
 Add a drop shadow to the CSS for the info div. (See https://developer.mozilla.org/en/CSS/-moz-box-shadow for specifications)
 
 ```css
 #info { 	
-	... 	border-radius: 6px; 
+	... 	
+	border-radius: 6px; 
 }
 ```
 
