@@ -109,14 +109,15 @@ border-width: 4px;
 
 Open before.html and examine the HTML. Then examine start.html. See the difference? The latter is a more standardized document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
 
-Examine start.html in the inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the unordered list (`<ul>`).
+Examine start.html in the inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
 Add a CSS block within the `<head> `of start.html as follows:
 
 ```html
 <style type="text/css"> 
 	body { 	
-		margin: 0; 	color: #333; 
+		margin: 0; 	
+		color: #333; 
 		font-size: 12px; 
 		font-family: Verdana, Arial, Helvetica, sans-serif; 
 		}
@@ -155,7 +156,7 @@ Add the following to our style block:
   color: #fff; 
   background-color: #600; 
 }
-``
+```
 
 Edit the nav CSS rule to position it
 
