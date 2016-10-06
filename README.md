@@ -223,18 +223,26 @@ Add wrapper `<div id="wrapper">` to entire content area (after the `<body>` tag 
 #wrapper {
 	width: 760px;
 }
+```
+
 Then center it in the browser.
+
+```css
 #wrapper {
 	width: 760px;
 	margin: 0 auto 0 auto;
 }
+
+```css
 Add a relative positioning instruction.
+```
+
 #wrapper {
 	position: relative;
 	width: 760px;
 	margin: 0 auto 0 auto;
 }
-``
+```
 
 Note the impact the relative positioning has on the layout (toggle it on and off using the developer’s tools). The two absolutely positioned elements (#info and .nav) previously had no positioning context and aligned themselves to the edges of the browser window. With the addition of the relative positioning to the wrapper they now become positioned relative to the wrapper box. The rule here is that absolutely positioned elements are positioned relative to their nearest positioned ancestor in the HTML tree. This is an important CSS design pattern and well will see it again.
 
@@ -320,6 +328,7 @@ Format the branding div:
   height:120px; 
 }
 ```
+
 Edit the CSS in preparation for absolutely positioning its children.
 
 ```css
@@ -329,7 +338,7 @@ Edit the CSS in preparation for absolutely positioning its children.
 }
 ```
 
-Add
+Add:
 
 ```css
 #header h1 {
