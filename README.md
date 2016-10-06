@@ -232,11 +232,11 @@ Then center it in the browser.
 	width: 760px;
 	margin: 0 auto 0 auto;
 }
-
-```css
-Add a relative positioning instruction.
 ```
 
+Add a relative positioning instruction.
+
+```css
 #wrapper {
 	position: relative;
 	width: 760px;
