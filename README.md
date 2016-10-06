@@ -34,6 +34,8 @@ You should take some time to familiarize yourself with thier full functionality.
 
 The inspector is your first line of defense when troubleshooting.
 
+Note: Safari's developer tool is not turned on by default and most be enabled in Safari preferences.
+
 ###User Agent Styles
 
 User agent styles are the default styles for HTML elements.
@@ -114,9 +116,14 @@ border-width: 4px;
 
 #Exercise - Converting to Standards
 
-Open before.html and examine the HTML. Then examine start.html. See the difference? The latter is a more standardized document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
+Open before.html in an editor and examine the HTML. Then examine index.html. The latter is a more standardized document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
 
-Examine start.html in the inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
+Examine index.html in the brwoser inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
+
+```
+$ cd <path-to-folder-relative-to-current-location>
+$ python -m SimpleHTTPServer 9000
+```
 
 Add a CSS block within the `<head> `of start.html as follows:
 
@@ -125,7 +132,6 @@ Add a CSS block within the `<head> `of start.html as follows:
 	body { 	
 		margin: 0; 	
 		color: #333; 
-		font-size: 12px; 
 		font-family: Verdana, Arial, Helvetica, sans-serif; 
 		}
  </style>
@@ -137,7 +143,7 @@ Add a nav class to the `<ul>` that will form the navigation for our page.
 
 ```html
 <ul class="nav">
-	<li><a href="#">my profile</a></li>
+	<li><a href="#">Cuisines</a></li>
 	...
 </ul>
 ```
@@ -176,14 +182,14 @@ Edit the nav CSS rule to position it
 	}
 ```
 
-Add a div around the table and list and give it an ID info then add the following CSS:
+Add a div around the table and list and give it an ID #info then add the following CSS:
 
 ```css
 #info {
   position: absolute; 
-  top: 120px; 
+  top: 200px; 
   left: 10px; 
-  width: 140px; 
+  width: 180px; 
   background-color: #F0DFB4; 
   padding: 6px;
   border: 1px solid #600; 
@@ -192,17 +198,17 @@ Add a div around the table and list and give it an ID info then add the followin
 
 Note how the text flows under the #info div. 
 
-Add a article tag before `<h2>Matsu</h2>` and close it at the end of document before the `</body>`. Note that this does not effect the display of the document.
+Note `<article>` tag before `<h2>Matsu</h2>` which closes at the end of document before the `</body>`. Also note that this does not effect the display of the document.
 
-Add margin to review to move it over to the right:
+Add margin to move the article over to the right:
 
 ```css
 article {
-  margin: 0 20px 0 180px;
+  margin: 0 20px 0 200px;
 }
 ```
 
-Note that this is another CSS short cut. The four values run clockwise from the top.
+(This is another CSS short cut - the four values for margin run clockwise from the top.
 
 Format the pull quote and image:
 
@@ -211,7 +217,7 @@ blockquote  {
   float: right; 
   width: 40%;
   padding: 16px; 
-  font-size: 18px; 
+  font-size: 24px; 
 }
 article img {
 	float:  right;
@@ -222,13 +228,14 @@ Note the float property and how the text wraps around it before and after we hav
 
 ##Converting the document to fixed width
 
-Currently our document is flexible width and makes use of all the available horizontal space. While flexibility is generally considered good practice, many sites are fixed width.
+Currently our document flexes as we make the browser wider - it makes use of all the available horizontal space. While flexibility is good practice, many sites use fixed widths to imporve readability.
 
 Add wrapper `<div id="wrapper">` to entire content area (after the `<body>` tag and close it before the closing `</body>` tag) and add the following to our CSS style block.
 
 ```css
 #wrapper {
-	width: 760px;
+	width: 840px;
+	max-width: 840px;
 }
 ```
 
@@ -236,7 +243,7 @@ Then center it in the browser.
 
 ```css
 #wrapper {
-	width: 760px;
+	width: 840px;
 	margin: 0 auto 0 auto;
 }
 ```
@@ -246,12 +253,12 @@ Add a relative positioning instruction.
 ```css
 #wrapper {
 	position: relative;
-	width: 760px;
+	width: 840px;
 	margin: 0 auto 0 auto;
 }
 ```
 
-Note the impact the relative positioning has on the layout (toggle it on and off using the developer’s tools). The two absolutely positioned elements (#info and .nav) previously had no positioning context and aligned themselves to the edges of the browser window. With the addition of the relative positioning to the wrapper they now become positioned relative to the wrapper box. The rule here is that absolutely positioned elements are positioned relative to their nearest positioned ancestor in the HTML tree. This is an important CSS design pattern and well will see it again.
+Note the impact the relative positioning has on the layout (toggle it on and off using the inspector). The two absolutely positioned elements (#info and .nav) previously had no positioning context and aligned themselves to the edges of the browser window. With the addition of the relative positioning to the wrapper they now become positioned relative to the wrapper box. The rule here is that absolutely positioned elements are positioned relative to their nearest positioned ancestor in the HTML tree. This is an important CSS design pattern and well will see it again.
 
 ##Adding color to our layout
 
@@ -259,10 +266,8 @@ Edit the CSS body rule.
 
 ```css
 body { 	
-	margin:0; 
-	font-size: 12px; 
-	font-family: Verdana, Arial, Helvetica, sans-serif; 	background-color: #ddd;
-	color:#333; 
+	...
+	background-color: #ddd;
 }
 ```
 
@@ -271,9 +276,7 @@ Let's add a white background to wrapper.
 
 ```css
 #wrapper {
-	position: relative;
-	width: 760px;
-	margin: 0 auto 0 auto;
+	...
 	background-color: #fff;
 }
 ```
@@ -281,14 +284,19 @@ Let's add a white background to wrapper.
 ##Formatting the content
 
 ```css
+h1, h2 {
+  color: #600;
+   margin-top: 20px;
+   margin-left: 20px;
+   font-size: 36px;
+}
 h2 {
-  color: #600; 
-  font-size: 16px;
-  /* or 1em 
-     target / context = result */
-  margin-top: 20px;
+  font-size: 24px;
+  /* or 1em - target / context = result */
 }
 ```
+
+Note multiple selectors, h1 margin outside the containing elements, and margin collapsing. Note that the lack of namespacing allows this to effect the Matsu text as well.
 
 Add a summary class to "bottom line" p:
 
@@ -300,7 +308,7 @@ Add CSS to format it:
 
 ```css
 .summary {
-  font-size: 14px; 
+  font-size: 16px; 
   border-bottom: 1px dotted #600;
 }
 ```
@@ -308,7 +316,9 @@ Add CSS to format it:
 Format elements in the list and table
 
 ```css
-#info th {text-align: right;}
+#info th {
+	text-align: right;
+}
 
 #info ul {
   list-style: none; 
@@ -319,7 +329,7 @@ Format elements in the list and table
 
 ##Formatting the Mast Head
 
-Add a `<header>` tag around the h1 and h2 at the top of the document.
+Note the `<header>` tag around the h1 and h2 at the top of the document.
 
 ```html
 <header>
@@ -331,7 +341,7 @@ Add a `<header>` tag around the h1 and h2 at the top of the document.
 Format the branding div:
 
 ```css
-#header {
+header {
   height:120px; 
 }
 ```
@@ -340,27 +350,24 @@ Edit the CSS in preparation for absolutely positioning its children.
 
 ```css
 #header {
-  height:120px;
+  ...
   position:relative;
 }
 ```
 
-Add:
+Edit:
 
 ```css
-#header h1 {
+header h1, header h2 {
+	...
 	position: absolute;
 	top: 10px;
-	left: 10px;
 }
-#header h2 {
-	position: absolute;
+header h2 {
+	...
 	top: 50px;
-	left: 10px;
 }
 ```
-
-Use the developer tool layout inspector to position the position the h2 and h1 header elements and transfer the code into your CSS.
 
 Use positioning to reposition up the info and nav elements.
 ￼
@@ -374,20 +381,16 @@ There are three ways to add CSS to an HTML document:
 * As an external .CSS file via linking (HTML <link> tag)
 * As an external .CSS file via importing (CSS @import statements)
 
-We will be looking at all three methods but for now note that method one is inefficient as it requires each individual element on the page to have its own styling:
+We will be looking at all three methods.
+
+Inline styles are inefficient: 
 
 ```html
 <p style="margin-top: 12px;">
 ```
 
-Whereas this in a CSS style sheet would apply to all paragraphs:
-
-```css
-p { margin-top:12px; }
-```
-
-However, this method is perfectly acceptable when dynamically changing the page after it has been loaded in the browser. 
-Try using the inspector to inspect a dynamic site (such as http://www.w3schools.com/jquery/jquery_animate.asp). Note how Firebug displays dynamic changes to the HTML by temporarily highlighting them in yellow.
+However, this method is acceptable and often used when dynamically changing the page after it has been loaded in the browser. 
+Try using the inspector to inspect a dynamic site (such as http://www.w3schools.com/jquery/jquery_animate.asp). Note how it displays dynamic changes to the HTML by temporarily highlighting them.
 
 Remove the CSS from the head of the document and paste it into a new text document. Save it in a new css directory calling it review.css. We have two options here: link to our CSS file using an HTML tag, or to use a CSS @import statement.
 
@@ -405,30 +408,11 @@ Remove the CSS from the head of the document and paste it into a new text docume
 
 We used absolute positioning to create our layout. Now that you have been introduced to floats we will convert our layout to use them instead of absolute positioning. To do so we will need to change the HTML ordering of the layout.
 
-Remove the `position:relative; declaration` from the wrapper CSS.
+* Remove the `position:relative; declaration` from the wrapper CSS so the absolutely positioned items are now positioned relative to the browser window.
 
-The absolutely positioned items are now positioned relative to the browser window.
+* Remove the absolute positioning from the nav so the position of the nav element follows source order.
 
-Remove the absolute positioning from the nav and add the float declaration.
-
-```css
-.nav { 
-	list-style-type:none; 
-	padding:0; 
-	float:right;
-}
-```
-Note the new position of the nav element in the browser.
-
-Edit the HTML, moving the entire nav block to just below the wrapper. The nav element is now rendered first and floated to the left hand side of the wrapper.
-
-Remove the absolute positioning elements from the #info div.
-
-The info div is now floated to the left of the review div.
-
-Edit the HTML, moving the entire info block so it appears just above the `<article>`.
-
-Now that it is outside the article the info block is positioned to the left of its parent (the wrapper).
+* Remove the absolute positioning elements from the #info div.
 
 Float the info div to the left
 
@@ -436,7 +420,7 @@ Float the info div to the left
 float:left;
 ```
 
-There may some additional adjustments required to correct the spacing of elements.
+There are some additional adjustments required to correct the layout.
 
 ##Some simple CSS 3 Enhancements
 
