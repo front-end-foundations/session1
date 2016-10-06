@@ -21,6 +21,8 @@ A `<div>` tag is a special block tag which is used to create a logical division 
 
 A `<span>` tag is used to create arbitrary inline elements.
 
+* These display modes can be controlled using the display property in CSS.
+
 
 ###The Box Model
 
@@ -32,9 +34,8 @@ Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the br
 
 You should take some time to familiarize yourself with thier full functionality. For now the only piece of functionality you need is to be able to right or control click on a portion of the page in the browser and select Inspect from the resulting pop up menu.
 
-The inspector is your first line of defense when troubleshooting.
-
-Note: Safari's developer tool is not turned on by default and most be enabled in Safari preferences.
+* The inspector is your first line of defense when troubleshooting.
+* Safari's developer tool is not turned on by default and most be enabled in Safari preferences.
 
 ###User Agent Styles
 
