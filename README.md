@@ -9,9 +9,9 @@ A doctype is the first piece of text in an HTML document and the first thing a b
 
 ###Block and Inline
 
-HTML elements all have a property known as “display“ which is either block or inline.
+HTML tags or elements all have a default property - “display“ - which is either block or inline.
 
-Most HTML tags are block which means that they create a rectangular region in the browser. These are part of the box model upon which all web page rendering is based. It is easy to see the boxes using the inspector.
+Most HTML elements are block elements which means that they create a rectangular region in the browser. These are part of the box model upon which all web page rendering is based. It is easy to see the boxes using the inspector.
 ￼
 The "opposite" of block in HTML is inline. An example might be a piece of italicized text or a link inside a paragraph. The paragraph tag - `<p>` - creates a box and typically has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
