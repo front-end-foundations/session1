@@ -540,7 +540,12 @@ $font-family: 'Lato', sans-serif;
 
 ##Homework
 
-1. Examine the provided homework samples for inspiration and try your hand at redesigning the page usings the CSS techniques described in class.
+1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class.
+
+--- alternatively ---
+
+1. Download the original files as distributed in class and, using the steps aboce, try to recreate the design we did in class.
+
 
 
 ##Reading 
