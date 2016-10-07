@@ -540,7 +540,7 @@ $font-family: 'Lato', sans-serif;
 
 ##Homework
 
-Note: the files I was working on in class can be [downloaded](http://daniel.deverell.com/css-files/foundation-fall-2016/session1-master.zip) for reference.
+Note: the finished files I was working on in class can be [downloaded](http://daniel.deverell.com/css-files/foundation-fall-2016/session1-master.zip) for reference.
 
 1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class.
 
