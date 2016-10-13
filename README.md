@@ -546,7 +546,7 @@ Note: the finished files I was working on in class can be [downloaded](http://da
 
 --- alternatively ---
 
-1. Download the original files as distributed in class and, using the steps aboce, try to recreate the design we did in class.
+1. Download the original files as distributed in class and, using the steps above, try to recreate the design we did in class.
 
 
 
