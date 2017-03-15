@@ -2,7 +2,7 @@
 
 ## Textbooks
 
-Jeremy Keith & Rachel Andrew - [HTML5 for Web Designers](https://abookapart.com/products/html5-for-web-designers)
+Jeremy Keith & Rachel Andrew - [HTML5 for Web Designers](https://html5forwebdesigners.com)
 
 Dan Cederholm - [CSS3 for Web Designers](https://abookapart.com/products/css3-for-web-designers)
 
