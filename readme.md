@@ -8,7 +8,7 @@ Ethan Marcotte - [Responsive Web Design](https://abookapart.com/products/respons
 
 Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-for-web-designers)
 
-David Demaree - [GIT For Humans](https://abookapart.com/products/git-for-humans)
+Jeremy Keith & Rachel Andrew - [HTML5 for Web Desingers](https://abookapart.com/products/html5-for-web-designers)
 
 [Syllabus](http://daniel.deverell.com/)
 
