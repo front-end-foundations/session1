@@ -4,7 +4,7 @@
 
 Jeremy Keith & Rachel Andrew - [HTML5 for Web Designers](https://abookapart.com/products/html5-for-web-designers)
 
-Dan Cederholm - [CSS3 for Web Desingers](https://abookapart.com/products/css3-for-web-designers)
+Dan Cederholm - [CSS3 for Web Designers](https://abookapart.com/products/css3-for-web-designers)
 
 Mat Marquis - [JavaScript for Web Designers](https://abookapart.com/products/javascript-for-web-designers)
 
@@ -15,15 +15,31 @@ Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-fo
 [Syllabus](http://daniel.deverell.com/)
 
 
-##The Doctype
+## Homework
+
+Note: the finished files I was working on in class can be [downloaded](http://daniel.deverell.com/css-files/foundation-fall-2016/session1-master.zip) for reference.
+
+1. Download the original files as distributed in class and, using the steps above, try to recreate the design we did in class.
+1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class.
+
+
+
+## Reading 
+* HTML5 for Web Designers - Ch. 1-4
+* CSS3 for Web Designers - Ch. 1-2
+
+
+## The Doctype
 
 Open box-model.html in Chrome, right click on the text and select Inspect.
 
 A doctype is the first piece of text in an HTML document and the first thing a browser sees when it attempts to display (or 'parse') your page. It tells the browser which version of HTML your are using and how it should render the code. 
 
-```<!doctype html>```
+```
+<!doctype html>
+```
 
-###Block and Inline
+### Block and Inline
 
 HTML tags or elements all have a default `display` property which is either `block` or `inline`.
 
@@ -38,11 +54,11 @@ A `<span>` tag is used to create arbitrary inline elements.
 * These display modes can be controlled using the display property in CSS.
 
 
-###The Box Model
+### The Box Model
 
 Block elements are interpreted as a box by the browser. But boxes have other characteristics such as spacing, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
 
-##The Browser and Developer Tools
+## The Browser and Developer Tools
 
 Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their traditionally superior developer tools. 
 
@@ -51,7 +67,7 @@ You should take some time to familiarize yourself with thier full functionality.
 * The inspector is your first line of defense when troubleshooting.
 * Safari's developer tool is not turned on by default and most be enabled in Safari preferences.
 
-###User Agent Styles
+### User Agent Styles
 
 User agent styles are the default styles for HTML elements.
 ￼
@@ -72,7 +88,7 @@ width: 300px;
 
 Refresh the page and inspect the paragraph again. You should see the changes in the inspector’s Style and Layout tabs.
 
-###Box Sizing
+### Box Sizing
 
 Boxes are additive by default. This means their width will be a combination of width, padding and border (margin is outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
@@ -152,7 +168,7 @@ Add a CSS block within the `<head> `of start.html as follows:
  </style>
 ```
 
-##Formatting the Navigation
+## Formatting the Navigation
 
 Add a nav class to the `<ul>` that will form the navigation for our page.
 
@@ -241,7 +257,7 @@ article img {
 
 Note the float property and how the text wraps around it before and after we have defined a width. By default, the floated container shrinks to the width determined by the content.
 
-##Converting the document to fixed width
+## Converting the document to fixed width
 
 Currently our document flexes as we make the browser wider - it makes use of all the available horizontal space. While flexibility is good practice, many sites use fixed widths to imporve readability.
 
@@ -275,7 +291,7 @@ Add a relative positioning instruction.
 
 Note the impact the relative positioning has on the layout (toggle it on and off using the inspector). The two absolutely positioned elements (#info and .nav) previously had no positioning context and aligned themselves to the edges of the browser window. With the addition of the relative positioning to the wrapper they now become positioned relative to the wrapper box. The rule here is that absolutely positioned elements are positioned relative to their nearest positioned ancestor in the HTML tree. This is an important CSS design pattern and well will see it again.
 
-##Adding color to our layout
+## Adding color to our layout
 
 Edit the CSS body rule.
 
@@ -296,7 +312,7 @@ Let's add a white background to wrapper.
 }
 ```
 
-##Formatting the content
+## Formatting the content
 
 ```css
 h1, h2 {
@@ -341,7 +357,7 @@ Format elements in the list and table
 }
 ```
 
-##Formatting the Mast Head
+## Formatting the Mast Head
 
 Note the `<header>` tag around the h1 and h2 at the top of the document.
 
@@ -418,7 +434,7 @@ Remove the CSS from the head of the document and paste it into a new text docume
 </style>
 ```
 
-###Converting the layout to use floats (optional)
+### Converting the layout to use floats (optional)
 
 We used absolute positioning to create our layout. Now that you have been introduced to floats we will use them our layout to see what the effects are.
 
@@ -439,7 +455,7 @@ float:left;
 We will need to perform some additional adjustments to correct the layout.
 
 
-###Using Flexbox (optional)
+### Using Flexbox (optional)
 
 ```css
 .nav {
@@ -453,7 +469,7 @@ We will need to perform some additional adjustments to correct the layout.
 ```
 
 
-##Some simple CSS 3 Enhancements
+## Some simple CSS3 Enhancements
 
 As work on a new version of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee (http://W3C.org) decided to break the process into modules. (For compatibility and advice see http://CanIuse.com.)
 
@@ -508,7 +524,7 @@ If you use vendor prefixes always make sure that the non-prefixed line appears l
 Add CSS 3 Gradients. (See: http://www.colorzilla.com/gradient-editor/)
 
 
-##Highlight one of the tabs
+## Highlight one of the tabs
 
 This is a simple way to create color coded navigation on a web site.
 Add a class to body tag so we know what kind of page this is.
@@ -532,7 +548,7 @@ Add the following to our CSS block:
 ```
 Note that the tab is now highlighted. 
 
-##Resetting the browser defaults
+## Resetting the browser defaults
 
 An elements margins may stick out from its containing elements. Combined with the fact that various browsers may use different settings for default margins and padding on items it makes it very hard to accurately style a page.
 
@@ -545,24 +561,9 @@ Add a simple reset to the CSS style sheet:
 }
 ```
 
-##Google font
+## Google font
 
 ```css
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 $font-family: 'Lato', sans-serif;
 ```
-
-##Homework
-
-Note: the finished files I was working on in class can be [downloaded](http://daniel.deverell.com/css-files/foundation-fall-2016/session1-master.zip) for reference.
-
-1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class.
-
---- alternatively ---
-
-1. Download the original files as distributed in class and, using the steps above, try to recreate the design we did in class.
-
-
-
-##Reading 
-* CSS Mastery: Advanced Web Standards Solutions - chapters 1-3 and chapter 8
