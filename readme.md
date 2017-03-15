@@ -102,8 +102,9 @@ Add `box-sizing: border-box/content-box` to review box model options.
 </style>
 ```
 
-Add a media query (min and max width):
+### Media Queries
 
+Add a media query (min and max width):
 
 ```
 @media (min-width: 500px){
@@ -157,8 +158,10 @@ Open before.html in an editor and examine the HTML. Then examine index.html. The
 
 Examine index.html in the browser inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
-```
-$ cd <path-to-folder-relative-to-current-location>
+## Terminal
+
+```sh
+$ cd <path-to-folder>
 $ python -m SimpleHTTPServer 9000
 ```
 
