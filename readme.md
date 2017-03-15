@@ -218,6 +218,12 @@ Add the following to our style block:
 }
 ```
 
+Add to the nav a css rule:
+
+```
+transition: all 0.5s;
+```
+
 Edit the nav CSS rule to position it
 
 ```css
@@ -487,7 +493,7 @@ At the bottom of the stylesheet
 ```
 
 
-### Using Flexbox (optional)
+### Using Flexbox (optional - demo only)
 
 ```css
 .nav {
