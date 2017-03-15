@@ -1,14 +1,16 @@
-#FOUNDATIONS Session One
+# FOUNDATIONS Session One
 
-##Texts (for the first part of the semester)
+## Textbooks
+
+Jeremy Keith & Rachel Andrew - [HTML5 for Web Designers](https://abookapart.com/products/html5-for-web-designers)
+
+Dan Cederholm - [CSS3 for Web Desingers](https://abookapart.com/products/css3-for-web-designers)
 
 Mat Marquis - [JavaScript for Web Designers](https://abookapart.com/products/javascript-for-web-designers)
 
 Ethan Marcotte - [Responsive Web Design](https://abookapart.com/products/responsive-web-design)
 
 Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-for-web-designers)
-
-Jeremy Keith & Rachel Andrew - [HTML5 for Web Desingers](https://abookapart.com/products/html5-for-web-designers)
 
 [Syllabus](http://daniel.deverell.com/)
 
