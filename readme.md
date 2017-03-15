@@ -1,5 +1,17 @@
 #FOUNDATIONS Session One
 
+##Texts (for the first part of the semester)
+
+Mat Marquis - [JavaScript for Web Designers](https://abookapart.com/products/javascript-for-web-designers)
+
+Ethan Marcotte - [Responsive Web Design](https://abookapart.com/products/responsive-web-design)
+
+Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-for-web-designers)
+
+David Demaree - [GIT For Humans](https://abookapart.com/products/git-for-humans)
+
+[Syllabus](http://daniel.deverell.com/)
+
 
 ##The Doctype
 
