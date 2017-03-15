@@ -443,17 +443,27 @@ Remove the CSS from the head of the document and paste it into a new text docume
 <link href="css/styles.css" media="all" />
 ```
 
+Try not to use the alternative:
+
 ```css
 <style>
-  @import url("css/review.css");
+  @import url("css/styles.css");
 </style>
 ```
+
+Ideally, all your stylesheets should be in one file to cut down on the number of requests the browser needs to make tothe server.
 
 ### Adding Simple Responsiveness
 
 At the bottom of the stylesheet
 
 ```
+@media print {
+    * {
+        display: none !important;
+    }
+}
+
 @media all and (max-width: 800px){
     .nav {
         top: 0;
@@ -467,6 +477,11 @@ At the bottom of the stylesheet
     }
     article {
         margin-left: 20px;
+    }
+    blockquote {
+        width: 100%;
+        float: none;
+        margin: 0;
     }
 }
 ```
