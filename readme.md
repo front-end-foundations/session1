@@ -25,8 +25,8 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 
 
 ## Reading 
-* HTML5 for Web Designers - Ch. 1-4
-* CSS3 for Web Designers - Ch. 1-2
+* HTML5 for Web Designers
+* CSS3 for Web Designers - start it
 
 
 ## The Doctype
@@ -75,7 +75,7 @@ By default the browser has placed a 16px margin above and below the paragraph.
 Let's add padding, border and override the margins.
 
 ```html
-<style type="text/css" media="screen">
+<style media="screen">
 p { 
 padding:12px; 
 margin:6px; 
@@ -95,16 +95,23 @@ Boxes are additive by default. This means their width will be a combination of w
 Add `box-sizing: border-box/content-box` to review box model options.
 
 ```html
-<style type="text/css" media="screen">
-p { 
-padding:12px; 
-margin:6px; 
-border:1px solid #333;
-height:200px;
-width: 300px;
-box-sizing:border-box; 
-}
+<style media="screen">
+    p { 
+        ...
+        box-sizing: border-box; 
+    }
 </style>
+```
+
+Add a media query (min and max width):
+
+
+```
+@media (min-width: 500px){
+    p {
+        color: red;
+    }
+}
 ```
 
 ## CSS syntax, whitespace and comments
@@ -113,18 +120,18 @@ CSS rules consist of a selector, a set of curly braces, and a series of property
 
 ```css
 selector { 
-	property1: value; 
-	property2: value; 
-	}
+    property1: value; 
+    property2: value; 
+    }
 ```
 e.g.
 
 ```css
 p { 
-	color:#000; 
-	font-family:verdana, sans-serif;
-	border:1px solid #333; 
-	}
+    color:#000; 
+    font-family:verdana, sans-serif;
+    border:1px solid #333; 
+    }
 ```
 
 The selector determines which HTML tag will be selected. The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit when used for measurements.
@@ -133,15 +140,15 @@ Note the border property:
 
 ```css
 p { 
-	border:1px solid #333; 
-	}
+    border:1px solid #333; 
+    }
 ```
 
 This is a CSS shortcut and could also be written in long form.
 
 ```css
 border-style: solid; 
-border-color: #f00; 	
+border-color: #f00;     
 border-width: 4px;
 ```
 
@@ -159,13 +166,13 @@ $ python -m SimpleHTTPServer 9000
 Add a CSS block within the `<head> `of start.html as follows:
 
 ```html
-<style type="text/css"> 
-	body { 	
-		margin: 0; 	
-		color: #333; 
-		font-family: Verdana, Arial, Helvetica, sans-serif; 
-		}
- </style>
+<style>
+    body {
+        margin: 0;
+        color: #333;
+        font-family: Verdana, Arial, sans-serif;
+    }
+</style>
 ```
 
 ## Google font
@@ -181,8 +188,8 @@ Add a nav class to the `<ul>` that will form the navigation for our page.
 
 ```html
 <ul class="nav">
-	<li><a href="#">Cuisines</a></li>
-	...
+    <li><a href="#">Cuisines</a></li>
+    ...
 </ul>
 ```
 
@@ -193,15 +200,15 @@ Add the following to our style block:
 ```css
 .nav { list-style: none; }
 .nav li { 
-	display: inline-block;
-	margin-right: 10px;
+    display: inline-block;
+    margin-right: 10px;
 }
 .nav a {
-	color: #333;
-	text-decoration: none;
-	padding: 4px;
-	display: block;
-	background-color: #f0dfb4
+    color: #333;
+    text-decoration: none;
+    padding: 4px;
+    display: block;
+    background-color: #f0dfb4
 }
 .nav a:hover {
   color: #fff; 
@@ -213,11 +220,11 @@ Edit the nav CSS rule to position it
 
 ```css
 .nav {
-	list-style:none;
-	position: absolute;
-	right:0;
-	top:60px; 
-	}
+    list-style:none;
+    position: absolute;
+    right:0;
+    top:60px; 
+    }
 ```
 
 Add a div around the table and list and give it an ID #info then add the following CSS:
@@ -258,7 +265,7 @@ blockquote  {
   font-size: 24px; 
 }
 article img {
-	float:  right;
+    float:  right;
 }
 ```
 
@@ -272,8 +279,8 @@ Add wrapper `<div id="wrapper">` to entire content area (after the `<body>` tag 
 
 ```css
 #wrapper {
-	width: 840px;
-	max-width: 840px;
+    width: 840px;
+    max-width: 840px;
 }
 ```
 
@@ -281,8 +288,8 @@ Then center it in the browser.
 
 ```css
 #wrapper {
-	width: 840px;
-	margin: 0 auto 0 auto;
+    width: 840px;
+    margin: 0 auto 0 auto;
 }
 ```
 
@@ -290,9 +297,9 @@ Add a relative positioning instruction.
 
 ```css
 #wrapper {
-	position: relative;
-	width: 840px;
-	margin: 0 auto 0 auto;
+    position: relative;
+    width: 840px;
+    margin: 0 auto 0 auto;
 }
 ```
 
@@ -303,19 +310,20 @@ Note the impact the relative positioning has on the layout (toggle it on and off
 Edit the CSS body rule.
 
 ```css
-body { 	
-	...
-	background-color: #ddd;
+body {  
+    ...
+    background-color: #ddd;
 }
 ```
 
 Note that the wrapper's background is transparent and shows through to the gray applied to the body. 
+
 Let's add a white background to wrapper.
 
 ```css
 #wrapper {
-	...
-	background-color: #fff;
+    ...
+    background-color: #fff;
 }
 ```
 
@@ -354,7 +362,7 @@ Format elements in the list and table
 
 ```css
 #info th {
-	text-align: right;
+    text-align: right;
 }
 
 #info ul {
@@ -387,7 +395,7 @@ Edit the CSS in preparation for absolutely positioning its children.
 
 ```css
 #header {
-  ...
+    ...
   position:relative;
 }
 ```
@@ -396,20 +404,19 @@ Edit:
 
 ```css
 header h1, header h2 {
-	...
-	position: absolute;
-	top: 10px;
+    position: absolute;
+    top: 10px;
 }
 header h2 {
-	...
-	top: 50px;
+    top: 50px;
 }
 ```
 
 Use positioning to reposition up the info and nav elements.
 ￼
 Clean up the code formatting in Sublime by using the Command Palette and searching for Reindent Lines.
-Inline, In Page & External CSS
+
+### Inline, In Page & External CSS
 
 There are three ways to add CSS to an HTML document:
 
@@ -427,51 +434,54 @@ Inline styles are inefficient:
 ```
 
 However, this method is acceptable and often used when dynamically changing the page after it has been loaded in the browser. 
+
 Try using the inspector to inspect a dynamic site (such as http://www.w3schools.com/jquery/jquery_animate.asp). Note how it displays dynamic changes to the HTML by temporarily highlighting them.
 
-Remove the CSS from the head of the document and paste it into a new text document. Save it in a new css directory calling it review.css. We have two options here: link to our CSS file using an HTML tag, or to use a CSS @import statement.
+Remove the CSS from the head of the document and paste it into a new text document. Save it in a new css directory calling it styles.css. We have two options here: link to our CSS file using an HTML tag, or to use a CSS @import statement.
 
 ```html
-<link href="css/review.css" rel="stylesheet" media="all" />
+<link href="css/styles.css" media="all" />
 ```
 
 ```css
 <style>
-  @import url('css/review.css');
+  @import url("css/review.css");
 </style>
 ```
 
-### Converting the layout to use floats (optional)
+### Adding Simple Responsiveness
 
-We used absolute positioning to create our layout. Now that you have been introduced to floats we will use them our layout to see what the effects are.
+At the bottom of the stylesheet
 
-* Remove the `position:relative; declaration` from the wrapper CSS so the absolutely positioned items are now positioned relative to the browser window.
-
-* Remove the absolute positioning from the nav so the position of the nav element follows source order.
-
-* Remove the absolute positioning elements from the #info div.
-
-Float the info div to the left
-
-```css
-...
-float:left;
-...
 ```
-
-We will need to perform some additional adjustments to correct the layout.
+@media all and (max-width: 800px){
+    .nav {
+        top: 0;
+        left:0;
+        margin: 0;
+    }
+    #info {
+        position: static;
+        float: left;
+        margin-right: 20px;
+    }
+    article {
+        margin-left: 20px;
+    }
+}
+```
 
 
 ### Using Flexbox (optional)
 
 ```css
 .nav {
-	display: flex;
+    display: flex;
 }
 .nav li { 
-	flex: 1;
-	background-color: #f0dfb4;
-	list-style: none;
+    flex: 1;
+    background-color: #f0dfb4;
+    list-style: none;
 }
 ```
 
@@ -485,9 +495,9 @@ Some of the earlier CSS 3 specifications include provisions for visual effects s
 Add a drop shadow to the CSS for the info div. (See https://developer.mozilla.org/en/CSS/-moz-box-shadow for specifications)
 
 ```css
-#info { 	
-	... 	
-	border-radius: 6px; 
+#info {     
+    ...     
+    border-radius: 6px; 
 }
 ```
 
@@ -495,8 +505,8 @@ Add rounded corners to the info div. (See https://developer.mozilla.org/en/CSS/b
 
 ```css
 #info { 
-	... 	
-	box-shadow: 5px 5px 5px #ddd; 
+    ...     
+    box-shadow: 5px 5px 5px #ddd; 
 }
 ```
 
@@ -518,13 +528,13 @@ If you use vendor prefixes always make sure that the non-prefixed line appears l
 
 ```css
 #wrapper { 
-	width:780px; 
-	position:relative; 
-	margin:0 auto;  
-	background: #fff;  
-	-webkit-box-shadow: 10px 10px 150px #aaa; 
-	-moz-box-shadow: 10px 10px 150px #aaa; 
-	box-shadow: 10px 10px 150px #aaa;
+    width:780px; 
+    position:relative; 
+    margin:0 auto;  
+    background: #fff;  
+    -webkit-box-shadow: 10px 10px 150px #aaa; 
+    -moz-box-shadow: 10px 10px 150px #aaa; 
+    box-shadow: 10px 10px 150px #aaa;
 }
 ```
 
@@ -549,23 +559,11 @@ Add the following to our CSS block:
 
 ```css
 .review-page .review-link {
-	color: #fff;
-	background:#600;
+    color: #fff;
+    background:#600;
  }
 ```
 Note that the tab is now highlighted. 
 
-## Resetting the browser defaults
-
-An elements margins may stick out from its containing elements. Combined with the fact that various browsers may use different settings for default margins and padding on items it makes it very hard to accurately style a page.
-
-Add a simple reset to the CSS style sheet:
-
-```css
-* { 
-	margin:0;  
-	padding:0; 
-}
-```
 
 
