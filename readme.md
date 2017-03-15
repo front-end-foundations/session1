@@ -17,7 +17,7 @@ Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-fo
 
 ## Homework
 
-Note: the finished files I was working on in class can be [downloaded](http://daniel.deverell.com/css-files/foundation-fall-2016/session1-master.zip) for reference.
+Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
 
 1. Download the original files as distributed in class and, using the steps above, try to recreate the design we did in class.
 1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class.
@@ -31,9 +31,9 @@ Note: the finished files I was working on in class can be [downloaded](http://da
 
 ## The Doctype
 
-Open box-model.html in Chrome, right click on the text and select Inspect.
+Open `box-model.html` in Chrome, right click on the text and select Inspect.
 
-A doctype is the first piece of text in an HTML document and the first thing a browser sees when it attempts to display (or 'parse') your page. It tells the browser which version of HTML your are using and how it should render the code. 
+A doctype is the first piece of text in an HTML document and the first thing a browser sees when it attempts to display ('parse') your page. It tells the browser which version of HTML your are using and how it should render the code. 
 
 ```
 <!doctype html>
@@ -51,7 +51,7 @@ A `<div>` tag is a special block tag which is used to create a logical division 
 
 A `<span>` tag is used to create arbitrary inline elements.
 
-* These display modes can be controlled using the display property in CSS.
+* These display modes can be controlled using the `display` property in CSS.
 
 
 ### The Box Model
@@ -60,9 +60,9 @@ Block elements are interpreted as a box by the browser. But boxes have other cha
 
 ## The Browser and Developer Tools
 
-Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their traditionally superior developer tools. 
+Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their  superior developer tools. 
 
-You should take some time to familiarize yourself with thier full functionality. For now the only piece of functionality you need is to be able to right or control click on a portion of the page in the browser and select Inspect from the resulting pop up menu.
+You should take some time to familiarize yourself with their full functionality. For now the only piece of functionality you need is to be able to right or control click on a portion of the page in the browser and select Inspect from the resulting pop up menu.
 
 * The inspector is your first line of defense when troubleshooting.
 * Safari's developer tool is not turned on by default and most be enabled in Safari preferences.
@@ -90,7 +90,7 @@ Refresh the page and inspect the paragraph again. You should see the changes in 
 
 ### Box Sizing
 
-Boxes are additive by default. This means their width will be a combination of width, padding and border (margin is outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
+Boxes are additive by default. This means their width will be a combination of width, padding and border (margins are outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
 Add `box-sizing: border-box/content-box` to review box model options.
 
@@ -145,11 +145,11 @@ border-color: #f00; 
 border-width: 4px;
 ```
 
-#Exercise - Converting to Standards
+# Exercise - Converting to Standards
 
 Open before.html in an editor and examine the HTML. Then examine index.html. The latter is a more standardized document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
 
-Examine index.html in the brwoser inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
+Examine index.html in the browser inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
 ```
 $ cd <path-to-folder-relative-to-current-location>
