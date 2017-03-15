@@ -15,6 +15,7 @@ Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-fo
 [Syllabus](http://daniel.deverell.com/)
 
 
+
 ## Homework
 
 Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
@@ -22,10 +23,8 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 1. Download the original files as distributed in class and, using the steps above, try to recreate the design we did in class.
 1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class.
 
-
-
 ## Reading 
-* HTML5 for Web Designers
+* HTML5 for Web Designers - chapters 1, 2, 5 and 6. 
 * CSS3 for Web Designers - start it
 
 
@@ -77,11 +76,11 @@ Let's add padding, border and override the margins.
 ```html
 <style media="screen">
 p { 
-padding:12px; 
-margin:6px; 
-border:1px solid #333;
-height:200px;
-width: 300px;
+    padding: 12px; 
+    margin: 6px; 
+    border: 1px solid #333;
+    height: 200px;
+    width: 300px;
 }
 </style> 
 ```
@@ -227,10 +226,10 @@ Edit the nav CSS rule to position it
     }
 ```
 
-Add a div around the table and list and give it an ID #info then add the following CSS:
+Add an `<aside>` tag around the table and list then add the following CSS:
 
 ```css
-#info {
+aside {
   position: absolute; 
   top: 200px; 
   left: 10px; 
@@ -241,9 +240,7 @@ Add a div around the table and list and give it an ID #info then add the followi
 }
 ```
 
-Note how the text flows under the #info div. 
-
-Note `<article>` tag before `<h2>Matsu</h2>` which closes at the end of document before the `</body>`. Also note that this does not effect the display of the document.
+Note how the text flows under the aside. 
 
 Add margin to move the article over to the right:
 
@@ -303,7 +300,7 @@ Add a relative positioning instruction.
 }
 ```
 
-Note the impact the relative positioning has on the layout (toggle it on and off using the inspector). The two absolutely positioned elements (#info and .nav) previously had no positioning context and aligned themselves to the edges of the browser window. With the addition of the relative positioning to the wrapper they now become positioned relative to the wrapper box. The rule here is that absolutely positioned elements are positioned relative to their nearest positioned ancestor in the HTML tree. This is an important CSS design pattern and well will see it again.
+Note the impact the relative positioning has on the layout (toggle it on and off using the inspector). The two absolutely positioned elements (aside and .nav) previously had no positioning context and aligned themselves to the edges of the browser window. With the addition of the relative positioning to the wrapper they now become positioned relative to the wrapper box. The rule here is that absolutely positioned elements are positioned relative to their nearest positioned ancestor in the HTML tree. This is an important CSS design pattern and well will see it again.
 
 ## Adding color to our layout
 
@@ -361,11 +358,11 @@ Add CSS to format it:
 Format elements in the list and table
 
 ```css
-#info th {
+aside th {
     text-align: right;
 }
 
-#info ul {
+aside ul {
   list-style: none; 
   margin: 1em; 
   padding: 0;
@@ -460,7 +457,7 @@ At the bottom of the stylesheet
         left:0;
         margin: 0;
     }
-    #info {
+    aside {
         position: static;
         float: left;
         margin-right: 20px;
@@ -495,7 +492,7 @@ Some of the earlier CSS 3 specifications include provisions for visual effects s
 Add a drop shadow to the CSS for the info div. (See https://developer.mozilla.org/en/CSS/-moz-box-shadow for specifications)
 
 ```css
-#info {     
+aside {     
     ...     
     border-radius: 6px; 
 }
@@ -504,7 +501,7 @@ Add a drop shadow to the CSS for the info div. (See https://developer.mozilla.or
 Add rounded corners to the info div. (See https://developer.mozilla.org/en/CSS/border-radius for specifications.)
 
 ```css
-#info { 
+aside { 
     ...     
     box-shadow: 5px 5px 5px #ddd; 
 }
