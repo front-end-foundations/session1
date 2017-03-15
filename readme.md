@@ -107,7 +107,7 @@ box-sizing:border-box;
 </style>
 ```
 
-##CSS syntax, whitespace and comments
+## CSS syntax, whitespace and comments
 
 CSS rules consist of a selector, a set of curly braces, and a series of property(s) and values separated by a full colon and terminated by a semi colon.
 
@@ -168,6 +168,13 @@ Add a CSS block within the `<head> `of start.html as follows:
  </style>
 ```
 
+## Google font
+
+```css
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
+font-family: 'Lato', sans-serif;
+```
+
 ## Formatting the Navigation
 
 Add a nav class to the `<ul>` that will form the navigation for our page.
@@ -179,7 +186,7 @@ Add a nav class to the `<ul>` that will form the navigation for our page.
 </ul>
 ```
 
-By doing so we have created a name space that allows us to differentiate the two `<ul>` lists in start.html and apply two different styles.
+By doing so we have created a name space that allows us to differentiate the two `<ul>` lists in `start.html` and apply two different styles.
 
 Add the following to our style block:
 
@@ -561,9 +568,4 @@ Add a simple reset to the CSS style sheet:
 }
 ```
 
-## Google font
 
-```css
-@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
-$font-family: 'Lato', sans-serif;
-```
