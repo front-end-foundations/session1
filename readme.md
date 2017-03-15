@@ -179,9 +179,19 @@ Add a CSS block within the `<head> `of start.html as follows:
 
 ## Google font
 
+https://fonts.google.com
+
 ```css
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 font-family: 'Lato', sans-serif;
+```
+
+```
+<link href="https://fonts.googleapis.com/css?family=Crushed" rel="stylesheet">
+```
+
+```
+font-family: 'Crushed', cursive;
 ```
 
 ## Formatting the Navigation
