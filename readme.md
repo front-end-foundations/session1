@@ -21,71 +21,62 @@ Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-fo
 Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
 
 1. Download the original files as distributed in class and, using the steps above, try to recreate the design we did in class.
-1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class.
+1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class as well as in the *CSS3 for Web Designers* reading assignment below.
 
 ## Reading 
 * HTML5 for Web Designers - chapters 1, 2, 5 and 6. 
 * CSS3 for Web Designers - start it
 
 
-## The Doctype
+## The Browser and Developer Tools
 
 Open `box-model.html` in Chrome, right click on the text and select Inspect.
 
-A doctype is the first piece of text in an HTML document and the first thing a browser sees when it attempts to display ('parse') your page. It tells the browser which version of HTML your are using and how it should render the code. 
+Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their superior developer tools. 
 
-```
-<!doctype html>
-```
+You should take some time to familiarize yourself with their full functionality. 
 
-### Block and Inline
+* The inspector is your first line of defense when troubleshooting.
+* Safari's developer tool is not turned on by default and most be enabled in Safari preferences.
 
-HTML tags or elements all have a default `display` property which is either `block` or `inline`.
+### Block vs Inline
 
-Most HTML elements are block elements which means that they create a rectangular region in the browser. These are part of the box model upon which all web page rendering is based. We can see these boxes using the inspector.
+Most HTML tags or elements all have a default `display` property which is set to `block` which means that they create a rectangular region in the browser. 
 
-The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. The paragraph tag - `<p>` - creates a box and typically has space above and below it while the italicized text does not and simply flows along with the rest of the text.
+(The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. The paragraph tag - `<p>` - creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.)
 
 A `<div>` tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. 
 
 A `<span>` tag is used to create arbitrary inline elements.
 
-* These display modes can be controlled using the `display` property in CSS.
+These display modes can be controlled using the `display` property in CSS.
 
 
 ### The Box Model
 
 Block elements are interpreted as a box by the browser. But boxes have other characteristics such as spacing, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
 
-## The Browser and Developer Tools
-
-Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their  superior developer tools. 
-
-You should take some time to familiarize yourself with their full functionality. For now the only piece of functionality you need is to be able to right or control click on a portion of the page in the browser and select Inspect from the resulting pop up menu.
-
-* The inspector is your first line of defense when troubleshooting.
-* Safari's developer tool is not turned on by default and most be enabled in Safari preferences.
-
 ### User Agent Styles
 
 User agent styles are the default styles for HTML elements.
 ￼
 By default the browser has placed a 16px margin above and below the paragraph. 
+
 Let's add padding, border and override the margins.
 
 ```html
 <style media="screen">
 p { 
-    padding: 12px; 
+    padding: 16px; 
     margin: 6px; 
-    border: 1px solid #333;
+    border: 3px solid #333;
     height: 200px;
     width: 300px;
 }
 </style> 
 ```
 
-Refresh the page and inspect the paragraph again. You should see the changes in the inspector’s Style and Layout tabs.
+Refresh the page and inspect the paragraph again. Note the changes in the inspector.
 
 ### Box Sizing
 
@@ -112,6 +103,12 @@ Add a media query (min and max width):
         color: red;
     }
 }
+
+@media (max-width: 500px){
+    p {
+        width: 100%;
+    }
+}
 ```
 
 ## CSS syntax, whitespace and comments
@@ -134,27 +131,29 @@ p {
     }
 ```
 
-The selector determines which HTML tag will be selected. The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit when used for measurements.
+The selector determines which HTML tag will be selected. 
+
+The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit when used for measurements.
 
 Note the border property:
 
 ```css
 p { 
-    border:1px solid #333; 
+    border: 1px solid #333; 
     }
 ```
 
 This is a CSS shortcut and could also be written in long form.
 
-```css
-border-style: solid; 
-border-color: #f00;     
+```
+border-style: solid;
+border-color: #f00;
 border-width: 4px;
 ```
 
 # Exercise - Converting to Standards
 
-Open before.html in an editor and examine the HTML. Then examine index.html. The latter is a more standardized document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
+Open before.html in an editor and examine the HTML. Then examine index.html. The latter is an html5 document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
 
 Examine index.html in the browser inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
@@ -181,12 +180,12 @@ Add a CSS block within the `<head> `of start.html as follows:
 
 https://fonts.google.com
 
-```css
+```
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 font-family: 'Lato', sans-serif;
 ```
 
-```
+```html
 <link href="https://fonts.googleapis.com/css?family=Crushed" rel="stylesheet">
 ```
 
@@ -228,11 +227,15 @@ Add the following to our style block:
 }
 ```
 
+Examine the inspector's color picker.
+
 Add to the nav a css rule:
 
 ```
-transition: all 0.5s;
+transition: all 0.5s linear;
 ```
+
+Examine the inspector's animation settings.
 
 Edit the nav CSS rule to position it
 
@@ -461,7 +464,7 @@ Remove the CSS from the head of the document and paste it into a new text docume
 
 Try not to use the alternative:
 
-```css
+```html
 <style>
   @import url("css/styles.css");
 </style>
@@ -473,7 +476,7 @@ Ideally, all your stylesheets should be in one file to cut down on the number of
 
 At the bottom of the stylesheet
 
-```
+```css
 @media print {
     * {
         display: none !important;
@@ -502,6 +505,24 @@ At the bottom of the stylesheet
 }
 ```
 
+## Aside - Server Accounts
+
+Your username is the first seven letters of your last name + the first letter of first name. e.g `devereld`
+
+(If your name is less than 7 characters your username is your last name plus the first letter of your first name.)
+
+Test to see if your account is active by entering this URL into a new browser tab (use your username after the tilde):
+
+`http://oit2.scps.nyu.edu/~******/`
+
+Your password is your first initial plus your last initial plus 123890. e.g. `dd123890`
+
+The computer name is `oit2.scps.nyu.edu`
+
+You can upload and download files using SFTP (sercure file transfer protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you *must* use port 22 or SFTP in order to connect.
+
+Note - when you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~******/`. Upload assignments into that folder.
+
 
 ### Using Flexbox (optional - demo only)
 
@@ -523,7 +544,7 @@ As work on a new version of CSS progressed it was found that releasing an entire
 
 Some of the earlier CSS 3 specifications include provisions for visual effects such as rounded corners, drop shadows and gradients. A useful page that allows you to become familiar with these enhancements is http://css3generator.com/.
 
-Add a drop shadow to the CSS for the info div. (See https://developer.mozilla.org/en/CSS/-moz-box-shadow for specifications)
+Add rounded corners to the info div. (See https://developer.mozilla.org/en/CSS/border-radius for specifications.)
 
 ```css
 aside {     
@@ -532,7 +553,7 @@ aside { 
 }
 ```
 
-Add rounded corners to the info div. (See https://developer.mozilla.org/en/CSS/border-radius for specifications.)
+Add a drop shadow to the CSS for the info div.
 
 ```css
 aside { 
@@ -543,30 +564,8 @@ aside { 
 
 Add a box shadow to the wrapper's CSS
 
-```css
+```
 box-shadow: 10px 10px 20px #ddd;
-```
-Note: to make these work in very old browsers you need to add vendor prefixes:
-
-```css
-...
--webkit-box-shadow: 10px 10px 150px #666;
--moz-box-shadow: 10px 10px 150px #666;
-...
-```
-
-If you use vendor prefixes always make sure that the non-prefixed line appears last.
-
-```css
-#wrapper { 
-    width:780px; 
-    position:relative; 
-    margin:0 auto;  
-    background: #fff;  
-    -webkit-box-shadow: 10px 10px 150px #aaa; 
-    -moz-box-shadow: 10px 10px 150px #aaa; 
-    box-shadow: 10px 10px 150px #aaa;
-}
 ```
 
 Add CSS 3 Gradients. (See: http://www.colorzilla.com/gradient-editor/)
