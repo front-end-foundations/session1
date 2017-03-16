@@ -22,6 +22,7 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 
 1. Download the original files as distributed in class and, using the steps above, try to recreate the design we did in class.
 1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class as well as in the *CSS3 for Web Designers* reading assignment below.
+1. Upload your efforts to oit2.scps.nyu.edu as outlined below and send a notification via the `frontend-foundations` slack channel
 
 ## Reading 
 * HTML5 for Web Designers - chapters 1, 2, 5 and 6. 
@@ -125,9 +126,9 @@ e.g.
 
 ```css
 p { 
-    color:#000; 
-    font-family:verdana, sans-serif;
-    border:1px solid #333; 
+    color: #000; 
+    font-family: verdana, sans-serif;
+    border: 1px solid #333; 
     }
 ```
 
@@ -150,6 +151,16 @@ border-style: solid;
 border-color: #f00;
 border-width: 4px;
 ```
+
+See the full specifications in the inspector (use the triangle drop down).
+
+### Debugging CSS with the inspector
+
+* misspelling
+* bad selector
+* missing units
+* default values
+
 
 # Exercise - Converting to Standards
 
@@ -594,6 +605,18 @@ Add the following to our CSS block:
  }
 ```
 Note that the tab is now highlighted. 
+
+
+###Notes
+
+Delete:
+git branch -d branch_name
+Delete on github:
+git push origin --delete <branch_name>
+Force a push:
+git push -f <remote> <branch>
+
+
 
 
 
