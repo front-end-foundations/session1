@@ -607,15 +607,16 @@ Add the following to our CSS block:
 Note that the tab is now highlighted. 
 
 
-###Notes
+### Notes
 
+```
 Delete:
 git branch -d branch_name
 Delete on github:
 git push origin --delete <branch_name>
 Force a push:
 git push -f <remote> <branch>
-
+```
 
 
 
