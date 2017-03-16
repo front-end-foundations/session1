@@ -48,8 +48,6 @@ A `<div>` tag is a special block tag which is used to create a logical division 
 
 A `<span>` tag is used to create arbitrary inline elements.
 
-These display modes can be controlled using the `display` property in CSS.
-
 
 ### The Box Model
 
@@ -57,9 +55,7 @@ Block elements are interpreted as a box by the browser. But boxes have other cha
 
 ### User Agent Styles
 
-User agent styles are the default styles for HTML elements.
-￼
-By default the browser has placed a 16px margin above and below the paragraph. 
+User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the paragraph. 
 
 Let's add padding, border and override the margins.
 
@@ -77,9 +73,34 @@ p {
 
 Refresh the page and inspect the paragraph again. Note the changes in the inspector.
 
+## CSS syntax, whitespace and comments
+
+CSS rules consist of a selector, a set of curly braces, and a series of property(s) and values separated by a full colon and terminated by a semi colon.
+
+```css
+selector { 
+    property1: value; 
+    property2: value; 
+    }
+```
+
+The selector determines which HTML will be selected. 
+
+The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit when used for measurements.
+
+Note the padding, margin and border properties. This are CSS shortcuts. Our border property could also be written in long form.
+
+```
+border-style: solid;
+border-color: #333;
+border-width: 3px;
+```
+
+See the full specifications in the inspector (use the triangle drop down).
+
 ### Box Sizing
 
-Boxes are additive by default. This means their width will be a combination of width, padding and border (margins are outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
+Boxes are additive by default - their width will be a combination of width, padding and border (margins are outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
 Add `box-sizing: border-box/content-box` to review box model options.
 
@@ -99,10 +120,14 @@ Add a media query (min and max width):
 ```
 @media (min-width: 500px){
     p {
-        color: red;
+        border: 3px solid red;
     }
 }
+```
 
+Note the inspector overrides. min-width = greater than. The css for > 500px is *added* to the styles when the condition is true.
+
+```
 @media (max-width: 500px){
     p {
         width: 100%;
@@ -110,54 +135,14 @@ Add a media query (min and max width):
 }
 ```
 
-## CSS syntax, whitespace and comments
+Note the inspector overrides (cascade). max-width = less than. The css for < (less than) 500px is *added* to the styles when the condition is true.
 
-CSS rules consist of a selector, a set of curly braces, and a series of property(s) and values separated by a full colon and terminated by a semi colon.
-
-```css
-selector { 
-    property1: value; 
-    property2: value; 
-    }
-```
-e.g.
-
-```css
-p { 
-    color: #000; 
-    font-family: verdana, sans-serif;
-    border: 1px solid #333; 
-    }
-```
-
-The selector determines which HTML tag will be selected. 
-
-The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit when used for measurements.
-
-Note the border property:
-
-```css
-p { 
-    border: 1px solid #333; 
-    }
-```
-
-This is a CSS shortcut and could also be written in long form.
-
-```
-border-style: solid;
-border-color: #f00;
-border-width: 4px;
-```
-
-See the full specifications in the inspector (use the triangle drop down).
 
 ### Debugging CSS with the inspector
 
 * misspelling
 * bad selector
 * missing units
-* default values
 
 
 # Exercise - Converting to Standards
@@ -189,22 +174,33 @@ Add a CSS block within the `<head> `of start.html as follows:
 
 https://fonts.google.com
 
+Including css from css:
+
 ```
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
+```
+
+Add to rule. Note cascade. Comment out.
+
+```
 font-family: 'Lato', sans-serif;
 ```
+
+HTML linking:
 
 ```html
 <link href="https://fonts.googleapis.com/css?family=Crushed" rel="stylesheet">
 ```
 
 ```
-font-family: 'Crushed', cursive;
+header {
+  font-family: 'Crushed', cursive;
+}
 ```
 
 ## Formatting the Navigation
 
-Add a nav class to the `<ul>` that will form the navigation for our page.
+Add a *class* to the `<ul>` that will form the navigation for our page.
 
 ```html
 <ul class="nav">
@@ -218,39 +214,49 @@ By doing so we have created a name space that allows us to differentiate the two
 Add the following to our style block:
 
 ```css
-.nav { list-style: none; }
+.nav { 
+  list-style: none;
+  padding: 0;
+}
 .nav li { 
     display: inline-block;
     margin-right: 10px;
 }
 .nav a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
     padding: 4px;
     display: block;
-    background-color: #f0dfb4
+    background-color: #600
 }
 .nav a:hover {
   color: #fff; 
-  background-color: #600; 
+  background-color: #795548; 
 }
 ```
 
-Examine the inspector's color picker.
+Examine the inspector's color picker. Note the ability to force element state.
 
-Add to the nav a css rule:
+Add css to `nav a`:
 
 ```
 transition: all 0.5s linear;
 ```
 
-Examine the inspector's animation settings.
+Edit the animation using the inspector's animation settings.
 
-Edit the nav CSS rule to position it
+Animate only one difference:
+
+```
+transition: background-color 0.5s linear;
+```
+
+*Edit* the nav CSS rule to position it
 
 ```css
 .nav {
     list-style:none;
+    padding: 0;
     position: absolute;
     right:0;
     top:60px; 
@@ -277,11 +283,35 @@ Add margin to move the article over to the right:
 
 ```css
 article {
-  margin: 0 20px 0 200px;
+  margin: 0 20px 0 240px;
 }
 ```
 
 (This is another CSS short cut - the four values for margin run clockwise from the top.)
+
+### CSS Variables
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+
+```
+html {
+  --bg-color: #f0dfb4;
+}
+```
+
+```
+.nav a {
+  ...
+  background-color: var(--bg-color);
+}
+
+aside {
+  ...
+  background-color: var(--bg-color); 
+}
+```
+
+### Floating
 
 Format the pull quote and image:
 
@@ -316,7 +346,7 @@ Then center it in the browser.
 
 ```css
 #wrapper {
-    width: 840px;
+    max-width: 840px;
     margin: 0 auto 0 auto;
 }
 ```
@@ -326,8 +356,7 @@ Add a relative positioning instruction.
 ```css
 #wrapper {
     position: relative;
-    width: 840px;
-    margin: 0 auto 0 auto;
+    ...
 }
 ```
 
@@ -344,7 +373,7 @@ body { 
 }
 ```
 
-Note that the wrapper's background is transparent and shows through to the gray applied to the body. 
+Note that the wrapper's background is transparent and shows through to the gray applied to the body.
 
 Let's add a white background to wrapper.
 
@@ -355,36 +384,27 @@ Let's add a white background to wrapper.
 }
 ```
 
+Note the body background color is grayed out in the inspector. Neither it nor the margin are inherited by other elements.
+
 ## Formatting the content
+
+Note the h1's margin outside the containing elements (not part of the box model). 
 
 ```css
 h1, h2 {
   color: #600;
-   margin-top: 20px;
-   margin-left: 20px;
-   font-size: 36px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 3rem;
+  margin-bottom: 0;
 }
 h2 {
-  font-size: 24px;
+  font-size: 32px;
+  margin-top: 0;
 }
 ```
 
-Note multiple selectors, h1 margin outside the containing elements, and margin collapsing. Note that the lack of namespacing allows this to effect the Matsu text as well.
-
-Add a summary class to "bottom line" p:
-
-```html
-<p class="summary"><strong>Bottom Line:</strong>
-```
-
-Add CSS to format it:
-
-```css
-.summary {
-  font-size: 16px; 
-  border-bottom: 1px dotted #600;
-}
-```
+Note - selector strength here. Note that the lack of namespacing allows this to effect the Matsu text as well.
 
 Format elements in the list and table
 
@@ -400,60 +420,14 @@ aside ul {
 }
 ```
 
-## Formatting the Mast Head
-
-Note the `<header>` tag around the h1 and h2 at the top of the document.
-
-```html
-<header>
-  <h1>Cleveland Eats</h1>
-  <h2>A Guide to Fine Northeast Ohio Dining</h2>
-</header>
-```
-
-Format the branding div:
-
-```css
-header {
-  height:120px; 
-}
-```
-
-Edit the CSS in preparation for absolutely positioning its children.
-
-```css
-#header {
-    ...
-  position:relative;
-}
-```
-
-Edit:
-
-```css
-header h1, header h2 {
-    position: absolute;
-    top: 10px;
-}
-header h2 {
-    top: 50px;
-}
-```
-
-Use positioning to reposition up the info and nav elements.
-￼
-Clean up the code formatting in Sublime by using the Command Palette and searching for Reindent Lines.
-
 ### Inline, In Page & External CSS
 
 There are three ways to add CSS to an HTML document:
 
 * Inline via the HTML style attribute
-* In page via the HTML style tag
+✓ In page via the HTML style tag
 * As an external .CSS file via linking (HTML <link> tag)
 * As an external .CSS file via importing (CSS @import statements)
-
-We will be looking at all three methods.
 
 Inline styles are inefficient: 
 
@@ -461,9 +435,9 @@ Inline styles are inefficient:
 <p style="margin-top: 12px;">
 ```
 
-However, this method is acceptable and often used when dynamically changing the page after it has been loaded in the browser. 
+However, this method is occasionally acceptable and often used when dynamically changing the page after it has been loaded in the browser. 
 
-Try using the inspector to inspect a dynamic site (such as http://www.w3schools.com/jquery/jquery_animate.asp). Note how it displays dynamic changes to the HTML by temporarily highlighting them.
+Try using the inspector to inspect a dynamic page (such as http://www.w3schools.com/jquery/jquery_animate.asp). Note how it displays dynamic changes to the HTML by temporarily highlighting them.
 
 Remove the CSS from the head of the document and paste it into a new text document. Save it in a new css directory calling it styles.css. We have two options here: link to our CSS file using an HTML tag, or to use a CSS @import statement.
 
@@ -479,7 +453,7 @@ Try not to use the alternative:
 </style>
 ```
 
-Ideally, all your stylesheets should be in one file to cut down on the number of requests the browser needs to make tothe server.
+Ideally, all your stylesheets should be in one file to reduce the number of requests the browser needs to make to the server (a major cause of slow loading sites).
 
 ### Adding Simple Responsiveness
 
@@ -538,6 +512,7 @@ Note - when you log into your account you will see a number of files and folders
 ```css
 .nav {
     display: flex;
+    padding: 0;
 }
 .nav li { 
     flex: 1;
@@ -562,22 +537,22 @@ aside { 
 }
 ```
 
-Add a drop shadow to the CSS for the info div.
+Add a drop shadow to the CSS for the info div using the inspector (...).
 
 ```css
 aside { 
     ...     
-    box-shadow: 5px 5px 5px #ddd; 
+    box-shadow: 3px 4px 3px 2px #d6d6d6;
 }
 ```
 
-Add a box shadow to the wrapper's CSS
+Add a box shadow to the wrapper's CSS:
 
 ```
 box-shadow: 10px 10px 20px #ddd;
 ```
 
-Add CSS 3 Gradients. (See: http://www.colorzilla.com/gradient-editor/)
+<!-- Add CSS 3 Gradients. (See: http://www.colorzilla.com/gradient-editor/) -->
 
 
 ## Highlight one of the tabs
