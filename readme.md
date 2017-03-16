@@ -14,8 +14,6 @@ Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-fo
 
 [Syllabus](http://daniel.deverell.com/)
 
-Test
-
 ## Homework
 
 Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
