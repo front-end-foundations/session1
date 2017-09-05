@@ -23,15 +23,15 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 1. Upload your efforts to oit2.scps.nyu.edu as outlined below and send a notification via the `frontend-foundations` slack channel
 
 ## Reading 
-* HTML5 for Web Designers - chapters 1, 2, 5 and 6. 
-* CSS3 for Web Designers - start it
+* [HTML5 for Web Designers](https://html5forwebdesigners.com) - chapters 1, 2, 5 and 6. (online - no need to purchase the book)
+* [CSS3 for Web Designers](https://abookapart.com/products/css3-for-web-designers) - purchase and start
 
 
 ## The Browser and Developer Tools
 
 Open `box-model.html` in Chrome, right click on the text and select Inspect.
 
-Despite recent moves by Microsoft - Chrome, Safari, and Firefox are still the browsers of choice for web designers. One of the reasons for this is their superior developer tools. 
+Despite recent moves by Microsoft - Safari, Firefox and especially Chrome are still the browsers of choice for web designers. One of the reasons for this is their superior developer tools. 
 
 You should take some time to familiarize yourself with their full functionality. 
 
@@ -141,7 +141,7 @@ Note the inspector overrides (cascade). max-width = less than. The css for < (le
 ### Debugging CSS with the inspector
 
 * misspelling
-* bad selector
+* bad selectors
 * missing units
 
 
@@ -591,6 +591,11 @@ Force a push:
 git push -f <remote> <branch>
 ```
 
+
+```
+$ open /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
+$ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+```
 
 
 
