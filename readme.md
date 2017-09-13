@@ -170,19 +170,19 @@ Add a CSS block within the `<head> `of start.html as follows:
 </style>
 ```
 
-## Google font
+## Google fonts
 
-https://fonts.google.com
+Google has a CDN offering (free fonts)[https://fonts.google.com] for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the link tag.
 
-Including css from css:
+Linking to a css file from css:
 
 ```
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 ```
 
-Add to rule. Note cascade. Comment out.
+Add to the top of our css (@import statements should always come first) to use the font within our stylesheet:
 
-```
+```css
 font-family: 'Lato', sans-serif;
 ```
 
@@ -251,6 +251,8 @@ Animate only one difference:
 transition: background-color 0.5s linear;
 ```
 
+## Absolutely Positioning the Navigation
+
 *Edit* the nav CSS rule to position it
 
 ```css
@@ -291,7 +293,7 @@ article {
 
 ### CSS Variables
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+(These)[https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables] allow us to store commonly used information as a variable for use throughout our css.
 
 ```
 html {
@@ -331,7 +333,7 @@ Note the float property and how the text wraps around it before and after we hav
 
 ## Converting the document to fixed width
 
-Currently our document flexes as we make the browser wider - it makes use of all the available horizontal space. While flexibility is good practice, many sites use fixed widths to imporve readability.
+Currently our document flexes as we make the browser wider - it makes use of all the available horizontal space. While flexibility is good practice, many sites use fixed widths to improve readability.
 
 Add wrapper `<div id="wrapper">` to entire content area (after the `<body>` tag and close it before the closing `</body>` tag) and add the following to our CSS style block.
 
