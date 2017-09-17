@@ -38,24 +38,41 @@ You should take some time to familiarize yourself with their full functionality.
 * The inspector is your first line of defense when troubleshooting.
 * Safari's developer tool is not turned on by default and most be enabled in Safari preferences.
 
+### User Agent Styles
+
+User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the paragraph. 
+
 ### Block vs Inline
 
 Most HTML tags or elements all have a default `display` property which is set to `block` which means that they create a rectangular region in the browser. 
 
-(The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. The paragraph tag - `<p>` - creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.)
+The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. 
+
+* Try: use the inspector to set the em tag to display block. *
+
+The paragraph tag - `<p>` - creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
 A `<div>` tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. 
 
-A `<span>` tag is used to create arbitrary inline elements.
+A `<span>` tag is used to create arbitrary inline (like `<em>`) elements.
 
 
 ### The Box Model
 
 Block elements are interpreted as a box by the browser. But boxes have other characteristics such as spacing, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
 
-### User Agent Styles
+Try: adding a 3em margin to the em tag with and w/o display: block
 
-User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the paragraph. 
+Lesson: html tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They are meaningful though and convey that meaning to the code that comprises the document and make it human readable. * html tags or semantically important * - not stylistically important. 
+
+This is part of the *separation of concerns*. For example:
+
+* content, display, behavior (html, css, javascript)
+* model, view, controller (MVC)
+
+Concerns are the different aspects of software functionality. For instance, the "business logic" of software is a concern, and the interface through which a person uses this logic is another.
+
+The separation of concerns is keeping the code for each of these concerns separate. Changing the interface should not require changing the business logic code, and vice versa.
 
 Let's add padding, border and override the margins.
 
