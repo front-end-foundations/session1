@@ -48,7 +48,7 @@ Most HTML tags or elements all have a default `display` property which is set to
 
 The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. 
 
-* Try: use the inspector to set the em tag to display block. *
+* Try: use the inspector to set the em tag to display block. 
 
 The paragraph tag - `<p>` - creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
@@ -61,7 +61,7 @@ A `<span>` tag is used to create arbitrary inline (like `<em>`) elements.
 
 Block elements are interpreted as a box by the browser. But boxes have other characteristics such as spacing, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
 
-Try: adding a 3em margin to the em tag with and w/o display: block
+* Try: adding a 3em margin to the em tag with and w/o display: block
 
 Lesson: html tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They are meaningful though and convey that meaning to the code that comprises the document and make it human readable. * html tags or semantically important * - not stylistically important. 
 
