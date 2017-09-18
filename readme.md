@@ -31,7 +31,7 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 
 Open `box-model.html` in Chrome, right click on the text and select Inspect.
 
-Despite recent moves by Microsoft - Safari, Firefox and especially Chrome are still the browsers of choice for web designers. One of the reasons for this is their superior developer tools. 
+Despite recent moves by Microsoft - Safari, Firefox and especially Chrome are the browsers of choice for web designers. One of the reasons for this is their superior developer tools. 
 
 You should take some time to familiarize yourself with their full functionality. 
 
@@ -63,12 +63,12 @@ Block elements are interpreted as a box by the browser. But boxes have other cha
 
 * Try: adding a 3em margin to the em tag with and w/o display: block
 
-Lesson: html tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They are meaningful though and convey that meaning to the code that comprises the document and make it human readable. * html tags or semantically important * - not stylistically important. 
+Lesson: html tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They are meaningful though and convey that meaning to the code that comprises the document and make it human readable. * html tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) * - not stylistically important. 
 
 This is part of the *separation of concerns*. For example:
 
 * content, display, behavior (html, css, javascript)
-* model, view, controller (MVC)
+* model, view, controller (MVC - database, interface, logic)
 
 Concerns are the different aspects of software functionality. For instance, the "business logic" of software is a concern, and the interface through which a person uses this logic is another.
 
@@ -175,7 +175,7 @@ $ cd <path-to-folder>
 $ python -m SimpleHTTPServer 9000
 ```
 
-Add a CSS block within the `<head> `of start.html as follows:
+Add a CSS block within the `<head> `of index.html as follows:
 
 ```html
 <style>
@@ -189,29 +189,53 @@ Add a CSS block within the `<head> `of start.html as follows:
 
 ## Google fonts
 
-Google has a CDN offering (free fonts)[https://fonts.google.com] for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the link tag.
+Google has a CDN offering (free fonts)[https://fonts.google.com] for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the `<link>` tag. 
 
-Linking to a css file from css:
+We will use [Lato](https://fonts.google.com/specimen/Lato) for our main text and [Lobster](https://fonts.google.com/specimen/Lobster) for our branding.
+
+### Linking to a css file from css
 
 ```
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 ```
 
-Add to the top of our css (@import statements should always come first) to use the font within our stylesheet:
+Add this to the top of our css (@import statements should always come first) to use the font within our stylesheet. Add to the body css rule:
 
-```css
+```
 font-family: 'Lato', sans-serif;
 ```
 
-HTML linking:
+### Linking to a css file from html
+
+THe html link tag:
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Crushed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 ```
 
-```
+in use:
+
+```css
 header {
-  font-family: 'Crushed', cursive;
+  font-family: 'Lobster', cursive;
+  font-weight: normal;
+}
+```
+
+Note the bold property belongs to the H1 tag, not the header tag. 
+
+```css
+
+header h1, header h2 {
+  font-weight: normal;
+}
+```
+
+Note the use of weights in Lato:
+
+```
+h2 {
+  font-weight: 300;
 }
 ```
 
@@ -444,7 +468,7 @@ aside ul {
 There are three ways to add CSS to an HTML document:
 
 * Inline via the HTML style attribute
-✓ In page via the HTML style tag
+* In page via the HTML style tag
 * As an external .CSS file via linking (HTML <link> tag)
 * As an external .CSS file via importing (CSS @import statements)
 
