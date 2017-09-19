@@ -1,4 +1,4 @@
-# FOUNDATIONS Session One
+# Session One
 
 ## Textbooks
 
@@ -25,6 +25,24 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 ## Reading 
 * [HTML5 for Web Designers](https://html5forwebdesigners.com) - chapters 1, 2, 5 and 6. (online - no need to purchase the book)
 * [CSS3 for Web Designers](https://abookapart.com/products/css3-for-web-designers) - purchase and start
+
+## Server Accounts
+
+Your username is the first seven letters of your last name + the first letter of first name. e.g `devereld`
+
+(If your name is less than 7 characters your username is your last name plus the first letter of your first name.)
+
+Test to see if your account is active by entering this URL into a new browser tab (use your username after the tilde):
+
+`http://oit2.scps.nyu.edu/~******/`
+
+Your password is your first initial plus your last initial plus 123890. e.g. `dd123890`
+
+The computer name is `oit2.scps.nyu.edu`
+
+You can upload and download files using SFTP (sercure file transfer protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you *must* use port 22 or SFTP in order to connect.
+
+Note - when you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~******/`. Upload assignments into that folder.
 
 
 ## The Browser and Developer Tools
@@ -272,11 +290,13 @@ Add the following to our style block:
 }
 .nav a:hover {
   color: #fff; 
-  background-color: #795548; 
+  background-color: #b10000; 
 }
 ```
 
-Examine the inspector's color picker. Note the ability to force element state.
+Examine display options for making the buttons horizontal using block, float, inline-block, and flex. 
+
+Examine the inspector's color picker. Note the ability to force element hover state.
 
 Add css to `nav a`:
 
@@ -302,7 +322,7 @@ transition: background-color 0.5s linear;
     padding: 0;
     position: absolute;
     right:0;
-    top:60px; 
+    top: 60px;
     }
 ```
 
@@ -330,9 +350,9 @@ article {
 }
 ```
 
-(This is another CSS short cut - the four values for margin run clockwise from the top.)
+The four values for margin run clockwise from the top.
 
-### CSS Variables
+<!-- ### CSS Variables
 
 (These)[https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables] allow us to store commonly used information as a variable for use throughout our css.
 
@@ -352,7 +372,7 @@ aside {
   ...
   background-color: var(--bg-color); 
 }
-```
+``` -->
 
 ### Floating
 
@@ -374,13 +394,20 @@ Note the float property and how the text wraps around it before and after we hav
 
 ## Converting the document to fixed width
 
-Currently our document flexes as we make the browser wider - it makes use of all the available horizontal space. While flexibility is good practice, many sites use fixed widths to improve readability.
+Currently our document flexes as we make the browser wider to makes use of all the available horizontal space. While flexibility is generally a good practice, most sites use fixed widths to improve readability. cf [Wikipedia](https://en.wikipedia.org/wiki/Line_length) vs [The Guardian](https://www.theguardian.com)
 
 Add wrapper `<div id="wrapper">` to entire content area (after the `<body>` tag and close it before the closing `</body>` tag) and add the following to our CSS style block.
 
 ```css
 #wrapper {
     width: 840px;
+}
+```
+
+vs.
+
+```css
+#wrapper {
     max-width: 840px;
 }
 ```
@@ -391,6 +418,7 @@ Then center it in the browser.
 #wrapper {
     max-width: 840px;
     margin: 0 auto 0 auto;
+    border: 1px solid #999;
 }
 ```
 
@@ -465,12 +493,12 @@ aside ul {
 
 ### Inline, In Page & External CSS
 
-There are three ways to add CSS to an HTML document:
+We've already seen the link tag and @import methods of adding css to our document. Let's examine all the ways to add CSS to an HTML document:
 
-* Inline via the HTML style attribute
-* In page via the HTML style tag
-* As an external .CSS file via linking (HTML <link> tag)
-* As an external .CSS file via importing (CSS @import statements)
+* Inline via the HTML `style=` attribute
+* In page via the HTML `<style>` tag
+* As an external .CSS file via linking (HTML `<link>` tag)
+* As an external .CSS file via importing (CSS `@import` statements)
 
 Inline styles are inefficient: 
 
@@ -478,9 +506,9 @@ Inline styles are inefficient:
 <p style="margin-top: 12px;">
 ```
 
-However, this method is occasionally acceptable and often used when dynamically changing the page after it has been loaded in the browser. 
+However, this method is often used when dynamically changing the page after it has been loaded in the browser. 
 
-Try using the inspector to inspect a dynamic page (such as http://www.w3schools.com/jquery/jquery_animate.asp). Note how it displays dynamic changes to the HTML by temporarily highlighting them.
+Try using the inspector to inspect a dynamic page (such as http://www.w3schools.com/jquery/jquery_animate.asp). Note how it displays animation by temporarily highlighting inline css in purple.
 
 Remove the CSS from the head of the document and paste it into a new text document. Save it in a new css directory calling it styles.css. We have two options here: link to our CSS file using an HTML tag, or to use a CSS @import statement.
 
@@ -496,73 +524,7 @@ Try not to use the alternative:
 </style>
 ```
 
-Ideally, all your stylesheets should be in one file to reduce the number of requests the browser needs to make to the server (a major cause of slow loading sites).
-
-### Adding Simple Responsiveness
-
-At the bottom of the stylesheet
-
-```css
-@media print {
-    * {
-        display: none !important;
-    }
-}
-
-@media all and (max-width: 800px){
-    .nav {
-        top: 0;
-        left:0;
-        margin: 0;
-    }
-    aside {
-        position: static;
-        float: left;
-        margin-right: 20px;
-    }
-    article {
-        margin-left: 20px;
-    }
-    blockquote {
-        width: 100%;
-        float: none;
-        margin: 0;
-    }
-}
-```
-
-## Aside - Server Accounts
-
-Your username is the first seven letters of your last name + the first letter of first name. e.g `devereld`
-
-(If your name is less than 7 characters your username is your last name plus the first letter of your first name.)
-
-Test to see if your account is active by entering this URL into a new browser tab (use your username after the tilde):
-
-`http://oit2.scps.nyu.edu/~******/`
-
-Your password is your first initial plus your last initial plus 123890. e.g. `dd123890`
-
-The computer name is `oit2.scps.nyu.edu`
-
-You can upload and download files using SFTP (sercure file transfer protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you *must* use port 22 or SFTP in order to connect.
-
-Note - when you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~******/`. Upload assignments into that folder.
-
-
-### Using Flexbox (optional - demo only)
-
-```css
-.nav {
-    display: flex;
-    padding: 0;
-}
-.nav li { 
-    flex: 1;
-    background-color: #f0dfb4;
-    list-style: none;
-}
-```
+Note: ideally, all your stylesheets should be in one file to reduce the number of requests the browser needs to make to the server (a major cause of slow loading sites).
 
 
 ## Some simple CSS3 Enhancements
@@ -621,6 +583,53 @@ Add the following to our CSS block:
  }
 ```
 Note that the tab is now highlighted. 
+
+### Adding Simple Responsiveness
+
+At the bottom of the stylesheet
+
+```css
+@media print {
+    * {
+        display: none !important;
+    }
+}
+
+@media all and (max-width: 800px){
+    .nav {
+        top: 0;
+        left:0;
+        margin: 0;
+    }
+    aside {
+        position: static;
+        float: left;
+        margin-right: 20px;
+    }
+    article {
+        margin-left: 20px;
+    }
+    blockquote {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+}
+```
+
+### Using Flexbox (optional - demo only)
+
+```css
+.nav {
+    display: flex;
+    padding: 0;
+}
+.nav li { 
+    flex: 1;
+    background-color: #f0dfb4;
+    list-style: none;
+}
+```
 
 
 ### Notes
