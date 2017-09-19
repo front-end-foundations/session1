@@ -153,7 +153,7 @@ Add `box-sizing: border-box/content-box` to review box model options.
 
 ### Media Queries
 
-Add a media query (min and max width):
+Add a media query:
 
 ```
 @media (min-width: 500px){
@@ -164,6 +164,8 @@ Add a media query (min and max width):
 ```
 
 Note the inspector overrides. min-width = greater than. The css for > 500px is *added* to the styles when the condition is true.
+
+Change it to:
 
 ```
 @media (max-width: 500px){
@@ -181,6 +183,7 @@ Note the inspector overrides (cascade). max-width = less than. The css for < (le
 * misspelling
 * bad selectors
 * missing units
+* whitespace
 
 
 # Exercise - Converting to Standards
