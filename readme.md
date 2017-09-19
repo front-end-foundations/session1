@@ -81,19 +81,6 @@ Block elements are interpreted as a box by the browser. But boxes have other cha
 
 * Try: adding a 3em margin to the em tag with and w/o display: block
 
-#####Lesson
-
-HTML tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They convey meaning to the code that comprises the document and make it human readable. * HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) * - not stylistically important. 
-
-This is part of the *separation of concerns*. For example:
-
-* content, display, behavior (html, css, javascript)
-* model, view, controller (MVC - database, interface, logic)
-
-Concerns are the different aspects of software functionality. For instance, the "business logic" of software is a concern, and the interface through which a person uses this logic is another.
-
-The separation of concerns is keeping the code for each of these concerns separate. Changing the interface should not require changing the business logic code, and vice versa.
-
 Let's add padding, border and override the margins.
 
 ```html
@@ -109,6 +96,20 @@ p {
 ```
 
 Refresh the page and inspect the paragraph again. Note the changes in the inspector.
+
+##### Semantics
+
+HTML tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They convey meaning to the code that comprises the document and make it human readable. * HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) * - not stylistically important. 
+
+This is part of the *separation of concerns*. For example:
+
+* content, display, behavior (html, css, javascript)
+* model, view, controller (MVC - database, interface, logic)
+
+Concerns are the different aspects of software functionality. For instance, the "business logic" of software is a concern, and the interface through which a person uses this logic is another.
+
+The separation of concerns is keeping the code for each of these concerns separate. Changing the interface should not require changing the business logic code, and vice versa.
+
 
 ## CSS syntax, whitespace and comments
 

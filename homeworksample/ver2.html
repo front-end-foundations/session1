@@ -26,6 +26,7 @@ body {
 	width: 900px;
 	margin: 0 auto;
 	overflow: hidden;
+	display: flex;
 }
 
 #brand {
@@ -70,24 +71,11 @@ body {
 }
 
 .secondary {
-	float: left;
-	display:inline;
-
+	width: 230px;
+	margin: 20px 20px 0 0;
 }
 
 .primary {
-	float: right;
-	display:inline;
-
-}
-
-#wrapper .secondary {
-	width: 230px;
-	margin: 20px 0 0 0;
-
-}
-
-#wrapper .primary {
 	width: 660px;
 	margin: 20px 0 80px 0;
 }
@@ -97,13 +85,10 @@ body {
 	padding: 5px;
 	background: #f9f9f9;
 	border-radius: 7px;
-	display: block;
 	box-shadow: 2px 2px 2px #000;
 }
 
 #review div:first-child {
-	border-radius: 5px;
-	border: 1px dashed #999;
 	padding: 5px 20px 40px 20px;
 }
 
@@ -125,7 +110,7 @@ body {
 	color: #111;
 }
 
-#review p:first-of-type:first-letter {
+#review h2 + p:first-letter {
 	float: left;
 	font-family: lobster;
 	font-size: 85px;
@@ -135,9 +120,8 @@ body {
 	color: #F90;
 }
 
-#review p:first-of-type {
+#review h2 + p {
 	text-indent:0;
-	
 }
 
 #review h1 {
