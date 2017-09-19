@@ -19,7 +19,7 @@ Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-fo
 Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
 
 1. Download the original files as distributed in class and, using the steps above, try to recreate the design we did in class.
-1. Examine the provided homework samples for inspiration and try your hand at redesigning the page using the CSS techniques described in class as well as in the *CSS3 for Web Designers* reading assignment below.
+1. Examine the provided homework samples (in the homeworksamples folder) and, using the developer tools in Chrome, pick a few formatting features and try to apply them to your page.
 1. Upload your efforts to oit2.scps.nyu.edu as outlined below and send a notification via the `frontend-foundations` slack channel
 
 ## Reading 
@@ -633,6 +633,11 @@ At the bottom of the stylesheet
 
 
 ### Notes
+
+slack
+daniel.deverell@nyu.edu
+simple
+klynch@cbury.org • email address bounced
 
 ```
 Delete:
