@@ -18,9 +18,12 @@ Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-fo
 
 Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
 
-1. Download the original files as distributed in class and, using the steps above, try to recreate the design we did in class.
-1. Examine the provided homework samples (in the homeworksamples folder) and, using the developer tools in Chrome, pick a few formatting features and try to apply them to your page.
-1. Upload your efforts to oit2.scps.nyu.edu as outlined below and send a notification via the `frontend-foundations` slack channel
+1. download an FTP application and try logging into your server account from home / work
+1. join the slack channel
+
+1. Download the original files as distributed in class and, using the steps below, try to recreate the design we did in class.
+1. Examine the provided homework samples (in the homeworksamples folder) in Chrome and, using the developer tools, pick two or three formatting features and try to apply them to your page. 
+1. Upload your efforts to oit2.scps.nyu.edu as outlined below and send a link to you file via the *frontend-foundations* slack channel
 
 ## Reading 
 * [HTML5 for Web Designers](https://html5forwebdesigners.com) - chapters 1, 2, 5 and 6. (online - no need to purchase the book)

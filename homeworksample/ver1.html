@@ -6,231 +6,206 @@
 	<title>Cleveland Eats: Matsu</title>
 	<style type="text/css">
 
-		* { margin:0; padding:0; }
+	* { margin:0; padding:0; }
 
-		@font-face {
-			font-family: SansitaOne;
-			src: url('fonts/SansitaOne.ttf');
-		}
-		@font-face {
-			font-family: Poly;
-			src: url('fonts/Poly-Regular.ttf');
-		}
-		body {
-			color: #333;
-			font-size: 12px;
-			font-family: Arial, Helvetica, sans-serif;
-			background: #999;
-		}
-		a { }
-		#wrapper {
-			width: 900px;
-			border: 1px solid #333;
-			margin: 20px auto;
-			position: relative;
-			-moz-border-radius: 10px;
-			border-radius: 10px;
-			background: #222;
-			-ms-box-shadow: 4px 4px 20px #333;
-			-webkit-box-shadow: 4px 4px 20px #333;
-			-moz-box-shadow: 4px 4px 20px #333;
-			box-shadow: 4px 4px 20px rgba(33,33,33,0.4);
-		}
-		#main-nav {
-			list-style: none;
-			position: absolute;
-			top: 5px;
-			right: 20px;
-		}
+	@font-face {
+		font-family: SansitaOne;
+		src: url('fonts/SansitaOne.ttf');
+	}
+	@font-face {
+		font-family: Poly;
+		src: url('fonts/Poly-Regular.ttf');
+	}
+	body {
+		color: #333;
+		font-size: 12px;
+		font-family: Arial, Helvetica, sans-serif;
+		background: #999;
+	}
+	a { }
+	#wrapper {
+		width: 900px;
+		border: 1px solid #333;
+		margin: 20px auto;
+		position: relative;
+		border-radius: 10px;
+		background: #222;
+		box-shadow: 4px 4px 20px rgba(33,33,33,0.4);
+	}
 
-		#main-nav li {float: left;}
-		#main-nav a {
-			color: #888;
-			text-decoration: none;
-			padding: 6px;
-			border-bottom: 1px solid #999; 
+	#info {
+		position: absolute;
+		padding:30px 0 30px 15px;
+		left: 0;
+		top: 200px;
+		background: #f0dfb4;
+		width: 140px;
+		border-radius: 0 12px 12px 0;
+		box-shadow: 4px 4px 4px rgba(33,33,33,0.4); /* #fff  */
+		background: linear-gradient(top, #f9eaa9 0%,#f9eaa9 100%); /* W3C */
+		color: #333;
+	}
 
-		}
-		#main-nav a:hover {
-			color: #F90;
-		}
-		#info {
-			position: absolute;
-			padding:30px 0 30px 15px;
-			left: 0;
-			top: 200px;
-			background: #f0dfb4;
-			width: 140px;
-			border-radius: 0 12px 12px 0;
-			box-shadow: 4px 4px 4px rgba(33,33,33,0.4); /* #fff  */
-			background: linear-gradient(top, #f9eaa9 0%,#f9eaa9 100%); /* W3C */
-			color: #333;
+	#info li {
+		list-style:none;
+	}
 
-		}
+	#info li a {color: #111;
+	}
 
-		#info li {
-			list-style:none;
-		}
+	#info li:first-child {
+		font-family: sansitaone;
+		font-size: 15px;
+		border-top: #333 1px solid;
+		width: 110px;
+		margin-top: 10px;
+		padding: 10px 0 0 0;
+	}
 
-		#info li a {color: #111;
-		}
+	#info li:last-child {
+		border-bottom: #333 1px solid;
+		width: 110px;
+		padding: 0 0 10px 0;
+	}
 
-		#info li:first-child {
-			font-family: sansitaone;
-			font-size: 15px;
-			border-top: #333 1px solid;
-			width: 110px;
-			margin-top: 10px;
-			padding: 10px 0 0 0;
-		}
+	a {
+		text-decoration: none;
+		font-weight: bold;
+		color:#F90;
+	}
 
-		#info li:last-child {
-			border-bottom: #333 1px solid;
-			width: 110px;
-			padding: 0 0 10px 0;
-		}
+	a:hover {
+		text-decoration: underline;
+	}
 
-		a {
-			text-decoration: none;
-			font-weight: bold;
-			color:#F90;
-		}
+	#review { 
+		padding: 50px 50px 50px 200px;
+		background: #fff;
+		margin-bottom: 30px;
+	}
 
-		a:hover {
-			text-decoration: underline;
-		}
+	#review p:first-of-type {
+		text-indent: 0; 
+		font-size: 16px;
+		line-height: 120%;	 
+	}
 
-		#review { 
-			padding: 50px 50px 50px 200px;
-			background: #fff;
-			margin-bottom: 30px;
-		}
-
-		#review p:first-of-type {
-			text-indent: 0; 
-			font-size: 16px;
-			line-height: 120%;	 
-		}
-
-		#sushi {
-			float: left;
-			margin: 30px 30px 30px 0;
-
-		}
-
-		p {margin: 0 0 12px 0;
-			text-indent: 1em;
-			line-height: 150%;
-			font-family:Arial, Helvetica, sans-serif;
-			font-size: 12px;
-		}
-
-		p::first-line {
-		}
-
-		#nav a { 
-			font-family: sansitaone;
-			text-decoration:none; color:#555; padding: 4px 8px; 
-			border:1px solid #9b8748; border-bottom:none; margin:0 6px 0 0; float:left;
-			background: #f9eaa9 url("i/off_bg.gif") repeat-x top left; 
-			border-radius: 8px 8px 0 0;
-			width: 150px;
-			text-align: center;
-			position: relative; top: 6px;
-		}
-		
-		#nav a:hover, 
-		.p-cuisines #t-cuisines a, 
-		.p-chefs #t-chefs a
-		{ background:#fff url("i/on_bg.gif") repeat-x top left;
-		border-color:#727377; padding-bottom:5px;
-		color: #000;
-		padding-top: 10px;
-		position: inherit;
+	#sushi {
+		float: left;
+		margin: 30px 30px 30px 0;
 
 	}
-	/* LVHAF */
-	#nav { 
-		background:#222 url("i/nav_bg.gif") repeat-x bottom left;
-		margin:0; padding:10px 0 0 30px;
-		list-style:none; float:left; width:870px;}
-		#nav li { margin:0; padding:0; float:left; font-size:16px; }
 
-		#title {
-			font-size: 70px;
-			color: #F90;
-			font-family: SansitaOne;
-			padding: 10px 30px 0px 30px;
-			text-shadow: #000 2px 4px 1px;
-		}
+	p {margin: 0 0 12px 0;
+		text-indent: 1em;
+		line-height: 150%;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size: 12px;
+	}
 
-		#deck {
-			font-size: 20px;
-			color: #999;
-			font-family: poly;
-			padding: 0 30px 10px 30px;
-			letter-spacing: .2em;
+	#nav a { 
+		font-family: sansitaone;
+		text-decoration:none; color:#555; padding: 4px 8px; 
+		border:1px solid #9b8748; border-bottom:none; margin:0 6px 0 0; float:left;
+		background: #f9eaa9 url("i/off_bg.gif") repeat-x top left; 
+		border-radius: 8px 8px 0 0;
+		width: 150px;
+		text-align: center;
+		position: relative; top: 6px;
+	}
 
-		}
+	#nav a:hover, 
+	.p-cuisines #t-cuisines a, 
+	.p-chefs #t-chefs a
+	{ background:#fff url("i/on_bg.gif") repeat-x top left;
+	border-color:#727377; padding-bottom:5px;
+	color: #000;
+	padding-top: 10px;
+	position: inherit;
 
-		#name {
-			font-family: sansitaone;
-			color: #000;
-			font-size: 25px;
-			width: 650px;
-			border-bottom: 2px #ccc dotted;
-			margin: 20px 0 0 0;
-		}
+}
+/* LVHAF */
+#nav { 
+	background:#222 url("i/nav_bg.gif") repeat-x bottom left;
+	margin:0; padding:10px 0 0 30px;
+	list-style:none; float:left; width:870px;
+}
 
-		#sum {
-			font-family: poly;
-			color: #000;
-			font-size: 18px;
-			margin: 5px 0 30px 0;
-			padding:0 0 5px 0;
-			width: 650px;
-			border-bottom: 2px #ccc dotted;
-		}
+#nav li { margin:0; padding:0; float:left; font-size:16px; }
 
-		#basil {
-			margin: auto;
-			position: absolute;
-			top: 80px;
-			right: -110px;
-		}
+#title {
+	font-size: 70px;
+	color: #F90;
+	font-family: SansitaOne;
+	padding: 10px 30px 0px 30px;
+	text-shadow: #000 2px 4px 1px;
+}
 
-		blockquote {
-			font-size: 25px;
-			color:#000;
-			font-family: poly;
-			margin: 15px 0 15px 60px;
-			padding: 15px 0;
-			text-indent: -.4em;
-			display:block;
-			float: right;
-			width: 230px;
-			border-top: 3px solid #F90;
-			border-bottom: 3px solid #F90;
+#deck {
+	font-size: 20px;
+	color: #999;
+	font-family: poly;
+	padding: 0 30px 10px 30px;
+	letter-spacing: .2em;
 
-		}
+}
 
+#name {
+	font-family: sansitaone;
+	color: #000;
+	font-size: 25px;
+	width: 650px;
+	border-bottom: 2px #ccc dotted;
+	margin: 20px 0 0 0;
+}
 
-		.rating1 {
-			text-align: right;
-			font-family: sansitaone;
-			font-size: 14px;
-			color: #444;
-		}
+#sum {
+	font-family: poly;
+	color: #000;
+	font-size: 18px;
+	margin: 5px 0 30px 0;
+	padding:0 0 5px 0;
+	width: 650px;
+	border-bottom: 2px #ccc dotted;
+}
 
-		.rating2 {
-			text-align: left;
-			font-family: Arial, Helvetica, sans-serif;
-			font-size: 12px;
-			color: #111;
-			font-style: italic;
-		}
+#basil {
+	margin: auto;
+	position: absolute;
+	top: 80px;
+	right: -110px;
+}
 
-	</style>
+blockquote {
+	font-size: 25px;
+	color:#000;
+	font-family: poly;
+	margin: 15px 0 15px 60px;
+	padding: 15px 0;
+	text-indent: -.4em;
+	display:block;
+	float: right;
+	width: 230px;
+	border-top: 3px solid #F90;
+	border-bottom: 3px solid #F90;
+}
+
+.rating1 {
+	text-align: right;
+	font-family: sansitaone;
+	font-size: 14px;
+	color: #444;
+}
+
+.rating2 {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #111;
+	font-style: italic;
+}
+
+</style>
 </head>
 
 <body class="p-cuisines">
@@ -238,14 +213,6 @@
 
 	<h1 id="title">Cleveland Eats</h1>
 	<h2 id="deck">A Guide to Fine Northeast Ohio Dining</h2>
-
-	<ul id="main-nav">
-		<li><a href="ver2.html">my profile</a></li>
-		<li><a href="ver2.html">logout</a></li>
-		<li><a href="ver2.html">top 10</a></li>
-		<li><a href="ver2.html">search</a></li>
-		<li><a href="ver2.html">contact us</a></li>
-	</ul>
 
 	<ul id="nav">
 		<li id="t-cuisines"><a href="ver1.html">Cuisines</a></li>
