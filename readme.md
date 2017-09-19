@@ -16,14 +16,13 @@ Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-fo
 
 ## Homework
 
-Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
-
-1. download an FTP application and try logging into your server account from home / work
-1. join the slack channel
-
+1. Download an FTP application and try logging into your server account from home / work.
+1. Join the slack channel.
 1. Download the original files as distributed in class and, using the steps below, try to recreate the design we did in class.
-1. Examine the provided homework samples (in the homeworksamples folder) in Chrome and, using the developer tools, pick two or three formatting features and try to apply them to your page. 
+1. Examine the provided homework samples (in the homeworksamples folder) in Chrome and, using the developer tools, pick two or three formatting features and try to apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
 1. Upload your efforts to oit2.scps.nyu.edu as outlined below and send a link to you file via the *frontend-foundations* slack channel
+
+Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
 
 ## Reading 
 * [HTML5 for Web Designers](https://html5forwebdesigners.com) - chapters 1, 2, 5 and 6. (online - no need to purchase the book)
@@ -31,9 +30,7 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 
 ## Server Accounts
 
-Your username is the first seven letters of your last name + the first letter of first name. e.g `devereld`
-
-(If your name is less than 7 characters your username is your last name plus the first letter of your first name.)
+Your username is the first seven letters of your last name + the first letter of first name. e.g `devereld`. (If your name is less than 7 characters your username is your last name plus the first letter of your first name.)
 
 Test to see if your account is active by entering this URL into a new browser tab (use your username after the tilde):
 
@@ -56,8 +53,8 @@ Despite recent moves by Microsoft - Safari, Firefox and especially Chrome are th
 
 You should take some time to familiarize yourself with their full functionality. 
 
-* The inspector is your first line of defense when troubleshooting.
-* Safari's developer tool is not turned on by default and most be enabled in Safari preferences.
+* The inspector is your first line of defense when troubleshooting and should be kept open at all times.
+* Safari's developer tools are not turned on by default and must be enabled in Safari preferences.
 
 ### User Agent Styles
 
