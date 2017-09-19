@@ -34,13 +34,13 @@ Your username is the first seven letters of your last name + the first letter of
 
 Test to see if your account is active by entering this URL into a new browser tab (use your username after the tilde):
 
-`http://oit2.scps.nyu.edu/~******/`
+`http://oit2.scps.nyu.edu/~******/` where `******` is your username.
 
 Your password is your first initial plus your last initial plus 123890. e.g. `dd123890`
 
 The computer name is `oit2.scps.nyu.edu`
 
-You can upload and download files using SFTP (sercure file transfer protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you *must* use port 22 or SFTP in order to connect.
+You can upload and download files using SFTP (secure file transfer protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you *must* use port 22 or SFTP in order to connect.
 
 Note - when you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~******/`. Upload assignments into that folder.
 
@@ -81,7 +81,9 @@ Block elements are interpreted as a box by the browser. But boxes have other cha
 
 * Try: adding a 3em margin to the em tag with and w/o display: block
 
-Lesson: html tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They are meaningful though and convey that meaning to the code that comprises the document and make it human readable. * html tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) * - not stylistically important. 
+#####Lesson
+
+HTML tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They convey meaning to the code that comprises the document and make it human readable. * HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) * - not stylistically important. 
 
 This is part of the *separation of concerns*. For example:
 
@@ -289,8 +291,8 @@ Add the following to our style block:
     background-color: #600
 }
 .nav a:hover {
-  color: #fff; 
-  background-color: #b10000; 
+  color: #222; 
+  background-color: #bada55; 
 }
 ```
 
@@ -306,7 +308,7 @@ transition: all 0.5s linear;
 
 Edit the animation using the inspector's animation settings.
 
-Animate only one difference:
+To animate only one difference specify it instead of `all`:
 
 ```
 transition: background-color 0.5s linear;
