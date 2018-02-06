@@ -22,26 +22,65 @@ When you log into your account you will see a number of files and folders. The `
 
 ## Homework
 
-1. Download the files as distributed in class from Github and, using the notes below, try to recreate the design we did in class from scratch
+1. Download Sublime text and install [Package Control](https://packagecontrol.io/) on your computer
+1. Install [Emmet](https://packagecontrol.io/packages/Emmet) into Sublime text using Package Control
+1. Download the files as distributed in class from Github and, using [the notes below](https://github.com/front-end-foundations/session1#exercise---converting-to-standards), try to recreate the design we did in class from scratch
 1. Examine the provided homework samples (in the homeworksamples folder) in Chrome's developer tools. Pick two or three visual formatting features that appeal to you and try to apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
 
 Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
 
 ## Additional Reading
 
+These are good resources for absolute beginners and go into more depth (in some areas) than we will have time for in class. They are rather long but you should try to watch them over the first two weeks of the semester.
+
 * Video: [HTML Crash Course for Absolute Beginners](https://youtu.be/UB1O30fR-EE)
 * Video: [CSS Crash Course for Absolute Beginners](https://youtu.be/yfoY53QXEnI)
 
-## The Browser and Developer Tools
+Be sure to [download the accompanying files](https://www.youtube.com/redirect?redir_token=1Yb19FwXTj2Zp4L-bRWo-VIllCl8MTUxODAxNjc4OUAxNTE3OTMwMzg5&event=video_description&v=UB1O30fR-EE&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fhtmlcheatsheet.zip) in the comments in order to follow along in a text editor.
 
-Open `box-model.html` in Chrome, right click on the text and select Inspect.
+## Text Editors, Browsers and Developer Tools
 
-Despite recent moves by Microsoft - Safari, Firefox and especially Chrome are the browsers of choice for web designers. One of the reasons for this is their superior developer tools.
+In this class we will be using [Sublime Text](https://www.sublimetext.com/).
 
-You should take some time to familiarize yourself with their full functionality.
+Other popular text editors you can try include:
 
-* The inspector is your first line of defense when troubleshooting and should be kept open at all times.
-* Safari's developer tools are not turned on by default and must be enabled in Safari preferences.
+* [Atom](https://atom.io/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+In order to extend Sublime Text you need to install [Package Control](https://packagecontrol.io/). Once installed you can take advantage of a huge assortment of add ons (or Packages).s
+
+I will demonstrate a couple of the more [popular packages](https://packagecontrol.io/browse/popular) for Sublime text over the course of the semester.
+
+(Note that in NYU labs, configuration changes are not saved after restart. You should install Package Control, Emmet and other Packages that might be useful to you _on your own computer_.)
+
+Create the following in [Sublime Text](https://www.sublimetext.com/):
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>Box Model</title>
+    <style media="screen">
+
+    </style>
+  </head>
+  <body>
+    <p>A paragraph is a block element. Is is rendered inside a box. <em>Italic text</em> is an inline element.
+    Here is a <a href="#">link</a>.</p>
+  </body>
+</html>
+```
+
+* html comments
+* lorem
+* auto complete
+
+Save it as `box-model.html`
+
+In Chrome, right click on the text and choose `Inspect`.
+
+* The inspector is your first line of defense when troubleshooting and should be kept open at all times
+* Safari's developer tools are not turned on by default and must be enabled in Safari preferences
 
 ### User Agent Styles
 
@@ -121,7 +160,7 @@ border-width: 3px;
 
 See the full specifications in the inspector (use the triangle drop down).
 
-### Box Sizing
+### Theory: Box Sizing
 
 Boxes are additive by default - their width will be a combination of width, padding and border (margins are outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
@@ -136,31 +175,39 @@ Add `box-sizing: border-box/content-box` to review box model options.
 </style>
 ```
 
-### Media Queries
+### Theory: Media Queries
 
 Add a media query:
 
-```
-@media (min-width: 500px){
-    p {
-        border: 3px solid red;
-    }
+```css
+@media (min-width: 500px) {
+  p {
+    border: 3px solid red;
+  }
 }
 ```
 
-Note the inspector overrides. min-width = greater than. The css for > 500px is _added_ to the styles when the condition is true.
+Note:
+
+* overrides in the inspector
+* min-width = greater than
+* the css for > (greater than) 500px is _added_ to the styles when the condition is true.
 
 Change it to:
 
-```
-@media (max-width: 500px){
-    p {
-        width: 100%;
-    }
+```css
+@media (max-width: 500px) {
+  p {
+    width: 100%;
+  }
 }
 ```
 
-Note the inspector overrides (cascade). max-width = less than. The css for < (less than) 500px is _added_ to the styles when the condition is true.
+Note
+
+* the inspector overrides (cascade)
+* max-width = less than
+* the css for < (less than) 500px is _added_ to the styles when the condition is true.
 
 ### Debugging CSS with the inspector
 
