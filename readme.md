@@ -2,6 +2,8 @@
 
 ## Resources
 
+[Email](mailto:daniel.deverell@nyu.edu)
+
 [Syllabus](http://daniel.deverell.com/)
 
 [Github](https://github.com/front-end-foundations) - this will be the source for all files used in this class
