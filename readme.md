@@ -1,36 +1,12 @@
 # Session One
 
-## Textbooks
-
-Jeremy Keith & Rachel Andrew - [HTML5 for Web Designers](https://html5forwebdesigners.com) (content is on the right)
-
-Dan Cederholm - [CSS3 for Web Designers](https://abookapart.com/products/css3-for-web-designers)
-
-Mat Marquis - [JavaScript for Web Designers](https://abookapart.com/products/javascript-for-web-designers)
-
-Ethan Marcotte - [Responsive Web Design](https://abookapart.com/products/responsive-web-design)
-
-Dan Cederholm - [SASS for Web Designers](https://abookapart.com/products/sass-for-web-designers)
+## Resources
 
 [Syllabus](http://daniel.deverell.com/)
 
-## Homework
+[Github](https://github.com/front-end-foundations) - this will be the source for all files used in this class
 
-1. Download an FTP application and try logging into your server account from home / work.
-1. Join the slack channel.
-1. Download the original files as distributed in class and, using the steps below, try to recreate the design we did in class.
-1. Examine the provided homework samples (in the homeworksamples folder) in Chrome and, using the developer tools, pick two or three formatting features and try to apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
-1. Upload your efforts to oit2.scps.nyu.edu as outlined below and send a link to you file via the *frontend-foundations* slack channel
-
-Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
-
-## Reading 
-* [HTML5 for Web Designers](https://html5forwebdesigners.com) - chapters 1, 2, 5 and 6. (online - no need to purchase the book)
-* [CSS3 for Web Designers](https://abookapart.com/products/css3-for-web-designers) - purchase and start
-
-## Server Accounts
-
-Your username is the first seven letters of your last name + the first letter of first name. e.g `devereld`. (If your name is less than 7 characters your username is your last name plus the first letter of your first name.)
+You will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `devereld`. (If your name is less than 7 characters your username is your entire last name plus the first letter of your first name.)
 
 Test to see if your account is active by entering this URL into a new browser tab (use your username after the tilde):
 
@@ -40,40 +16,50 @@ Your password is your first initial plus your last initial plus 123890. e.g. `dd
 
 The computer name is `oit2.scps.nyu.edu`
 
-You can upload and download files using SFTP (secure file transfer protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you *must* use port 22 or SFTP in order to connect.
+You can upload and download files using SFTP (Secure File Transfer Protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you _must_ use port 22 or SFTP in order to connect.
 
-Note - when you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~******/`. Upload assignments into that folder.
+When you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~******/`.
 
+## Homework
+
+1. Download the files as distributed in class from Github and, using the notes below, try to recreate the design we did in class from scratch
+1. Examine the provided homework samples (in the homeworksamples folder) in Chrome's developer tools. Pick two or three visual formatting features that appeal to you and try to apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
+
+Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
+
+## Additional Reading
+
+* Video: [HTML Crash Course for Absolute Beginners](https://youtu.be/UB1O30fR-EE)
+* Video: [CSS Crash Course for Absolute Beginners](https://youtu.be/yfoY53QXEnI)
 
 ## The Browser and Developer Tools
 
 Open `box-model.html` in Chrome, right click on the text and select Inspect.
 
-Despite recent moves by Microsoft - Safari, Firefox and especially Chrome are the browsers of choice for web designers. One of the reasons for this is their superior developer tools. 
+Despite recent moves by Microsoft - Safari, Firefox and especially Chrome are the browsers of choice for web designers. One of the reasons for this is their superior developer tools.
 
-You should take some time to familiarize yourself with their full functionality. 
+You should take some time to familiarize yourself with their full functionality.
 
 * The inspector is your first line of defense when troubleshooting and should be kept open at all times.
 * Safari's developer tools are not turned on by default and must be enabled in Safari preferences.
 
 ### User Agent Styles
 
-User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the paragraph. 
+User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the paragraph.
 
 ### Block vs Inline
 
-Most HTML tags or elements all have a default `display` property which is set to `block` which means that they create a rectangular region in the browser. 
+Most HTML tags or elements all have a default `display` property which is set to `block` which means that they create a rectangular region in the browser.
 
-The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. 
+The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph.
 
-* Try: use the inspector to set the em tag to display block. 
+* Try: use the inspector to set the em tag to display block.
 
 The paragraph tag - `<p>` - creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
-A `<div>` tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. 
+A `<div>` tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics.
 
 A `<span>` tag is used to create arbitrary inline (like `<em>`) elements.
-
 
 ### The Box Model
 
@@ -85,23 +71,23 @@ Let's add padding, border and override the margins.
 
 ```html
 <style media="screen">
-p { 
-    padding: 16px; 
-    margin: 6px; 
+p {
+    padding: 16px;
+    margin: 6px;
     border: 3px solid #333;
     height: 200px;
     width: 300px;
 }
-</style> 
+</style>
 ```
 
 Refresh the page and inspect the paragraph again. Note the changes in the inspector.
 
 ##### Semantics
 
-HTML tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They convey meaning to the code that comprises the document and make it human readable. * HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) * - not stylistically important. 
+HTML tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They convey meaning to the code that comprises the document and make it human readable. _ HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) _ - not stylistically important.
 
-This is part of the *separation of concerns*. For example:
+This is part of the _separation of concerns_. For example:
 
 * content, display, behavior (html, css, javascript)
 * model, view, controller (MVC - database, interface, logic)
@@ -110,19 +96,18 @@ Concerns are the different aspects of software functionality. For instance, the 
 
 The separation of concerns is keeping the code for each of these concerns separate. Changing the interface should not require changing the business logic code, and vice versa.
 
-
 ## CSS syntax, whitespace and comments
 
 CSS rules consist of a selector, a set of curly braces, and a series of property(s) and values separated by a full colon and terminated by a semi colon.
 
 ```css
-selector { 
-    property1: value; 
-    property2: value; 
-    }
+selector {
+  property1: value;
+  property2: value;
+}
 ```
 
-The selector determines which HTML will be selected. 
+The selector determines which HTML will be selected.
 
 The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit when used for measurements.
 
@@ -144,9 +129,9 @@ Add `box-sizing: border-box/content-box` to review box model options.
 
 ```html
 <style media="screen">
-    p { 
+    p {
         ...
-        box-sizing: border-box; 
+        box-sizing: border-box;
     }
 </style>
 ```
@@ -163,7 +148,7 @@ Add a media query:
 }
 ```
 
-Note the inspector overrides. min-width = greater than. The css for > 500px is *added* to the styles when the condition is true.
+Note the inspector overrides. min-width = greater than. The css for > 500px is _added_ to the styles when the condition is true.
 
 Change it to:
 
@@ -175,8 +160,7 @@ Change it to:
 }
 ```
 
-Note the inspector overrides (cascade). max-width = less than. The css for < (less than) 500px is *added* to the styles when the condition is true.
-
+Note the inspector overrides (cascade). max-width = less than. The css for < (less than) 500px is _added_ to the styles when the condition is true.
 
 ### Debugging CSS with the inspector
 
@@ -184,7 +168,6 @@ Note the inspector overrides (cascade). max-width = less than. The css for < (le
 * bad selectors
 * missing units
 * whitespace
-
 
 # Exercise - Converting to Standards
 
@@ -199,7 +182,7 @@ $ cd <path-to-folder>
 $ python -m SimpleHTTPServer 9000
 ```
 
-Add a CSS block within the `<head> `of index.html as follows:
+Add a CSS block within the `<head>`of index.html as follows:
 
 ```html
 <style>
@@ -213,7 +196,7 @@ Add a CSS block within the `<head> `of index.html as follows:
 
 ## Google fonts
 
-Google has a CDN offering (free fonts)[https://fonts.google.com] for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the `<link>` tag. 
+Google has a CDN offering (free fonts)[https://fonts.google.com] for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the `<link>` tag.
 
 We will use [Lato](https://fonts.google.com/specimen/Lato) for our main text and [Lobster](https://fonts.google.com/specimen/Lobster) for our branding.
 
@@ -246,11 +229,11 @@ header {
 }
 ```
 
-Note the bold property belongs to the H1 tag, not the header tag. 
+Note the bold property belongs to the H1 tag, not the header tag.
 
 ```css
-
-header h1, header h2 {
+header h1,
+header h2 {
   font-weight: normal;
 }
 ```
@@ -265,7 +248,7 @@ h2 {
 
 ## Formatting the Navigation
 
-Add a *class* to the `<ul>` that will form the navigation for our page.
+Add a _class_ to the `<ul>` that will form the navigation for our page.
 
 ```html
 <ul class="nav">
@@ -279,28 +262,28 @@ By doing so we have created a name space that allows us to differentiate the two
 Add the following to our style block:
 
 ```css
-.nav { 
+.nav {
   list-style: none;
   padding: 0;
 }
-.nav li { 
-    display: inline-block;
-    margin-right: 10px;
+.nav li {
+  display: inline-block;
+  margin-right: 10px;
 }
 .nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 4px;
-    display: block;
-    background-color: #600
+  color: #fff;
+  text-decoration: none;
+  padding: 4px;
+  display: block;
+  background-color: #600;
 }
 .nav a:hover {
-  color: #222; 
-  background-color: #bada55; 
+  color: #222;
+  background-color: #bada55;
 }
 ```
 
-Examine display options for making the buttons horizontal using block, float, inline-block, and flex. 
+Examine display options for making the buttons horizontal using block, float, inline-block, and flex.
 
 Examine the inspector's color picker. Note the ability to force element hover state.
 
@@ -320,33 +303,33 @@ transition: background-color 0.5s linear;
 
 ## Absolutely Positioning the Navigation
 
-*Edit* the nav CSS rule to position it
+_Edit_ the nav CSS rule to position it
 
 ```css
 .nav {
-    list-style:none;
-    padding: 0;
-    position: absolute;
-    right:0;
-    top: 60px;
-    }
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 60px;
+}
 ```
 
 Add an `<aside>` tag around the table and list then add the following CSS:
 
 ```css
 aside {
-  position: absolute; 
-  top: 200px; 
-  left: 10px; 
-  width: 180px; 
-  background-color: #F0DFB4; 
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  width: 180px;
+  background-color: #f0dfb4;
   padding: 6px;
-  border: 1px solid #600; 
+  border: 1px solid #600;
 }
 ```
 
-Note how the text flows under the aside. 
+Note how the text flows under the aside.
 
 Add margin to move the article over to the right:
 
@@ -385,14 +368,14 @@ aside {
 Format the pull quote and image:
 
 ```css
-blockquote  {
-  float: right; 
+blockquote {
+  float: right;
   width: 40%;
-  padding: 16px; 
-  font-size: 24px; 
+  padding: 16px;
+  font-size: 24px;
 }
 article img {
-    float:  right;
+  float: right;
 }
 ```
 
@@ -406,7 +389,7 @@ Add wrapper `<div id="wrapper">` to entire content area (after the `<body>` tag 
 
 ```css
 #wrapper {
-    width: 840px;
+  width: 840px;
 }
 ```
 
@@ -414,7 +397,7 @@ vs.
 
 ```css
 #wrapper {
-    max-width: 840px;
+  max-width: 840px;
 }
 ```
 
@@ -422,9 +405,9 @@ Then center it in the browser.
 
 ```css
 #wrapper {
-    max-width: 840px;
-    margin: 0 auto 0 auto;
-    border: 1px solid #999;
+  max-width: 840px;
+  margin: 0 auto 0 auto;
+  border: 1px solid #999;
 }
 ```
 
@@ -432,8 +415,8 @@ Add a relative positioning instruction.
 
 ```css
 #wrapper {
-    position: relative;
-    ...
+  position: relative;
+  ...;
 }
 ```
 
@@ -444,9 +427,8 @@ Note the impact the relative positioning has on the layout (toggle it on and off
 Edit the CSS body rule.
 
 ```css
-body {  
-    ...
-    background-color: #ddd;
+body {
+   : #ddd;
 }
 ```
 
@@ -456,7 +438,7 @@ Let's add a white background to wrapper.
 
 ```css
 #wrapper {
-    ...
+  ...
     background-color: #fff;
 }
 ```
@@ -465,10 +447,11 @@ Note the body background color is grayed out in the inspector. Neither it nor th
 
 ## Formatting the content
 
-Note the h1's margin outside the containing elements (not part of the box model). 
+Note the h1's margin outside the containing elements (not part of the box model).
 
 ```css
-h1, h2 {
+h1,
+h2 {
   color: #600;
   margin-top: 20px;
   margin-left: 20px;
@@ -487,12 +470,12 @@ Format elements in the list and table
 
 ```css
 aside th {
-    text-align: right;
+  text-align: right;
 }
 
 aside ul {
-  list-style: none; 
-  margin: 1em; 
+  list-style: none;
+  margin: 1em;
   padding: 0;
 }
 ```
@@ -506,13 +489,13 @@ We've already seen the link tag and @import methods of adding css to our documen
 * As an external .CSS file via linking (HTML `<link>` tag)
 * As an external .CSS file via importing (CSS `@import` statements)
 
-Inline styles are inefficient: 
+Inline styles are inefficient:
 
 ```html
 <p style="margin-top: 12px;">
 ```
 
-However, this method is often used when dynamically changing the page after it has been loaded in the browser. 
+However, this method is often used when dynamically changing the page after it has been loaded in the browser.
 
 Try using the inspector to inspect a dynamic page (such as http://www.w3schools.com/jquery/jquery_animate.asp). Note how it displays animation by temporarily highlighting inline css in purple.
 
@@ -532,7 +515,6 @@ Try not to use the alternative:
 
 Note: ideally, all your stylesheets should be in one file to reduce the number of requests the browser needs to make to the server (a major cause of slow loading sites).
 
-
 ## Some simple CSS3 Enhancements
 
 As work on a new version of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee (http://W3C.org) decided to break the process into modules. (For compatibility and advice see http://CanIuse.com.)
@@ -542,18 +524,17 @@ Some of the earlier CSS 3 specifications include provisions for visual effects s
 Add rounded corners to the info div. (See https://developer.mozilla.org/en/CSS/border-radius for specifications.)
 
 ```css
-aside {     
-    ...     
-    border-radius: 6px; 
+aside {
+  ...
+    border-radius: 6px;
 }
 ```
 
 Add a drop shadow to the CSS for the info div using the inspector (...).
 
 ```css
-aside { 
-    ...     
-    box-shadow: 3px 4px 3px 2px #d6d6d6;
+aside {
+   : 3px 4px 3px 2px #d6d6d6;
 }
 ```
 
@@ -564,7 +545,6 @@ box-shadow: 10px 10px 20px #ddd;
 ```
 
 <!-- Add CSS 3 Gradients. (See: http://www.colorzilla.com/gradient-editor/) -->
-
 
 ## Highlight one of the tabs
 
@@ -580,6 +560,7 @@ Add a list item to the nav list with a class of review-link.
 ```html
 <li><a class="t-review" href="#">Reviews</a></li>
 ```
+
 Add the following to our CSS block:
 
 ```css
@@ -588,7 +569,8 @@ Add the following to our CSS block:
     background:#600;
  }
 ```
-Note that the tab is now highlighted. 
+
+Note that the tab is now highlighted.
 
 ### Adding Simple Responsiveness
 
@@ -596,30 +578,30 @@ At the bottom of the stylesheet
 
 ```css
 @media print {
-    * {
-        display: none !important;
-    }
+  * {
+    display: none !important;
+  }
 }
 
-@media all and (max-width: 800px){
-    .nav {
-        top: 0;
-        left:0;
-        margin: 0;
-    }
-    aside {
-        position: static;
-        float: left;
-        margin-right: 20px;
-    }
-    article {
-        margin-left: 20px;
-    }
-    blockquote {
-        width: 100%;
-        float: none;
-        margin: 0;
-    }
+@media all and (max-width: 800px) {
+  .nav {
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  aside {
+    position: static;
+    float: left;
+    margin-right: 20px;
+  }
+  article {
+    margin-left: 20px;
+  }
+  blockquote {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
 }
 ```
 
@@ -627,16 +609,15 @@ At the bottom of the stylesheet
 
 ```css
 .nav {
-    display: flex;
-    padding: 0;
+  display: flex;
+  padding: 0;
 }
-.nav li { 
-    flex: 1;
-    background-color: #f0dfb4;
-    list-style: none;
+.nav li {
+  flex: 1;
+  background-color: #f0dfb4;
+  list-style: none;
 }
 ```
-
 
 ### Notes
 
@@ -654,11 +635,7 @@ Force a push:
 git push -f <remote> <branch>
 ```
 
-
 ```
 $ open /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
 $ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
-
-
-
