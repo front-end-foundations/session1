@@ -1,6 +1,6 @@
 # Session One
 
-Note - an updated version of the sushi exercise is available in session 2 - 3.
+Note to self - an updated version of the sushi exercise is available in session 3.
 
 ## Resources
 
