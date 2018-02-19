@@ -1,5 +1,7 @@
 # Session One
 
+Note - an updated version of the sushi exercise is available in session 2 - 3.
+
 ## Resources
 
 [Email](mailto:daniel.deverell@nyu.edu)
