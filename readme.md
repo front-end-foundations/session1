@@ -126,7 +126,7 @@ p {
 
 Refresh the page and inspect the paragraph again. Note the changes in the inspector.
 
-##### Semantics
+#### Semantics
 
 HTML tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They convey meaning to the code that comprises the document and make it human readable. _ HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) _ - not stylistically important.
 
@@ -156,7 +156,7 @@ The properties (there are many but we will be focusing on a few of the most usef
 
 Note the padding, margin and border properties. This are CSS shortcuts. Our border property could also be written in long form.
 
-```
+```css
 border-style: solid;
 border-color: #333;
 border-width: 3px;
@@ -220,7 +220,7 @@ Note
 * missing units
 * whitespace
 
-# Exercise - Converting to Standards
+## Exercise - Converting to Standards
 
 Open before.html in an editor and examine the HTML. Then examine index.html. The latter is an html5 document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
 
@@ -229,8 +229,8 @@ Examine index.html in the browser inspector to display the default (user agent) 
 ## Terminal
 
 ```sh
-$ cd <path-to-folder>
-$ python -m SimpleHTTPServer 9000
+cd <path-to-folder>
+python -m SimpleHTTPServer 9000
 ```
 
 Add a CSS block within the `<head>`of index.html as follows:
@@ -247,19 +247,19 @@ Add a CSS block within the `<head>`of index.html as follows:
 
 ## Google fonts
 
-Google has a CDN offering (free fonts)[https://fonts.google.com] for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the `<link>` tag.
+Google has a CDN offering [free fonts](https://fonts.google.com) for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the `<link>` tag.
 
 We will use [Lato](https://fonts.google.com/specimen/Lato) for our main text and [Lobster](https://fonts.google.com/specimen/Lobster) for our branding.
 
 ### Linking to a css file from css
 
-```
+```css
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 ```
 
 Add this to the top of our css (@import statements should always come first) to use the font within our stylesheet. Add to the body css rule:
 
-```
+```css
 font-family: 'Lato', sans-serif;
 ```
 
@@ -291,7 +291,7 @@ header h2 {
 
 Note the use of weights in Lato:
 
-```
+```css
 h2 {
   font-weight: 300;
 }
@@ -340,7 +340,7 @@ Examine the inspector's color picker. Note the ability to force element hover st
 
 Add css to `nav a`:
 
-```
+```css
 transition: all 0.5s linear;
 ```
 
@@ -348,7 +348,7 @@ Edit the animation using the inspector's animation settings.
 
 To animate only one difference specify it instead of `all`:
 
-```
+```css
 transition: background-color 0.5s linear;
 ```
 
@@ -410,7 +410,7 @@ html {
 
 aside {
   ...
-  background-color: var(--bg-color); 
+  background-color: var(--bg-color);
 }
 ``` -->
 
@@ -548,7 +548,7 @@ Inline styles are inefficient:
 
 However, this method is often used when dynamically changing the page after it has been loaded in the browser.
 
-Try using the inspector to inspect a dynamic page (such as http://www.w3schools.com/jquery/jquery_animate.asp). Note how it displays animation by temporarily highlighting inline css in purple.
+Try using the inspector to inspect a dynamic page (such as [http://www.w3schools.com/jquery/jquery_animate.asp](http://www.w3schools.com/jquery/jquery_animate.asp)). Note how it displays animation by temporarily highlighting inline css in purple.
 
 Remove the CSS from the head of the document and paste it into a new text document. Save it in a new css directory calling it styles.css. We have two options here: link to our CSS file using an HTML tag, or to use a CSS @import statement.
 
@@ -568,11 +568,11 @@ Note: ideally, all your stylesheets should be in one file to reduce the number o
 
 ## Some simple CSS3 Enhancements
 
-As work on a new version of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee (http://W3C.org) decided to break the process into modules. (For compatibility and advice see http://CanIuse.com.)
+As work on a new version of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee [http://W3C.org](http://W3C.org) decided to break the process into modules. (For compatibility and advice see [http://CanIuse.com](http://CanIuse.com).)
 
-Some of the earlier CSS 3 specifications include provisions for visual effects such as rounded corners, drop shadows and gradients. A useful page that allows you to become familiar with these enhancements is http://css3generator.com/.
+Some of the earlier CSS 3 specifications include provisions for visual effects such as rounded corners, drop shadows and gradients. A useful page that allows you to become familiar with these enhancements is [http://css3generator.com/](http://css3generator.com/).
 
-Add rounded corners to the info div. (See https://developer.mozilla.org/en/CSS/border-radius for specifications.)
+Add rounded corners to the info div. (See [https://developer.mozilla.org/en/CSS/border-radius](https://developer.mozilla.org/en/CSS/border-radius) for specifications.)
 
 ```css
 aside {
@@ -591,7 +591,7 @@ aside {
 
 Add a box shadow to the wrapper's CSS:
 
-```
+```css
 box-shadow: 10px 10px 20px #ddd;
 ```
 
@@ -674,19 +674,3 @@ At the bottom of the stylesheet
 
 slack
 daniel.deverell@nyu.edu
-simple
-klynch@cbury.org • email address bounced
-
-```
-Delete:
-git branch -d branch_name
-Delete on github:
-git push origin --delete <branch_name>
-Force a push:
-git push -f <remote> <branch>
-```
-
-```
-$ open /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl
-$ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-```
