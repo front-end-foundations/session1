@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: pink;
+}
+a:hover {
+  color: black;
+  background-color: white;
+}
