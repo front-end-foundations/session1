@@ -2,11 +2,11 @@
 
 ## Resources
 
-[Email](mailto:daniel.deverell@nyu.edu) daniel.deverell@nyu.edu
+[Email](mailto:daniel.deverell@nyu.edu) - `daniel.deverell@nyu.edu`
 
-[Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf) http://daniel.deverell.com/syllabus-fall2018.pdf
+[Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf) - `http://daniel.deverell.com/syllabus-fall2018.pdf`
 
-[Github](https://github.com/front-end-foundations): https://github.com/front-end-foundations - the source for *all files* used in this class
+[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations` - the source for *all files* used in this class
 
 You will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `devereld`. (If your name is less than 7 characters your username is your entire last name plus the first letter of your first name.)
 
