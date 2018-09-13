@@ -1,20 +1,18 @@
 # Session One
 
-Note to self - an updated version of the sushi exercise is available in session 3.
-
 ## Resources
 
-[Email](mailto:daniel.deverell@nyu.edu)
+[Email](mailto:daniel.deverell@nyu.edu): daniel.deverell@nyu.edu
 
-[Syllabus](http://daniel.deverell.com/)
+[Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf): http://daniel.deverell.com/syllabus-fall2018.pdf
 
-[Github](https://github.com/front-end-foundations) - this will be the source for all files used in this class
+[Github](https://github.com/front-end-foundations): https://github.com/front-end-foundations - the source for *all files* used in this class
 
 You will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `devereld`. (If your name is less than 7 characters your username is your entire last name plus the first letter of your first name.)
 
 Test to see if your account is active by entering this URL into a new browser tab (use your username after the tilde):
 
-`http://oit2.scps.nyu.edu/~******/` where `******` is your username.
+`http://oit2.scps.nyu.edu/~<username>/` where `<username>` is your username.
 
 Your password is your first initial plus your last initial plus 123890. e.g. `dd123890`
 
@@ -22,7 +20,7 @@ The computer name is `oit2.scps.nyu.edu`
 
 You can upload and download files using SFTP (Secure File Transfer Protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you _must_ use port 22 or SFTP in order to connect.
 
-When you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~******/`.
+When you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~<username>/`.
 
 ## Homework
 
