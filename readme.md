@@ -2,7 +2,7 @@
 
 ## Resources
 
-[Email](mailto:daniel.deverell@nyu.edu)
+[Email](mailto:daniel.deverell@nyu.edu) daniel.deverell@nyu.edu
 
 [Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf) http://daniel.deverell.com/syllabus-fall2018.pdf
 
