@@ -31,6 +31,16 @@ When you log into your account you will see a number of files and folders. The `
 
 Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
 
+## Text Book
+
+This text book is available at the NYU bookstore or online.
+
+### HTML5 and CSS3: Building Responsive Websites
+
+#### Thoriq Firdaus, Ben Frain, Benjamin LaGrone
+
+Packt Publishing, ISBN 139781787124813
+
 ## Additional Reading
 
 These are good resources for absolute beginners and go into more depth (in some areas) than we will have time for in class. They are rather long but you should try to watch them over the first two weeks of the semester.
