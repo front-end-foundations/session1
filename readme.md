@@ -2,9 +2,9 @@
 
 ## Resources
 
-[Email](mailto:daniel.deverell@nyu.edu): daniel.deverell@nyu.edu
+[Email](mailto:daniel.deverell@nyu.edu)
 
-[Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf): http://daniel.deverell.com/syllabus-fall2018.pdf
+[Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf) http://daniel.deverell.com/syllabus-fall2018.pdf
 
 [Github](https://github.com/front-end-foundations): https://github.com/front-end-foundations - the source for *all files* used in this class
 
