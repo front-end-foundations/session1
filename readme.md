@@ -12,7 +12,7 @@ You will be provided with server space on an NYU web server. Your username will 
 
 Test to see if your account is active by entering this URL into a new browser tab (use your username after the tilde):
 
-`http://oit2.scps.nyu.edu/~<username>/` where `<username>` is your username.
+`http://oit2.scps.nyu.edu/~<username>/` replace `<username>` with your username.
 
 Your password is your first initial plus your last initial plus 123890. e.g. `dd123890`
 
@@ -63,80 +63,69 @@ In order to extend Sublime Text you need to install [Package Control](https://pa
 
 I will demonstrate a couple of the more [popular packages](https://packagecontrol.io/browse/popular) for Sublime text over the course of the semester.
 
-(Note that in NYU labs, configuration changes are not saved after restart. You should install Package Control, Emmet and other Packages that might be useful to you _on your own computer_.)
+(Note that in NYU labs, configuration changes are not saved after restart. You should install Package Control, Emmet and any other Packages that might be useful to you _on your own computer_.)
 
-Create the following in [Sublime Text](https://www.sublimetext.com/):
+## Browser Tools
 
-```html
-<!doctype html>
-<html>
-  <head>
-    <title>Box Model</title>
-    <style media="screen">
+Open the folder (`cmd-o`) `box-model-inspector` as a project in the text editor.
 
-    </style>
-  </head>
-  <body>
-    <p>A paragraph is a block element. Is is rendered inside a box. <em>Italic text</em> is an inline element.
-    Here is a <a href="#">link</a>.</p>
-  </body>
-</html>
-```
+In Chrome, right click on any text and choose `Inspect`.
 
-* html comments
-* lorem
-* auto complete
-
-Save it as `box-model.html`
-
-In Chrome, right click on the text and choose `Inspect`.
-
-* The inspector is your first line of defense when troubleshooting and should be kept open at all times
-* Safari's developer tools are not turned on by default and must be enabled in Safari preferences
+No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open at all times
 
 ### User Agent Styles
 
-User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the paragraph.
+User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the header, paragraph and on all four sides of the body.
 
 ### Block vs Inline
 
 Most HTML tags or elements all have a default `display` property which is set to `block` which means that they create a rectangular region in the browser.
 
-The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph.
+The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. A `<span>` tag is used to create arbitrary inline (like `<em>`) elements.
 
 * Try: use the inspector to set the em tag to display block.
 
 The paragraph tag - `<p>` - creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
-A `<div>` tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics.
+A `<div>` tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. `div` tags are useful but don't say anything about the content inside them. Use HTML5 [semantic tags](https://www.w3schools.com/html/html5_semantic_elements.asp) whenever possible.
 
-A `<span>` tag is used to create arbitrary inline (like `<em>`) elements.
+* Try: use the inspector to change the `div` tag to an `article` tag.
+
+### HTML, CSS and JavaScript Comments
+
+In most editors the shortcut `cmd-/` will comment out a line or lines with the appropriate code.
+
+* HTML: `<!-- -->`
+* CSS: `/*  */`
+* JavaScript: `/*  */` for multiline comments and `//` for single line comments
 
 ### The Box Model
 
-Block elements are interpreted as a box by the browser. But boxes have other characteristics such as spacing, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
+Block elements are interpreted as a box by the browser. Boxes have other characteristics such as padding, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
 
 * Try: adding a 3em margin to the em tag with and w/o display: block
 
 Let's add padding, border and override the margins.
 
-```html
-<style media="screen">
+In `styles.css`:
+
+```css
 p {
-    padding: 16px;
-    margin: 6px;
-    border: 3px solid #333;
-    height: 200px;
-    width: 300px;
+  padding: 16px;
+  margin: 1em;
+  border: 3px solid #333;
+  height: 200px;
+  width: 80%;
 }
-</style>
 ```
 
 Refresh the page and inspect the paragraph again. Note the changes in the inspector.
 
+* Try: setting the height of the p to 3px in the inspector
+
 #### Semantics
 
-HTML tags are divorced from the way they appear and can be 'reprogrammed' to look any way you want. They convey meaning to the code that comprises the document and make it human readable. _ HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) _ - not stylistically important.
+HTML tags can be styled to look any way you want. They convey meaning to the code that comprises the document and make it human readable. _ HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) _ - not stylistically important.
 
 This is part of the _separation of concerns_. For example:
 
@@ -147,7 +136,7 @@ Concerns are the different aspects of software functionality. For instance, the 
 
 The separation of concerns is keeping the code for each of these concerns separate. Changing the interface should not require changing the business logic code, and vice versa.
 
-## CSS syntax, whitespace and comments
+## CSS syntax, whitespace and Comments
 
 CSS rules consist of a selector, a set of curly braces, and a series of property(s) and values separated by a full colon and terminated by a semi colon.
 
