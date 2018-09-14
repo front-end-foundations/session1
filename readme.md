@@ -149,7 +149,7 @@ selector {
 
 The selector determines which HTML will be selected.
 
-The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit when used for measurements.
+The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit such as `px`, `s`, `em` or `%`.
 
 Note the padding, margin and border properties. This are CSS shortcuts. Our border property could also be written in long form.
 

@@ -10,11 +10,3 @@ a:hover {
   color: black;
   background-color: white;
 }
-
-p {
-  padding: 16px;
-  margin: 1em;
-  border: 3px solid #333;
-  height: 200px;
-  width: 80%;
-}
