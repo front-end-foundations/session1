@@ -6,17 +6,15 @@
 
 [Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf) - `http://daniel.deverell.com/syllabus-fall2018.pdf`
 
-[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations` (the source for *all files* used in this class)
+[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, the source for *all files* used in this class
 
-You will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `devereld`. (If your name is less than 7 characters your username is your entire last name plus the first letter of your first name.)
+[Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) -  _HTML5 and CSS3: Building Responsive Websites_ is available in paperback at the NYU bookstore or [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats.
 
-Test to see if your account is active by entering this URL into a new browser tab (use your username after the tilde):
+[Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `devereld`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
 
-`http://oit2.scps.nyu.edu/~<username>/` replace `<username>` with your username.
+Test to see if your account is active by entering `http://oit2.scps.nyu.edu/~<username>` into a browser (note the tilde`~`, be sure to replace `<username>` with your username):
 
-Your password is your first initial plus your last initial plus 123890. e.g. `dd123890`
-
-The computer name is `oit2.scps.nyu.edu`
+Your password is your first initial plus your last initial plus 123890. e.g. `dd123890` and the computer name is `oit2.scps.nyu.edu`
 
 You can upload and download files using SFTP (Secure File Transfer Protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you _must_ use port 22 or SFTP in order to connect.
 
@@ -24,22 +22,12 @@ When you log into your account you will see a number of files and folders. The `
 
 ## Homework
 
-1. Download Sublime text and install [Package Control](https://packagecontrol.io/) on your computer
+1. Download Sublime text and install [Package Control](https://packagecontrol.io/)
 1. Install [Emmet](https://packagecontrol.io/packages/Emmet) into Sublime text using Package Control
 1. Download the files as distributed in class from Github and, using [the notes below](https://github.com/front-end-foundations/session1#exercise---converting-to-standards), try to recreate the design we did in class from scratch
-1. Examine the provided homework samples (in the homeworksamples folder) in Chrome's developer tools. Pick two or three visual formatting features that appeal to you and try to apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
+1. Examine the provided homework samples (in the `home-work-samples` folder) using Chrome's developer tools. Pick two or three visual formatting features that appeal to you and apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
 
 Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
-
-## Text Book
-
-This text book is available at the NYU bookstore or online.
-
-### HTML5 and CSS3: Building Responsive Websites
-
-#### Thoriq Firdaus, Ben Frain, Benjamin LaGrone
-
-Packt Publishing, ISBN 139781787124813
 
 ## Additional Reading
 
