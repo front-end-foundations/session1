@@ -6,13 +6,13 @@
 
 [Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf) - `http://daniel.deverell.com/syllabus-fall2018.pdf`
 
-[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, the source for *all files* used in this class. The  edited files as they existed at the end of class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
+[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for *all files* used in this class. The  edited files as they existed at the end of class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
 
 [Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) -  _HTML5 and CSS3: Building Responsive Websites_ is available in paperback at the NYU bookstore or [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats.
 
 [Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `devereld`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
 
-Test to see if your account is active by entering `http://oit2.scps.nyu.edu/~<username>` into a browser (note the tilde`~`, be sure to replace `<username>` with your username):
+Test to see if your account is active by entering `http://oit2.scps.nyu.edu/~<username>` into a browser (note the tilde`~`, be sure to replace `<username>` with your username).
 
 Your password is your first initial plus your last initial plus 123890. e.g. `dd123890` and the computer name is `oit2.scps.nyu.edu`
 
@@ -31,12 +31,10 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 
 ## Additional Reading
 
-These are good resources for absolute beginners and go into more depth in some areas than we will have time for in class. They are rather long but you should try to watch them over the first two weeks of the semester.
+These are good resources for absolute beginners and go into more depth in some areas than we will have time for in class. You should try to watch them over the first two weeks of the semester. Be sure to download the accompanying files in order to follow along on your own.
 
 * Video: [HTML Crash Course for Absolute Beginners](https://youtu.be/UB1O30fR-EE), and the [accompanying files](https://www.youtube.com/redirect?redir_token=1Yb19FwXTj2Zp4L-bRWo-VIllCl8MTUxODAxNjc4OUAxNTE3OTMwMzg5&event=video_description&v=UB1O30fR-EE&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fhtmlcheatsheet.zip)
 * Video: [CSS Crash Course for Absolute Beginners](https://youtu.be/yfoY53QXEnI), and the [accompanying files](https://www.youtube.com/redirect?event=video_description&v=yfoY53QXEnI&redir_token=7uspCtsw-mSVQ-CRLJqyBuXp4B18MTUzNzIwOTU4MUAxNTM3MTIzMTgx&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fcsscrashcourse.zip)
-
-Be sure to download the accompanying files in the comments in order to follow along in a text editor.
 
 ## Text Editors, Browsers and Developer Tools
 
