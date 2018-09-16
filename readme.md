@@ -31,12 +31,12 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 
 ## Additional Reading
 
-These are good resources for absolute beginners and go into more depth (in some areas) than we will have time for in class. They are rather long but you should try to watch them over the first two weeks of the semester.
+These are good resources for absolute beginners and go into more depth in some areas than we will have time for in class. They are rather long but you should try to watch them over the first two weeks of the semester.
 
-* Video: [HTML Crash Course for Absolute Beginners](https://youtu.be/UB1O30fR-EE)
-* Video: [CSS Crash Course for Absolute Beginners](https://youtu.be/yfoY53QXEnI)
+* Video: [HTML Crash Course for Absolute Beginners](https://youtu.be/UB1O30fR-EE), and the [accompanying files](https://www.youtube.com/redirect?redir_token=1Yb19FwXTj2Zp4L-bRWo-VIllCl8MTUxODAxNjc4OUAxNTE3OTMwMzg5&event=video_description&v=UB1O30fR-EE&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fhtmlcheatsheet.zip)
+* Video: [CSS Crash Course for Absolute Beginners](https://youtu.be/yfoY53QXEnI), and the [accompanying files](https://www.youtube.com/redirect?event=video_description&v=yfoY53QXEnI&redir_token=7uspCtsw-mSVQ-CRLJqyBuXp4B18MTUzNzIwOTU4MUAxNTM3MTIzMTgx&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fcsscrashcourse.zip)
 
-Be sure to [download the accompanying files](https://www.youtube.com/redirect?redir_token=1Yb19FwXTj2Zp4L-bRWo-VIllCl8MTUxODAxNjc4OUAxNTE3OTMwMzg5&event=video_description&v=UB1O30fR-EE&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fhtmlcheatsheet.zip) in the comments in order to follow along in a text editor.
+Be sure to download the accompanying files in the comments in order to follow along in a text editor.
 
 ## Text Editors, Browsers and Developer Tools
 
@@ -151,7 +151,7 @@ See the full specifications in the inspector (use the triangle drop down).
 
 ### Theory: Box Sizing
 
-Boxes are additive by default - their width will be a combination of width, padding and border (margins are outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
+Boxes are additive by default - their width will be a combination of CSS width, padding and border properties (margins are outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
 Add `box-sizing: border-box/content-box` to review box model options.
 
@@ -207,9 +207,9 @@ Note
 
 ## Exercise - Converting to Standards
 
-Open before.html in an editor and examine the HTML. Then examine index.html. The latter is an html5 document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
+Open the `Sushi` folder and `before.html` in an editor and examine the HTML. The latter is an html5 document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
 
-Examine index.html in the browser inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
+Examine `index.html` in the browser inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
 ## Terminal
 
@@ -232,7 +232,7 @@ Add a CSS block within the `<head>`of index.html as follows:
 
 ## Google fonts
 
-Google has a CDN offering [free fonts](https://fonts.google.com) for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the `<link>` tag.
+Google has a CDN (Content Delivery Network) offering [free fonts](https://fonts.google.com) for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the `<link>` tag.
 
 We will use [Lato](https://fonts.google.com/specimen/Lato) for our main text and [Lobster](https://fonts.google.com/specimen/Lobster) for our branding.
 
