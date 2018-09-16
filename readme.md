@@ -464,7 +464,7 @@ Edit the CSS body rule.
 
 ```css
 body {
-   : #ddd;
+  background-color: #ddd;
 }
 ```
 
