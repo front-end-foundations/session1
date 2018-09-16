@@ -6,7 +6,7 @@
 
 [Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf) - `http://daniel.deverell.com/syllabus-fall2018.pdf`
 
-[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, the source for *all files* used in this class
+[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, the source for *all files* used in this class. The  edited files as they existed at the end of class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
 
 [Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) -  _HTML5 and CSS3: Building Responsive Websites_ is available in paperback at the NYU bookstore or [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats.
 
@@ -27,7 +27,7 @@ When you log into your account you will see a number of files and folders. The `
 1. Download the files as distributed in class from Github and, using [the notes below](https://github.com/front-end-foundations/session1#exercise---converting-to-standards), try to recreate the design we did in class from scratch
 1. Examine the provided homework samples (in the `home-work-samples` folder) using Chrome's developer tools. Pick two or three visual formatting features that appeal to you and apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
 
-Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/work) from the `work` branch of this repo for reference.
+Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this repo for reference. Be sure to select the branch on Github _before_ downloading the zip.
 
 ## Additional Reading
 
@@ -570,7 +570,7 @@ Add a drop shadow to the CSS for the info div using the inspector (...).
 
 ```css
 aside {
-   : 3px 4px 3px 2px #d6d6d6;
+  box-shadow: 3px 4px 3px 2px #d6d6d6;
 }
 ```
 
@@ -584,26 +584,27 @@ box-shadow: 10px 10px 20px #ddd;
 
 ## Highlight one of the tabs
 
-This is a simple way to create color coded navigation on a web site.
-Add a class to body tag so we know what kind of page this is.
+A simple way to create navigation on a web site.
+
+1 Add a class to body tag so we know what kind of page this is.
 
 ```html
 <body class="p-review">
 ```
 
-Add a list item to the nav list with a class of review-link.
+2 Add a list item to the nav list with a class of review-link.
 
 ```html
 <li><a class="t-review" href="#">Reviews</a></li>
 ```
 
-Add the following to our CSS block:
+3 Add the following to our CSS block:
 
 ```css
 .review-page .review-link {
     color: #fff;
     background:#600;
- }
+}
 ```
 
 Note that the tab is now highlighted.
