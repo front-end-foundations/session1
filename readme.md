@@ -45,19 +45,21 @@ Other popular text editors you can try include:
 * [Atom](https://atom.io/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-In order to extend Sublime Text you need to install [Package Control](https://packagecontrol.io/). Once installed you can take advantage of a huge assortment of add-ons (or Packages).
+In order to extend Sublime Text you need to install [Package Control](https://packagecontrol.io/) first. Once installed you can take advantage of a large assortment of [packages](https://packagecontrol.io/browse/popular).
 
-I will demonstrate a couple of the more [popular packages](https://packagecontrol.io/browse/popular) for Sublime text over the course of the semester.
-
-(Note that in NYU labs, configuration changes are not saved after restart. You should install Package Control, Emmet and any other Packages that might be useful to you _on your own computer_.)
+(Note that in NYU labs, configuration changes are not saved after restart. You should only install Package Control, Emmet and any other Packages that might be useful to you _on your own computer_.)
 
 ## Browser Tools
 
-Open the folder (`cmd-o`) `box-model-inspector` as a project in the text editor.
-
-In Chrome, right click on any text and choose `Inspect`.
+Open the folder (`cmd-o`) `box-model-inspector` as a project in the text editor and open `index.html` in Chrome. Right click on any text and choose `Inspect`.
 
 No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open at all times
+
+## The Three Pillars of Web Design
+
+* Content (HTML)
+* Appearance (CSS)
+* Behavior (JavaScript)
 
 ### User Agent Styles
 
@@ -147,7 +149,7 @@ border-width: 3px;
 
 See the full specifications in the inspector (use the triangle drop down).
 
-### Theory: Box Sizing
+### Box Sizing
 
 Boxes are additive by default - their width will be a combination of CSS width, padding and border properties (margins are outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
