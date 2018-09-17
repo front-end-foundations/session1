@@ -45,7 +45,7 @@ Other popular text editors you can try include:
 * [Atom](https://atom.io/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-In order to extend Sublime Text you need to install [Package Control](https://packagecontrol.io/). Once installed you can take advantage of a huge assortment of add ons (or Packages).s
+In order to extend Sublime Text you need to install [Package Control](https://packagecontrol.io/). Once installed you can take advantage of a huge assortment of add-ons (or Packages).
 
 I will demonstrate a couple of the more [popular packages](https://packagecontrol.io/browse/popular) for Sublime text over the course of the semester.
 
