@@ -4,9 +4,19 @@ body {
 }
 
 a {
-  color: pink;
+  color: papayawhip;
 }
 a:hover {
   color: black;
   background-color: white;
+}
+
+p span {
+  font-size: 150%;
+  color: papayawhip;
+}
+
+img {
+  padding: 10px;
+  border: 1px solid #fff;
 }

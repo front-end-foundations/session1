@@ -63,23 +63,24 @@ No matter which browser you are working in, the inspector is your first line of 
 * Appearance (CSS) - uses CSS rules to determine how the content will appear to the user
 * Behavior (JavaScript) - uses scripts written in JavaScript to allow the user to interact with the content
 
-Akin to MVC development:
-
-* model, view, controller (MVC) - database, interface, logic
-
 Try:
 * Click on the cat picture and note the changes in the document and how the inspector display it
-* Click on the link and note the change in the browser's address bar
+* Click on the link and note the change in the browser's address bar, note the Console tab in the inspector
+* Force the link to hover using the inspector
 
-#### Semantics
+## Separation of Concerns
 
-HTML tags can be styled to look any way you want. They convey meaning to the code that comprises the document and help make it understandable. _ HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) _ - not stylistically important.
+The three pillars are an example of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
-This is central the _separation of concerns_: content, display, behavior (html, css, javascript).
+Another example is MVC (model, view, controller) - database, interface, busiiness logic
 
-Concerns are the different aspects of software functionality. For instance, in MVC, the business logic or _controller_ is a concern, and the interface or _view_ through which a person uses this logic is another.
+Concerns here are the different aspects of software functionality. For instance, in MVC, the business logic or _controller_ is a concern, and the interface or _view_ through which a person uses this logic is another. Changing the interface should not require changing the business logic code, and vice versa. This makes it possible to assign different roles and responsibilities to each area for workgroups.
 
-The separation of concerns keeps the code for each of these concerns separate. Changing the interface should not require changing the business logic code, and vice versa. This makes it possible to assign different roles and responsibilities to each area for workgroups.
+### Semantics
+
+HTML tags can be styled to look any way you want. They convey meaning to the code that comprises the document and help make it understandable. HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) - not stylistically important.
+
+* Try: use the inspector to change the `div` tag to an `article` tag.
 
 ### User Agent Styles
 
@@ -97,11 +98,9 @@ The paragraph tag - `<p>` - creates a box and by default has space above and bel
 
 A `<div>` tag is a block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. `div` tags are useful but don't say anything about the content inside them. Use HTML5 [semantic tags](https://www.w3schools.com/html/html5_semantic_elements.asp) whenever possible.
 
-* Try: use the inspector to change the `div` tag to an `article` tag.
-
 ### HTML, CSS and JavaScript Comments
 
-In most editors the shortcut `cmd-/` will comment out a line or lines with the appropriate code.
+In most editors the keyboard shortcut `cmd-/` will comment out a line or lines with the appropriate code:
 
 * HTML: `<!-- -->`
 * CSS: `/*  */`
@@ -111,11 +110,11 @@ In most editors the shortcut `cmd-/` will comment out a line or lines with the a
 
 Block elements are interpreted as a box in the browser. Boxes have other characteristics such as padding, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
 
-* Try: adding a 3em margin to the em tag with and without `display: block` and `display: inline-block`
+* Try: adding a 3em margin to the `em` tag with and without `display: block` and `display: inline-block`
 
 Let's add padding, border and override the margins.
 
-In `styles.css`:
+Edit `styles.css` to add:
 
 ```css
 p {
@@ -163,13 +162,13 @@ There is another sizing method that is often prefered called `border-box`. This 
 Add `box-sizing: border-box/content-box` to review box model options.
 
 ```css
-    p {
-        ...
-        box-sizing: border-box;
-    }
+p {
+    ...
+    box-sizing: border-box;
+}
 ```
 
-### Theory: Media Queries
+### Media Queries Demo
 
 Add a media query to `styles.css`:
 
@@ -181,11 +180,11 @@ Add a media query to `styles.css`:
 }
 ```
 
-Note:
+Resize the browser and note:
 
 * overrides in the inspector
-* min-width = greater than
-* the css for > (greater than) 500px is _added_ to the styles when the condition is true.
+* `min-width` = greater than
+* the css for `>` (greater than) 500px is _added_ to the styles when the condition is true.
 
 Change it to:
 
@@ -200,8 +199,8 @@ Change it to:
 Note:
 
 * the inspector overrides (cascade)
-* max-width = less than
-* the css for < (less than) 500px is _added_ to the styles when the condition is true.
+* `max-width` = less than
+* the css for `<` (less than) 500px is _added_ to the styles when the condition is true.
 
 ### Debugging CSS with the inspector
 
