@@ -229,6 +229,12 @@ Add a CSS declaration to `styles.css` as follows:
     }
 ```
 
+and link it to `index.html` in the head:
+
+```html
+<link href="css/styles.css" media="all" />
+```
+
 ## Google fonts
 
 Google has a CDN (Content Delivery Network) offering [free fonts](https://fonts.google.com) for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the `<link>` tag.
@@ -583,15 +589,9 @@ Inline styles are inefficient:
 <p style="margin-top: 12px;">
 ```
 
-However, this method is often used when dynamically changing the page after it has been loaded in the browser.
+However this method is often used when dynamically changing the page after it has been loaded in the browser.
 
 Try using the inspector to inspect a dynamic page (such as [http://www.w3schools.com/jquery/jquery_animate.asp](http://www.w3schools.com/jquery/jquery_animate.asp)). Note how it displays animation by temporarily highlighting inline css in purple.
-
-Remove the CSS from the head of the document and paste it into a new text document. Save it in a new css directory calling it styles.css. We have two options here: link to our CSS file using an HTML tag, or to use a CSS @import statement.
-
-```html
-<link href="css/styles.css" media="all" />
-```
 
 It is best practice not to use the alternative:
 
