@@ -1,4 +1,4 @@
-# Session One
+# I - Intro & Converting to Standards
 
 ## Resources
 
