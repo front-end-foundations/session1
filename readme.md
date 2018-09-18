@@ -63,7 +63,8 @@ No matter which browser you are working in, the inspector is your first line of 
 * Appearance (CSS) - uses CSS rules to determine how the content will appear to the user
 * Behavior (JavaScript) - uses scripts written in JavaScript to allow the user to interact with the content
 
-* Try - click on the cat picture and note the changes in the document
+* Try - click on the cat picture and note the changes in the document and how the inspector display it
+* Try - click on the link and note the change in the browser's address bar
 
 Akin to MVC development:
 
