@@ -61,6 +61,10 @@ No matter which browser you are working in, the inspector is your first line of 
 * Appearance (CSS)
 * Behavior (JavaScript)
 
+Akin to MVC development:
+
+* model, view, controller (MVC - database, interface, logic)
+
 ### User Agent Styles
 
 User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the header, paragraph and on all four sides of the body.
@@ -115,10 +119,7 @@ Refresh the page and inspect the paragraph again. Note the changes in the inspec
 
 HTML tags can be styled to look any way you want. They convey meaning to the code that comprises the document and make it human readable. _ HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) _ - not stylistically important.
 
-This is part of the _separation of concerns_. For example:
-
-* content, display, behavior (html, css, javascript)
-* model, view, controller (MVC - database, interface, logic)
+This is central the _separation of concerns_: content, display, behavior (html, css, javascript).
 
 Concerns are the different aspects of software functionality. For instance, the "business logic" of software is a concern, and the interface through which a person uses this logic is another.
 
