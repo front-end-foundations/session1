@@ -64,8 +64,8 @@ No matter which browser you are working in, the inspector is your first line of 
 * Behavior (JavaScript) - uses scripts written in JavaScript to allow the user to interact with the content
 
 Try:
-* Click on the cat picture and note the changes in the document and how the inspector display it
-* Click on the link and note the change in the browser's address bar, note the Console tab in the inspector
+* Click on the cat picture and note the changes in the document, how the inspector displays it, and the Console tab in the inspector
+* Click on the link and note the change in the browser's address bar
 * Force the link to hover using the inspector
 
 ## Separation of Concerns
