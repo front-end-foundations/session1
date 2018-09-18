@@ -10,7 +10,7 @@
 
 [Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) -  _HTML5 and CSS3: Building Responsive Websites_ is available in paperback at the NYU bookstore or [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats.
 
-[Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `devereld`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
+[Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `jdoe`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
 
 Test to see if your account is active by entering `http://oit2.scps.nyu.edu/~<username>` into a browser (note the tilde`~`, be sure to replace `<username>` with your username).
 
@@ -18,13 +18,15 @@ Your password is your first initial plus your last initial plus 123890. e.g. `dd
 
 You can upload and download files using SFTP (Secure File Transfer Protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you _must_ use port 22 or SFTP in order to connect.
 
-When you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~<username>/`.
+When you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~<username>/`. This is where you will hand in your assignments.
+
+Do not leave original copies of material on the server as accounts are deleted at the end of the semester.
 
 ## Homework
 
 1. Download Sublime text and install [Package Control](https://packagecontrol.io/)
 1. Install [Emmet](https://packagecontrol.io/packages/Emmet) into Sublime text using Package Control
-1. Download the files as distributed in class from Github and, using [the notes below](https://github.com/front-end-foundations/session1#exercise---converting-to-standards), try to recreate the design we did in class from scratch
+1. Download the files as distributed in class from Github and, using the notes below, try to recreate the design we did in class from scratch
 1. Examine the provided homework samples (in the `home-work-samples` folder) using Chrome's developer tools. Pick two or three visual formatting features that appeal to you and apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
 
 Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this repo for reference. Be sure to select the branch on Github _before_ downloading the zip.
@@ -51,35 +53,47 @@ In order to extend Sublime Text you need to install [Package Control](https://pa
 
 ## Browser Tools
 
-Open the folder (`cmd-o`) `box-model-inspector` as a project in the text editor and open `index.html` in Chrome. Right click on any text and choose `Inspect`.
+Open the folder (`cmd-o`) `session1` in the text editor and then open `box-model-inspector/index.html` in Chrome. Right click on any text and choose `Inspect`.
 
-No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open at all times
+No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open _at all times_ when you are working.
 
 ## The Three Pillars of Web Design
 
-* Content (HTML)
-* Appearance (CSS)
-* Behavior (JavaScript)
+* Content (HTML) - uses HTML tags to semantically markup the contents 
+* Appearance (CSS) - uses CSS rules to determine how the content will appear to the user
+* Behavior (JavaScript) - uses scripts written in JavaScript to allow the user to interact with the content
+
+* Try - click on the cat picture and note the changes in the document
 
 Akin to MVC development:
 
-* model, view, controller (MVC - database, interface, logic)
+* model, view, controller (MVC) - database, interface, logic
+
+#### Semantics
+
+HTML tags can be styled to look any way you want. They convey meaning to the code that comprises the document and help make it understandable. _ HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) _ - not stylistically important.
+
+This is central the _separation of concerns_: content, display, behavior (html, css, javascript).
+
+Concerns are the different aspects of software functionality. For instance, in MVC, the business logic or _controller_ is a concern, and the interface or _view_ through which a person uses this logic is another.
+
+The separation of concerns keeps the code for each of these concerns separate. Changing the interface should not require changing the business logic code, and vice versa. This makes it possible to assign different roles and responsibilities to each area for workgroups.
 
 ### User Agent Styles
 
-User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the header, paragraph and on all four sides of the body.
+User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the header, paragraph and on all four sides of the body. These default styles make sure that the content is understandable even in the absence of a style sheet.
 
 ### Block vs Inline
 
 Most HTML tags or elements all have a default `display` property which is set to `block` which means that they create a rectangular region in the browser.
 
-The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>` inside a paragraph. A `<span>` tag is used to create arbitrary inline (like `<em>`) elements.
+The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>`. A `<span>` tag is used to create arbitrary inline elements.
 
 * Try: use the inspector to set the em tag to display block.
 
 The paragraph tag - `<p>` - creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
-A `<div>` tag is a special block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. `div` tags are useful but don't say anything about the content inside them. Use HTML5 [semantic tags](https://www.w3schools.com/html/html5_semantic_elements.asp) whenever possible.
+A `<div>` tag is a block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. `div` tags are useful but don't say anything about the content inside them. Use HTML5 [semantic tags](https://www.w3schools.com/html/html5_semantic_elements.asp) whenever possible.
 
 * Try: use the inspector to change the `div` tag to an `article` tag.
 
@@ -93,9 +107,9 @@ In most editors the shortcut `cmd-/` will comment out a line or lines with the a
 
 ### The Box Model
 
-Block elements are interpreted as a box by the browser. Boxes have other characteristics such as padding, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
+Block elements are interpreted as a box in the browser. Boxes have other characteristics such as padding, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
 
-* Try: adding a 3em margin to the em tag with and w/o display: block
+* Try: adding a 3em margin to the em tag with and without `display: block` and `display: inline-block`
 
 Let's add padding, border and override the margins.
 
@@ -113,21 +127,11 @@ p {
 
 Refresh the page and inspect the paragraph again. Note the changes in the inspector.
 
-* Try: setting the height of the p to 3px in the inspector
+* Try: setting the height of the `p` to 3px in the inspector with `overflow: hidden;` and `overflow: auto;`
 
-#### Semantics
+## CSS Syntax
 
-HTML tags can be styled to look any way you want. They convey meaning to the code that comprises the document and make it human readable. _ HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) _ - not stylistically important.
-
-This is central the _separation of concerns_: content, display, behavior (html, css, javascript).
-
-Concerns are the different aspects of software functionality. For instance, the "business logic" of software is a concern, and the interface through which a person uses this logic is another.
-
-The separation of concerns is keeping the code for each of these concerns separate. Changing the interface should not require changing the business logic code, and vice versa.
-
-## CSS syntax, whitespace and Comments
-
-CSS rules consist of a selector, a set of curly braces, and a series of property(s) and values separated by a full colon and terminated by a semi colon.
+CSS rules consist of a selector, a set of curly braces, and a series of properties and values separated by a full colon and terminated by a semi colon.
 
 ```css
 selector {
@@ -136,11 +140,11 @@ selector {
 }
 ```
 
-The selector determines which HTML will be selected.
+The selector determines which HTML element will be selected.
 
 The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit such as `px`, `s`, `em` or `%`.
 
-Note the padding, margin and border properties. This are CSS shortcuts. Our border property could also be written in long form.
+Note the drop down (triangle) next to padding, margin and border properties in the inspector. This are CSS shortcuts. Our border property could also be written in long form.
 
 ```css
 border-style: solid;
@@ -148,26 +152,24 @@ border-color: #333;
 border-width: 3px;
 ```
 
-See the full specifications in the inspector (use the triangle drop down).
-
 ### Box Sizing
 
-Boxes are additive by default - their width will be a combination of CSS width, padding and border properties (margins are outside the box model). There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
+Boxes are additive by default - the amount of space they take up in the browser will be a combination of CSS width, padding and border properties (margins are outside the box model). 
+
+There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
 Add `box-sizing: border-box/content-box` to review box model options.
 
-```html
-<style media="screen">
+```css
     p {
         ...
         box-sizing: border-box;
     }
-</style>
 ```
 
 ### Theory: Media Queries
 
-Add a media query:
+Add a media query to `styles.css`:
 
 ```css
 @media (min-width: 500px) {
@@ -193,7 +195,7 @@ Change it to:
 }
 ```
 
-Note
+Note:
 
 * the inspector overrides (cascade)
 * max-width = less than
@@ -208,25 +210,18 @@ Note
 
 ## Exercise - Converting to Standards
 
-Open the `Sushi` folder and `before.html` in an editor and examine the HTML. The latter is an html5 document that uses HTML tags semantically. The former is often referred to as tag soup as it makes little sense to humans looking at the code.
+Open the `Sushi` folder and `before.html` in an editor and examine the HTML. This is often referred to as tag soup as it makes little sense to humans looking at the code.
 
-Examine `index.html` in the browser inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
-
-<!-- ## Terminal
-
-```sh
-cd <path-to-folder>
-python -m SimpleHTTPServer 9000
-``` -->
+Open `index.html`. This is an html5 document that uses HTML tags semantically. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
 Add a CSS declaration to `styles.css` as follows:
 
 ```css
-    body {
-        margin: 12px;
-        color: #333;
-        font-family: Verdana, Arial, sans-serif;
-    }
+body {
+    margin: 12px;
+    color: #333;
+    font-family: Verdana, Arial, sans-serif;
+}
 ```
 
 and link it to `index.html` in the head:
