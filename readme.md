@@ -212,23 +212,21 @@ Open the `Sushi` folder and `before.html` in an editor and examine the HTML. The
 
 Examine `index.html` in the browser inspector to display the default (user agent) styling. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
-## Terminal
+<!-- ## Terminal
 
 ```sh
 cd <path-to-folder>
 python -m SimpleHTTPServer 9000
-```
+``` -->
 
-Add a CSS block within the `<head>`of index.html as follows:
+Add a CSS declaration to `styles.css` as follows:
 
-```html
-<style>
+```css
     body {
-        margin: 0;
+        margin: 12px;
         color: #333;
         font-family: Verdana, Arial, sans-serif;
     }
-</style>
 ```
 
 ## Google fonts
@@ -243,10 +241,12 @@ We will use [Lato](https://fonts.google.com/specimen/Lato) for our main text and
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 ```
 
-Add this to the top of our css (@import statements should always come first) to use the font within our stylesheet. Add to the body css rule:
+Add this to the top of our css (@import statements should always come first) to use the font within our stylesheet. 
+
+Add to the body css rule:
 
 ```css
-font-family: 'Lato', sans-serif;
+font-family: 'Lato', Verdana, Arial, sans-serif;
 ```
 
 ### Linking to a css file from html
@@ -257,7 +257,7 @@ THe html link tag:
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 ```
 
-in use:
+In use:
 
 ```css
 header {
@@ -266,20 +266,41 @@ header {
 }
 ```
 
-Note the bold property belongs to the H1 tag, not the header tag.
+Note: the bold property belongs to the `h1` tag, not the `header` tag.
 
 ```css
 header h1,
 header h2 {
   font-weight: normal;
+  font-size: 3rem;
+}
+header h2 {
+  font-size: 2rem;
+}
+```
+
+Note margin collapsing.
+
+```css
+header h1,
+header h2 {
+  font-weight: normal;
+	font-size: 3rem;
+	margin: 8px 0;
 }
 ```
 
 Note the use of weights in Lato:
 
 ```css
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
+```
+
+Use 400:
+
+```css
 h2 {
-  font-weight: 300;
+  font-weight: 400;
 }
 ```
 
@@ -316,7 +337,7 @@ Add the following to our style block:
 }
 .nav a:hover {
   color: #222;
-  background-color: #bada55;
+  background-color: #f0dfb4;
 }
 ```
 
@@ -348,7 +369,7 @@ _Edit_ the nav CSS rule to position it
   padding: 0;
   position: absolute;
   right: 0;
-  top: 60px;
+  top: 12px;
 }
 ```
 
@@ -418,9 +439,19 @@ article img {
 
 Note the float property and how the text wraps around it before and after we have defined a width. By default, the floated container shrinks to the width determined by the content.
 
+Take a moment to resize the browser. Toggle the device button in the developer tools. Note: this is not a responsive design.
+
+Add the device meta tag:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+Toggle the device button in the developer tools again.
+
 ## Converting the document to fixed width
 
-Currently our document flexes as we make the browser wider to makes use of all the available horizontal space. While flexibility is generally a good practice, most sites use fixed widths to improve readability. cf [Wikipedia](https://en.wikipedia.org/wiki/Line_length) vs [The Guardian](https://www.theguardian.com)
+Currently our document flexes as we make the browser wider to makes use of all the available horizontal space. While flexibility is generally a good practice, many sites still use fixed widths to improve readability. cf [Wikipedia](https://en.wikipedia.org/wiki/Line_length) vs [The Guardian](https://www.theguardian.com)
 
 Add wrapper `<div id="wrapper">` to entire content area (after the `<body>` tag and close it before the closing `</body>` tag) and add the following to our CSS style block.
 
@@ -461,11 +492,14 @@ Note the impact the relative positioning has on the layout (toggle it on and off
 
 ## Adding color to our layout
 
-Edit the CSS body rule.
+Edit the CSS body rule to include ` background-color: #ddd;`:
 
 ```css
 body {
-  background-color: #ddd;
+		margin: 12px;
+		color: #333;
+		font-family: 'Lato', Verdana, Arial, sans-serif;
+    background-color: #ddd;
 }
 ```
 
@@ -477,8 +511,11 @@ Let's add a white background to wrapper.
 #wrapper {
   ...
     background-color: #fff;
+    margin: 12px;
 }
 ```
+
+Change margin to padding. Why is margin a poor choice here?
 
 Note the body background color is grayed out in the inspector. Neither it nor the margin are inherited by other elements.
 
@@ -487,17 +524,20 @@ Note the body background color is grayed out in the inspector. Neither it nor th
 Note the h1's margin outside the containing elements (not part of the box model).
 
 ```css
-h1,
-h2 {
+header h1,
+header h2 {
+  font-weight: normal;
+	font-size: 3rem;
+	margin: 8px 0;
   color: #600;
-  margin-top: 20px;
-  margin-left: 20px;
-  font-size: 3rem;
-  margin-bottom: 0;
 }
-h2 {
-  font-size: 32px;
-  margin-top: 0;
+header h2 {
+	font-size: 2rem;
+}
+article h2 {
+  font-weight: 400;
+  color: #600;
+  border-bottom: 1px solid #600;
 }
 ```
 
@@ -506,13 +546,24 @@ Note - selector strength here. Note that the lack of namespacing allows this to 
 Format elements in the list and table
 
 ```css
+aside {
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  width: 180px;
+  background-color: #f0dfb4;
+  padding: 6px;
+  border: 1px solid #600;
+  font-size: 0.875rem;
+}
+
 aside th {
   text-align: right;
 }
 
 aside ul {
   list-style: none;
-  margin: 1em;
+  margin: 0.5rem;
   padding: 0;
 }
 ```
@@ -542,7 +593,7 @@ Remove the CSS from the head of the document and paste it into a new text docume
 <link href="css/styles.css" media="all" />
 ```
 
-Try not to use the alternative:
+It is best practice not to use the alternative:
 
 ```html
 <style>
