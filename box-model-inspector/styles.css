@@ -20,3 +20,41 @@ img {
   padding: 10px;
   border: 1px solid #fff;
 }
+
+p {
+  padding: 16px;
+  margin: 1em;
+  border: 3px solid #333;
+  height: 200px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+  p {
+    border: 3px solid red;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

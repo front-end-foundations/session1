@@ -1,0 +1,126 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+body {
+	margin: 1rem;
+	color: #333;
+	font-family: Lato, Verdana, Arial, sans-serif;
+}
+
+header {
+	font-family: Lobster, cursive;
+	/*font-weight: normal;*/
+}
+
+header h1,
+header h2 {
+	font-weight: normal;
+	font-size: 3rem;
+}
+header h2 {
+	font-size: 2rem;
+	margin: 8px 0;
+}
+article h2 {
+	font-weight: 400;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 12px;
+}
+
+
+.nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 4px;
+  display: block;
+  background-color: #600;
+  transition: background-color 0.5s cubic-bezier(0.94,-0.23, 0.29, 1.43);
+}
+.nav a:hover {
+  color: #222;
+  background-color: #f0dfb4;
+}
+
+aside {
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  width: 180px;
+  background-color: #f0dfb4;
+  padding: 6px;
+  border: 1px solid #600;
+}
+
+article {
+	margin: 0 20px 0 240px;
+}
+
+#wrapper {
+	max-width: 840px;
+	margin: 0 auto;
+	border: 1px solid #999;
+	position: relative;
+}
+
+@media print {
+	* {
+		display: none;
+	}
+}
+
+@media all and (max-width: 800px) {
+  .nav {
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  aside {
+    position: static;
+    float: left;
+    margin-right: 20px;
+  }
+  article {
+    margin-left: 20px;
+  }
+  blockquote {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
