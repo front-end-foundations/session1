@@ -131,10 +131,11 @@ Try:
 
 ### The Box Model
 
-Block elements are interpreted as a box in the browser. Boxes have other characteristics such as padding, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
+Block elements are interpreted as a box in the browser. Boxes have properties such as padding, borders, position and margins. Taken together these elements form the box model.
 
 Try:
 
+- Viewing and adjusting a box in the inspector
 - Adding a 3em margin to the `em` tag with and without `display: block` and `display: inline-block`
 
 Let's add padding, border and override the margins.
