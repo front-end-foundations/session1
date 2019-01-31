@@ -91,7 +91,7 @@ HTML tags can be styled to look any way you want - they convey _meaning_ to the 
 
 Try:
 
-- Use the inspector to change the `div` tag to an `article` tag.
+- Use the inspector to change the `div` tag to an `article` tag
 
 There are only a small [number](https://www.w3schools.com/tags/) of html tags but each has a meaning.
 
@@ -113,9 +113,9 @@ The paragraph tag `<p>` creates a box and by default has space above and below i
 
 A `<div>` tag is a block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. `div` tags are useful but don't say anything about the content inside them. Use HTML5 [semantic tags](https://www.w3schools.com/html/html5_semantic_elements.asp) whenever possible.
 
-Try:
+<!-- Try:
 
-- Use a completely fabricated html tag and set its display property to block in the CSS
+- Use a completely fabricated html tag and set its display property to block in the CSS -->
 
 ### HTML, CSS and JavaScript Comments
 
@@ -136,27 +136,7 @@ Block elements are interpreted as a box in the browser. Boxes have properties su
 Try:
 
 - Viewing and adjusting a box in the inspector
-- Adding a 3em margin to the `em` tag with and without `display: block` and `display: inline-block`
-
-Let's add padding, border and override the margins.
-
-Edit `styles.css` to add:
-
-```css
-p {
-  padding: 16px;
-  margin: 1em;
-  border: 3px solid #333;
-  height: 200px;
-  width: 80%;
-}
-```
-
-Refresh the page and inspect the paragraph again. Note the changes in the inspector.
-
-Try:
-
-- Setting the height of the `p` to 3px in the inspector with `overflow: hidden;` and `overflow: auto;`
+- Adding `margin`, `padding` and `height` to the `em` tag with and without `display: block` and `display: inline-block`
 
 ## CSS Syntax
 
@@ -173,13 +153,37 @@ The selector determines which HTML element will be selected.
 
 The properties are set by the value after the full colon. These almost always have a unit such as `px`, `s`, `em` or `%`.
 
-Note the drop down (triangle) next to padding, margin and border properties in the inspector. This are CSS shortcuts. Our border property could also be written in long form.
+Let's add padding, border and override the margins.
+
+Edit `styles.css` to add:
+
+```css
+p {
+  padding: 16px;
+  margin: 1em;
+  border: 3px solid #333;
+  height: 100px;
+  width: 80%;
+}
+```
+
+Refresh the page and inspect the paragraph again. Note the changes in the inspector.
+
+<!-- Try:
+
+- Setting the height to 4px with `overflow: hidden;` and `overflow: auto;` -->
+
+Note the drop down (triangle) next to padding, margin and border properties in the inspector. This indicate CSS shortcuts. Our border property could also be written in long form.
 
 ```css
 border-style: solid;
 border-color: #333;
 border-width: 3px;
 ```
+
+Try:
+
+- `border-top-style: dotted;`
 
 ### Box Sizing
 
