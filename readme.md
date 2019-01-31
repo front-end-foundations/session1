@@ -77,11 +77,11 @@ Try:
 
 ## Separation of Concerns
 
-The three pillars are an example of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) - an important principle in programming.
+This sample page illustrates the three pillars of the web and comprise an example of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) - an important principle in programming.
 
-Another important model is MVC (model, view, controller) - database, interface, business logic
+Another example of the separation of concerns might be MVC (model, view, controller) which corresponds to database, interface, and business logic.
 
-Concerns here are the different aspects of software functionality. For instance, in MVC, the business logic or _controller_ is a concern, and the interface or _view_ through which a person uses this logic is another. Changing the interface should not require changing the business logic code, and vice versa. This makes it possible to assign different roles and responsibilities to each area for workgroups.
+Concerns here are the different aspects of software functionality. For instance, in MVC, the business logic or _controller_ is a concern, and the interface or _view_ through which a person uses this logic is another. Changing the interface should not require changing the business logic, and vice versa. This makes it possible to assign different roles and responsibilities to each area for a large organization.
 
 ### Semantics
 
@@ -91,23 +91,29 @@ Try:
 
 - Use the inspector to change the `div` tag to an `article` tag.
 
+There are only a small [number](https://www.w3schools.com/tags/) of html tags but each has a meaning.
+
 ### User Agent Styles
 
-User agent styles are the default styles for HTML elements. By default the browser has placed margins above and below the header, paragraph and on all four sides of the body. These default styles make sure that the content is understandable even in the absence of a style sheet.
+User agent styles are the default styles for HTML elements. By default the browser places margins above and below the header, paragraph and on all four sides of the body. These default styles make sure that the content is understandable even in the absence of a style sheet.
 
 ### Block vs Inline
 
-Most HTML tags or elements all have a default `display` property which is set to `block` which means that they create a rectangular region in the browser.
+Most HTML tags or elements all have a default `display` property set to `block` which means that they create a rectangular region in the browser.
 
 The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>`. A `<span>` tag is used to create arbitrary inline elements.
 
 Try:
 
-- Use the inspector to set the em tag to `display: block`.
+- Use the inspector to set the em tag to `display: block`
 
-The paragraph tag - `<p>` - creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.
+The paragraph tag `<p>` creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
 A `<div>` tag is a block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. `div` tags are useful but don't say anything about the content inside them. Use HTML5 [semantic tags](https://www.w3schools.com/html/html5_semantic_elements.asp) whenever possible.
+
+Try:
+
+- Use a completely fabricated html tag and set its display property to block in the CSS
 
 ### HTML, CSS and JavaScript Comments
 
@@ -116,6 +122,10 @@ In most editors the keyboard shortcut `cmd-/` will comment out a line or lines w
 - HTML: `<!-- -->`
 - CSS: `/* */`
 - JavaScript: `/* */` for multiline comments and `//` for single line comments
+
+Try:
+
+- Comment on and off the meta tag in the HTML file and viewing the result in the browser with the Toggle device button on and off
 
 ### The Box Model
 
