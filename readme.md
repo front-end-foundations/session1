@@ -4,11 +4,13 @@
 
 [Email](mailto:daniel.deverell@nyu.edu) - `daniel.deverell@nyu.edu`
 
-[Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf) - `http://daniel.deverell.com/syllabus-fall2018.pdf`
+[Syllabus](http://daniel.deverell.com/syllabus.pdf) - `http://daniel.deverell.com/syllabus.pdf`
 
-[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for _all files_ used in this class. The edited files as they existed at the end of class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
+[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for _all files_ used in this class. The edited files as they existed at the end of class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `*-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
 
-[Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) - _HTML5 and CSS3: Building Responsive Websites_ is available in paperback [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats.
+[Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) - _HTML5 and CSS3: Building Responsive Websites_ is available in paperback [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats. This text is optional but recommended for those who would like some additional material. Additional online reading and videos will be assigned.
+
+### NYU Server
 
 [Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `jdoe`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
 
@@ -16,7 +18,7 @@ Test to see if your account is active by entering `http://oit2.scps.nyu.edu/~<us
 
 Your password is your first initial plus your last initial plus 123890. e.g. `dd123890` and the computer name is `oit2.scps.nyu.edu`
 
-You can upload and download files using SFTP (Secure File Transfer Protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you _must_ use port 22 or SFTP in order to connect.
+You can upload and download files using SFTP (Secure File Transfer Protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you _must_ use port 22 or SFTP in order to connect via SFTP.
 
 When you log into your account you will see a number of files and folders. The `web` folder is where you place folders and files in order to make them accessible at `http://oit2.scps.nyu.edu/~<username>/`. This is where you will hand in your assignments.
 
@@ -24,12 +26,12 @@ Do not leave original copies of material on the server as accounts are deleted a
 
 ## Homework
 
-1. Download Sublime text and install [Package Control](https://packagecontrol.io/)
-1. Install [Emmet](https://packagecontrol.io/packages/Emmet) into Sublime text using Package Control
+<!-- 1. Download Sublime text and install [Package Control](https://packagecontrol.io/)
+1. Install [Emmet](https://packagecontrol.io/packages/Emmet) into Sublime text using Package Control -->
 1. Download the files as distributed in class from Github and, using the notes below, try to recreate the design we did in class from scratch
 1. Examine the provided homework samples (in the `home-work-samples` folder) using Chrome's developer tools. Pick two or three visual formatting features that appeal to you and apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
 
-Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/spring2019-done) from the `fall2019-done` branch of the repo for reference. Be sure to select the branch on Github _before_ downloading the zip.
+As noted above, the "end state" (the files I was working as they were at the end of class) can be downloaded from the `fall2019-done` branch of the repo for reference. Be sure to select the branch on Github _before_ downloading the zip.
 
 ### Additional Reading
 
@@ -38,9 +40,9 @@ These are good resources for absolute beginners and go into more depth in some a
 - Video: [HTML Crash Course for Absolute Beginners](https://youtu.be/UB1O30fR-EE), and the [accompanying files](https://www.youtube.com/redirect?redir_token=1Yb19FwXTj2Zp4L-bRWo-VIllCl8MTUxODAxNjc4OUAxNTE3OTMwMzg5&event=video_description&v=UB1O30fR-EE&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fhtmlcheatsheet.zip)
 - Video: [CSS Crash Course for Absolute Beginners](https://youtu.be/yfoY53QXEnI), and the [accompanying files](https://www.youtube.com/redirect?event=video_description&v=yfoY53QXEnI&redir_token=7uspCtsw-mSVQ-CRLJqyBuXp4B18MTUzNzIwOTU4MUAxNTM3MTIzMTgx&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fcsscrashcourse.zip)
 
-## Text Editors, Browsers and Browser Developer Tools
+<!-- ## Text Editors, Browsers and Browser Developer Tools -->
 
-In this class we will be using [Sublime Text](https://www.sublimetext.com/).
+<!-- In this class we will be using [Sublime Text](https://www.sublimetext.com/).
 
 Other popular text editors you can try include:
 
@@ -49,9 +51,9 @@ Other popular text editors you can try include:
 
 In order to extend Sublime Text you need to install [Package Control](https://packagecontrol.io/) first. Once installed you can take advantage of a large assortment of [packages](https://packagecontrol.io/browse/popular).
 
-(Note that in NYU labs, configuration changes are not saved after restart. You should only install Package Control, Emmet and any other Packages that might be useful to you _on your own computer_.)
+(Note that in NYU labs, configuration changes are not saved after restart. You should only install Package Control, Emmet and any other Packages that might be useful to you _on your own computer_.) -->
 
-### Developer Tools in the Browser
+## Developer Tools
 
 Open the folder (`cmd-o`) `session1` in the text editor and then open `box-model-inspector/index.html` in Chrome. Right click on any text and choose `Inspect`.
 
@@ -145,8 +147,8 @@ CSS rules consist of a selector, a set of curly braces, and a series of properti
 
 ```css
 selector {
-  property1: value;
-  property2: value;
+  property: value;
+  property: value;
 }
 ```
 
