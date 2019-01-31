@@ -55,19 +55,23 @@ In order to extend Sublime Text you need to install [Package Control](https://pa
 
 ## Developer Tools
 
-Open the folder (`cmd-o`) `session1` in the text editor and then open `box-model-inspector/index.html` in Chrome. Right click on any text and choose `Inspect`.
+Open the folder (`cmd-o`) `session1` in the text editor. 
+
+Open `box-model-inspector/index.html` in Chrome. Right click on any text and choose `Inspect`.
 
 No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open _at all times_ when you are working - seriously.
+
+The shortcut for opening the developer tools is `command-shift-c`.
 
 ## The Three Pillars of Web Design
 
 - Content (HTML) - uses HTML tags to _semantically_ markup the contents
 - Appearance (CSS) - uses CSS to determine how the content will appear to the user
-- Behavior (JavaScript) - uses JavaScript to allow the user to interact with the content
+- Behavior (JavaScript) - uses JavaScript to control how the pages works and allow the user to interact with the content
 
 Try:
 
-- Click on the cat picture and note the changes in the document, how the inspector displays it, and the Console tab in the inspector
+- Click on the cat picture and note the changes in the document, how the Elements inspector displays the number, and what happens in the Console tab in the inspector
 - Click on the link and note the change in the browser's address bar
 - Force the link to hover using the inspector
 

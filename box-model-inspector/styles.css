@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 1rem/1.5 sans-serif;
   background-color: black;
@@ -21,4 +25,8 @@ p span {
 img {
   padding: 10px;
   border: 1px solid #fff;
+}
+
+div {
+  height: 3000px;
 }

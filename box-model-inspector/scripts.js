@@ -6,9 +6,9 @@ var kittenPic = document.querySelector('img');
 var clickedKitten = 0;
 
 // set up the kittenPic to listen for clicks
-kittenPic.addEventListener('click', function () {
+kittenPic.addEventListener('click', function() {
   // and run commands when the kitten is clicked
-  clickedKitten = clickedKitten + 1
-  console.log(clickedKitten);
+  clickedKitten = clickedKitten + 1;
+  console.log('You kitten clicked ' + clickedKitten + ' times!');
   textSpan.textContent = clickedKitten;
 });
