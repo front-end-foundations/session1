@@ -6,9 +6,9 @@
 
 [Syllabus](http://daniel.deverell.com/syllabus-fall2018.pdf) - `http://daniel.deverell.com/syllabus-fall2018.pdf`
 
-[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for *all files* used in this class. The  edited files as they existed at the end of class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
+[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for _all files_ used in this class. The edited files as they existed at the end of class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
 
-[Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) -  _HTML5 and CSS3: Building Responsive Websites_ is available in paperback [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats.
+[Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) - _HTML5 and CSS3: Building Responsive Websites_ is available in paperback [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats.
 
 [Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `jdoe`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
 
@@ -35,8 +35,8 @@ Note: the finished files I was working on in class can be [downloaded](https://g
 
 These are good resources for absolute beginners and go into more depth in some areas than we will have time for in class. You should try to watch them over the first two weeks of the semester. Be sure to download the accompanying files in order to follow along on your own.
 
-* Video: [HTML Crash Course for Absolute Beginners](https://youtu.be/UB1O30fR-EE), and the [accompanying files](https://www.youtube.com/redirect?redir_token=1Yb19FwXTj2Zp4L-bRWo-VIllCl8MTUxODAxNjc4OUAxNTE3OTMwMzg5&event=video_description&v=UB1O30fR-EE&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fhtmlcheatsheet.zip)
-* Video: [CSS Crash Course for Absolute Beginners](https://youtu.be/yfoY53QXEnI), and the [accompanying files](https://www.youtube.com/redirect?event=video_description&v=yfoY53QXEnI&redir_token=7uspCtsw-mSVQ-CRLJqyBuXp4B18MTUzNzIwOTU4MUAxNTM3MTIzMTgx&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fcsscrashcourse.zip)
+- Video: [HTML Crash Course for Absolute Beginners](https://youtu.be/UB1O30fR-EE), and the [accompanying files](https://www.youtube.com/redirect?redir_token=1Yb19FwXTj2Zp4L-bRWo-VIllCl8MTUxODAxNjc4OUAxNTE3OTMwMzg5&event=video_description&v=UB1O30fR-EE&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fhtmlcheatsheet.zip)
+- Video: [CSS Crash Course for Absolute Beginners](https://youtu.be/yfoY53QXEnI), and the [accompanying files](https://www.youtube.com/redirect?event=video_description&v=yfoY53QXEnI&redir_token=7uspCtsw-mSVQ-CRLJqyBuXp4B18MTUzNzIwOTU4MUAxNTM3MTIzMTgx&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fcsscrashcourse.zip)
 
 ## Text Editors, Browsers and Browser Developer Tools
 
@@ -44,8 +44,8 @@ In this class we will be using [Sublime Text](https://www.sublimetext.com/).
 
 Other popular text editors you can try include:
 
-* [Atom](https://atom.io/)
-* [Visual Studio Code](https://code.visualstudio.com/)
+- [Atom](https://atom.io/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 In order to extend Sublime Text you need to install [Package Control](https://packagecontrol.io/) first. Once installed you can take advantage of a large assortment of [packages](https://packagecontrol.io/browse/popular).
 
@@ -55,19 +55,19 @@ In order to extend Sublime Text you need to install [Package Control](https://pa
 
 Open the folder (`cmd-o`) `session1` in the text editor and then open `box-model-inspector/index.html` in Chrome. Right click on any text and choose `Inspect`.
 
-No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open _at all times_ when you are working - seriously.  
+No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open _at all times_ when you are working - seriously.
 
 ## The Three Pillars of Web Design
 
-* Content (HTML) - uses HTML tags to _semantically_ markup the contents 
-* Appearance (CSS) - uses CSS to determine how the content will appear to the user
-* Behavior (JavaScript) - uses JavaScript to allow the user to interact with the content
+- Content (HTML) - uses HTML tags to _semantically_ markup the contents
+- Appearance (CSS) - uses CSS to determine how the content will appear to the user
+- Behavior (JavaScript) - uses JavaScript to allow the user to interact with the content
 
 Try:
 
-* Click on the cat picture and note the changes in the document, how the inspector displays it, and the Console tab in the inspector
-* Click on the link and note the change in the browser's address bar
-* Force the link to hover using the inspector
+- Click on the cat picture and note the changes in the document, how the inspector displays it, and the Console tab in the inspector
+- Click on the link and note the change in the browser's address bar
+- Force the link to hover using the inspector
 
 ## Separation of Concerns
 
@@ -79,11 +79,11 @@ Concerns here are the different aspects of software functionality. For instance,
 
 ### Semantics
 
-HTML tags can be styled to look any way you want - they convey _meaning_ to the content that makes up the document and help make it understandable. HTML tags can be made to look anyway you want -they are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) - not stylistically important.
+HTML tags can be styled to look any way you want - they convey _meaning_ to the content that makes up the document and help make it understandable. HTML tags can be made to look anyway you want. They are [semantically](https://en.wikipedia.org/wiki/Semantic_HTML) - not stylistically - important.
 
-Try: 
+Try:
 
-* Use the inspector to change the `div` tag to an `article` tag.
+- Use the inspector to change the `div` tag to an `article` tag.
 
 ### User Agent Styles
 
@@ -95,7 +95,9 @@ Most HTML tags or elements all have a default `display` property which is set to
 
 The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>`. A `<span>` tag is used to create arbitrary inline elements.
 
-* Try: use the inspector to set the em tag to display block.
+Try:
+
+- Use the inspector to set the em tag to `display: block`.
 
 The paragraph tag - `<p>` - creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.
 
@@ -105,15 +107,17 @@ A `<div>` tag is a block tag which is used to create a logical division in your 
 
 In most editors the keyboard shortcut `cmd-/` will comment out a line or lines with the appropriate code:
 
-* HTML: `<!-- -->`
-* CSS: `/*  */`
-* JavaScript: `/*  */` for multiline comments and `//` for single line comments
+- HTML: `<!-- -->`
+- CSS: `/* */`
+- JavaScript: `/* */` for multiline comments and `//` for single line comments
 
 ### The Box Model
 
 Block elements are interpreted as a box in the browser. Boxes have other characteristics such as padding, borders and margins. Taken together these elements form the box model. You can view this in the inspector.
 
-* Try: adding a 3em margin to the `em` tag with and without `display: block` and `display: inline-block`
+Try:
+
+- Adding a 3em margin to the `em` tag with and without `display: block` and `display: inline-block`
 
 Let's add padding, border and override the margins.
 
@@ -131,7 +135,9 @@ p {
 
 Refresh the page and inspect the paragraph again. Note the changes in the inspector.
 
-* Try: setting the height of the `p` to 3px in the inspector with `overflow: hidden;` and `overflow: auto;`
+Try:
+
+- Setting the height of the `p` to 3px in the inspector with `overflow: hidden;` and `overflow: auto;`
 
 ## CSS Syntax
 
@@ -146,7 +152,7 @@ selector {
 
 The selector determines which HTML element will be selected.
 
-The properties (there are many but we will be focusing on a few of the most useful at the outset) are set by the value after the full colon. These almost always have a unit such as `px`, `s`, `em` or `%`.
+The properties are set by the value after the full colon. These almost always have a unit such as `px`, `s`, `em` or `%`.
 
 Note the drop down (triangle) next to padding, margin and border properties in the inspector. This are CSS shortcuts. Our border property could also be written in long form.
 
@@ -158,7 +164,7 @@ border-width: 3px;
 
 ### Box Sizing
 
-Boxes are additive by default - the amount of space they take up in the browser will be a combination of CSS width, padding and border properties (margins are outside the box model). 
+Boxes are additive by default - the amount of space they take up in the browser will be a combination of CSS width, padding and border properties (margins are outside the box model).
 
 There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
@@ -166,8 +172,8 @@ Add `box-sizing: border-box/content-box` to review box model options.
 
 ```css
 p {
-    ...
-    box-sizing: border-box;
+  box-sizing: border-box;
+  ...;
 }
 ```
 
@@ -185,9 +191,9 @@ Add a media query to `styles.css`:
 
 Resize the browser and note:
 
-* overrides in the inspector
-* `min-width` = greater than
-* the css for `>` (greater than) 500px is _added_ to the styles when the condition is true.
+- overrides in the inspector
+- `min-width` = greater than
+- the css for `>` (greater than) 500px is _added_ to the styles when the condition is true.
 
 Change it to:
 
@@ -201,16 +207,16 @@ Change it to:
 
 Note:
 
-* the inspector overrides (cascade)
-* `max-width` = less than
-* the css for `<` (less than) 500px is _added_ to the styles when the condition is true.
+- the inspector overrides (cascade)
+- `max-width` = less than
+- the css for `<` (less than) 500px is _added_ to the styles when the condition is true.
 
 ### Debugging CSS with the inspector
 
-* misspelling
-* bad selectors
-* missing units
-* whitespace
+- misspelling
+- bad selectors
+- missing units
+- whitespace
 
 ## Exercise - Converting to Standards
 
@@ -222,9 +228,9 @@ Add a CSS declaration to `styles.css` as follows:
 
 ```css
 body {
-    margin: 12px;
-    color: #333;
-    font-family: Verdana, Arial, sans-serif;
+  margin: 12px;
+  color: #333;
+  font-family: Verdana, Arial, sans-serif;
 }
 ```
 
@@ -246,7 +252,7 @@ We will use [Lato](https://fonts.google.com/specimen/Lato) for our main text and
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 ```
 
-Add this to the top of our css (@import statements should always come first) to use the font within our stylesheet. 
+Add this to the top of our css (@import statements should always come first) to use the font within our stylesheet.
 
 Add to the body css rule:
 
@@ -259,7 +265,7 @@ font-family: 'Lato', Verdana, Arial, sans-serif;
 THe html link tag:
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
 ```
 
 In use:
@@ -290,8 +296,8 @@ Note margin collapsing.
 header h1,
 header h2 {
   font-weight: normal;
-	font-size: 3rem;
-	margin: 8px 0;
+  font-size: 3rem;
+  margin: 8px 0;
 }
 ```
 
@@ -315,8 +321,8 @@ Add a _class_ to the `<ul>` that will form the navigation for our page.
 
 ```html
 <ul class="nav">
-    <li><a href="#">Cuisines</a></li>
-    ...
+  <li><a href="#">Cuisines</a></li>
+  ...
 </ul>
 ```
 
@@ -449,7 +455,7 @@ Take a moment to resize the browser. Toggle the device button in the developer t
 Add the device meta tag:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
 
 Toggle the device button in the developer tools again.
@@ -497,14 +503,14 @@ Note the impact the relative positioning has on the layout (toggle it on and off
 
 ## Adding color to our layout
 
-Edit the CSS body rule to include ` background-color: #ddd;`:
+Edit the CSS body rule to include `background-color: #ddd;`:
 
 ```css
 body {
-		margin: 12px;
-		color: #333;
-		font-family: 'Lato', Verdana, Arial, sans-serif;
-    background-color: #ddd;
+  margin: 12px;
+  color: #333;
+  font-family: 'Lato', Verdana, Arial, sans-serif;
+  background-color: #ddd;
 }
 ```
 
@@ -514,9 +520,8 @@ Let's add a white background to wrapper.
 
 ```css
 #wrapper {
-  ...
-    background-color: #fff;
-    margin: 12px;
+  ... background-color: #fff;
+  margin: 12px;
 }
 ```
 
@@ -532,12 +537,12 @@ Note the h1's margin outside the containing elements (not part of the box model)
 header h1,
 header h2 {
   font-weight: normal;
-	font-size: 3rem;
-	margin: 8px 0;
+  font-size: 3rem;
+  margin: 8px 0;
   color: #600;
 }
 header h2 {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 article h2 {
   font-weight: 400;
@@ -577,15 +582,15 @@ aside ul {
 
 We've already seen the link tag and @import methods of adding css to our document. Let's examine all the ways to add CSS to an HTML document:
 
-* Inline via the HTML `style=` attribute
-* In page via the HTML `<style>` tag
-* As an external .CSS file via linking (HTML `<link>` tag)
-* As an external .CSS file via importing (CSS `@import` statements)
+- Inline via the HTML `style=` attribute
+- In page via the HTML `<style>` tag
+- As an external .CSS file via linking (HTML `<link>` tag)
+- As an external .CSS file via importing (CSS `@import` statements)
 
 Inline styles are inefficient:
 
 ```html
-<p style="margin-top: 12px;">
+<p style="margin-top: 12px;"></p>
 ```
 
 However this method is often used when dynamically changing the page after it has been loaded in the browser.
@@ -596,7 +601,7 @@ It is best practice not to use the alternative:
 
 ```html
 <style>
-  @import url("css/styles.css");
+  @import url('css/styles.css');
 </style>
 ```
 
@@ -612,8 +617,7 @@ Add rounded corners to the info div. (See [https://developer.mozilla.org/en/CSS/
 
 ```css
 aside {
-  ...
-    border-radius: 6px;
+  ... border-radius: 6px;
 }
 ```
 
@@ -640,7 +644,7 @@ A simple way to create navigation on a web site.
 1 Add a class to body tag so we know what kind of page this is.
 
 ```html
-<body class="p-review">
+<body class="p-review"></body>
 ```
 
 2 Add a list item to the nav list with a class of review-link.
@@ -653,8 +657,8 @@ A simple way to create navigation on a web site.
 
 ```css
 .review-page .review-link {
-    color: #fff;
-    background:#600;
+  color: #fff;
+  background: #600;
 }
 ```
 
