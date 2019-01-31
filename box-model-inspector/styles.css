@@ -1,4 +1,5 @@
 body {
+  font: 1rem/1.5 sans-serif;
   background-color: black;
   color: white;
 }
@@ -6,13 +7,14 @@ body {
 a {
   color: papayawhip;
 }
+
 a:hover {
   color: black;
   background-color: white;
 }
 
 p span {
-  font-size: 150%;
+  font-size: 200%;
   color: papayawhip;
 }
 

@@ -8,7 +8,7 @@
 
 [Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for *all files* used in this class. The  edited files as they existed at the end of class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
 
-[Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) -  _HTML5 and CSS3: Building Responsive Websites_ is available in paperback at the NYU bookstore or [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats.
+[Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) -  _HTML5 and CSS3: Building Responsive Websites_ is available in paperback [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats.
 
 [Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `jdoe`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
 
@@ -29,16 +29,16 @@ Do not leave original copies of material on the server as accounts are deleted a
 1. Download the files as distributed in class from Github and, using the notes below, try to recreate the design we did in class from scratch
 1. Examine the provided homework samples (in the `home-work-samples` folder) using Chrome's developer tools. Pick two or three visual formatting features that appeal to you and apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
 
-Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `fall2018-done` branch of this repo for reference. Be sure to select the branch on Github _before_ downloading the zip.
+Note: the finished files I was working on in class can be [downloaded](https://github.com/front-end-foundations/session1/tree/spring2019-done) from the `fall2019-done` branch of the repo for reference. Be sure to select the branch on Github _before_ downloading the zip.
 
-## Additional Reading
+### Additional Reading
 
 These are good resources for absolute beginners and go into more depth in some areas than we will have time for in class. You should try to watch them over the first two weeks of the semester. Be sure to download the accompanying files in order to follow along on your own.
 
 * Video: [HTML Crash Course for Absolute Beginners](https://youtu.be/UB1O30fR-EE), and the [accompanying files](https://www.youtube.com/redirect?redir_token=1Yb19FwXTj2Zp4L-bRWo-VIllCl8MTUxODAxNjc4OUAxNTE3OTMwMzg5&event=video_description&v=UB1O30fR-EE&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fhtmlcheatsheet.zip)
 * Video: [CSS Crash Course for Absolute Beginners](https://youtu.be/yfoY53QXEnI), and the [accompanying files](https://www.youtube.com/redirect?event=video_description&v=yfoY53QXEnI&redir_token=7uspCtsw-mSVQ-CRLJqyBuXp4B18MTUzNzIwOTU4MUAxNTM3MTIzMTgx&q=http%3A%2F%2Fwww.traversymedia.com%2Fdownloads%2Fcsscrashcourse.zip)
 
-## Text Editors, Browsers and Developer Tools
+## Text Editors, Browsers and Browser Developer Tools
 
 In this class we will be using [Sublime Text](https://www.sublimetext.com/).
 
@@ -51,28 +51,29 @@ In order to extend Sublime Text you need to install [Package Control](https://pa
 
 (Note that in NYU labs, configuration changes are not saved after restart. You should only install Package Control, Emmet and any other Packages that might be useful to you _on your own computer_.)
 
-## Browser Tools
+### Developer Tools in the Browser
 
 Open the folder (`cmd-o`) `session1` in the text editor and then open `box-model-inspector/index.html` in Chrome. Right click on any text and choose `Inspect`.
 
-No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open _at all times_ when you are working.
+No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open _at all times_ when you are working - seriously.  
 
 ## The Three Pillars of Web Design
 
-* Content (HTML) - uses HTML tags to semantically markup the contents 
-* Appearance (CSS) - uses CSS rules to determine how the content will appear to the user
-* Behavior (JavaScript) - uses scripts written in JavaScript to allow the user to interact with the content
+* Content (HTML) - uses HTML tags to _semantically_ markup the contents 
+* Appearance (CSS) - uses CSS to determine how the content will appear to the user
+* Behavior (JavaScript) - uses JavaScript to allow the user to interact with the content
 
 Try:
+
 * Click on the cat picture and note the changes in the document, how the inspector displays it, and the Console tab in the inspector
 * Click on the link and note the change in the browser's address bar
 * Force the link to hover using the inspector
 
 ## Separation of Concerns
 
-The three pillars are an example of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
+The three pillars are an example of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) - an important principle in programming.
 
-Another example is MVC (model, view, controller) - database, interface, busiiness logic
+Another important model is MVC (model, view, controller) - database, interface, business logic
 
 Concerns here are the different aspects of software functionality. For instance, in MVC, the business logic or _controller_ is a concern, and the interface or _view_ through which a person uses this logic is another. Changing the interface should not require changing the business logic code, and vice versa. This makes it possible to assign different roles and responsibilities to each area for workgroups.
 
