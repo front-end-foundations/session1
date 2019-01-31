@@ -187,9 +187,9 @@ Try:
 
 ### Box Sizing
 
-Boxes are additive by default - the amount of space they take up in the browser will be a combination of CSS width, padding and border properties (margins are outside the box model).
+Examine the paragraphs in the inspector. Boxes are additive by default - the amount of space they take up in the browser will be a combination of width, padding and border properties (margins are outside the box model).
 
-There is another sizing method that is often prefered called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
+There is another sizing method called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
 Add `box-sizing: border-box/content-box` to review box model options.
 
@@ -200,14 +200,22 @@ p {
 }
 ```
 
+Note the the height is now exactly 100px.
+
+Try: 
+
+- Setting the width of the paragraphs to 400px
+- Then comment out the box sizing property and examine the width and height using the inspector
+
 ### Media Queries Demo
 
 Add a media query to `styles.css`:
 
 ```css
-@media (min-width: 500px) {
+@media (min-width: 700px) {
   p {
     border: 3px solid red;
+    width: 600px
   }
 }
 ```
@@ -215,31 +223,35 @@ Add a media query to `styles.css`:
 Resize the browser and note:
 
 - overrides in the inspector
-- `min-width` = greater than
-- the css for `>` (greater than) 500px is _added_ to the styles when the condition is true.
+- `min-width` means "greater than"
+- the css for `>` (greater than) 700px is _added_ to the styles when the condition is true.
 
-Change it to:
+Change it to use `max-width`:
 
 ```css
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   p {
-    width: 100%;
+    border: 3px solid red;
+    width: 600px
   }
 }
 ```
 
 Note:
 
-- the inspector overrides (cascade)
-- `max-width` = less than
-- the css for `<` (less than) 500px is _added_ to the styles when the condition is true.
+- `max-width` means "less than"
+
+In the first case (`min-width`) the styles are added when the screen is small. In the second the styles are added when the screen is wide. This will be important when we start optimizing our CSS for devices with different screen sizes.
 
 ### Debugging CSS with the inspector
 
+By keeping an eye on the inspector you will quickly see when something has gone wrong with:
+
 - misspelling
-- bad selectors
+- bad or inapropriate selectors
 - missing units
-- whitespace
+- bad logic
+- and more
 
 ## Exercise - Converting to Standards
 
