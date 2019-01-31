@@ -28,6 +28,7 @@ Do not leave original copies of material on the server as accounts are deleted a
 
 <!-- 1. Download Sublime text and install [Package Control](https://packagecontrol.io/)
 1. Install [Emmet](https://packagecontrol.io/packages/Emmet) into Sublime text using Package Control -->
+
 1. Download the files as distributed in class from Github and, using the notes below, try to recreate the design we did in class from scratch
 1. Examine the provided homework samples (in the `home-work-samples` folder) using Chrome's developer tools. Pick two or three visual formatting features that appeal to you and apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
 
@@ -55,7 +56,7 @@ In order to extend Sublime Text you need to install [Package Control](https://pa
 
 ## Developer Tools
 
-Open the folder (`cmd-o`) `session1` in the text editor. 
+Open the folder (`cmd-o`) `session1` in the text editor.
 
 Open `box-model-inspector/index.html` in Chrome. Right click on any text and choose `Inspect`.
 
@@ -74,6 +75,7 @@ Try:
 - Click on the cat picture and note the changes in the document, how the Elements inspector displays the number, and what happens in the Console tab in the inspector
 - Click on the link and note the change in the browser's address bar
 - Force the link to hover using the inspector
+- Use multiple cursors to change a variable
 
 ## Separation of Concerns
 
@@ -95,7 +97,7 @@ There are only a small [number](https://www.w3schools.com/tags/) of html tags bu
 
 ### User Agent Styles
 
-User agent styles are the default styles for HTML elements. By default the browser places margins above and below the header, paragraph and on all four sides of the body. These default styles make sure that the content is understandable even in the absence of a style sheet.
+`User agent styles` are the default styles for HTML elements. By default the browser places margins above and below the header, paragraph and on all four sides of the body. These default styles make sure that the content is understandable even in the absence of a style sheet.
 
 ### Block vs Inline
 
