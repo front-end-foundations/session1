@@ -79,7 +79,7 @@ Concerns here are the different aspects of software functionality. For instance,
 
 ### Semantics
 
-HTML tags can be styled to look any way you want. They convey meaning to the code that comprises the document and help make it understandable. HTML tags are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) - not stylistically important.
+HTML tags can be styled to look any way you want - they convey _meaning_ to the content that makes up the document and help make it understandable. HTML tags can be made to look anyway you want -they are [semantically important](https://en.wikipedia.org/wiki/Semantic_HTML) - not stylistically important.
 
 * Try: use the inspector to change the `div` tag to an `article` tag.
 
