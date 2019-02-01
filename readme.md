@@ -4,9 +4,9 @@
 
 [Email](mailto:daniel.deverell@nyu.edu) - `daniel.deverell@nyu.edu`
 
-[Syllabus](http://daniel.deverell.com/syllabus.pdf){:target="\_blank" rel="noopener"} - `http://daniel.deverell.com/syllabus.pdf`
+[Syllabus](http://daniel.deverell.com/syllabus.pdf) - `http://daniel.deverell.com/syllabus.pdf`
 
-[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for _all files_ used in this class. The edited files as they existed at the end of class can be [downloaded](https://github.com/front-end-foundations/session1/tree/fall2018-done) from the `*-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip. Each class's activities will be documented in the readme file. Please keep the readme open during class for reference and in order to copy and paste code.
+[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for _all files_ used in this class. Each class's activities will be documented in the readme file. Please keep the readme open during class for reference and in order to copy and paste code. The edited files as they existed at the end of class can be downloaded from the `*-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
 
 [Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) - _HTML5 and CSS3: Building Responsive Websites_ is available in paperback [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats. This text is optional but recommended for those who would like some additional material. Additional online reading and videos will be assigned.
 
