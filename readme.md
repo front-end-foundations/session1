@@ -81,17 +81,17 @@ Try:
 
 This sample page illustrates the three pillars of the web and comprise an example of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) - an important principle in programming.
 
-Another example of the separation of concerns might be MVC (model, view, controller) which corresponds to database, interface, and business logic.
+<!-- Another example of the separation of concerns might be MVC (model, view, controller) which corresponds to database, interface, and business logic.
 
-Concerns here are the different aspects of software functionality. For instance, in MVC, the business logic or _controller_ is a concern, and the interface or _view_ through which a person uses this logic is another. Changing the interface should not require changing the business logic, and vice versa. This makes it possible to assign different roles and responsibilities to each area for a large organization.
+Concerns here are the different aspects of software functionality. For instance, in MVC, the business logic or _controller_ is a concern, and the interface or _view_ through which a person uses this logic is another. Changing the interface should not require changing the business logic, and vice versa. This makes it possible to assign different roles and responsibilities to each area for a large organization. -->
 
-### Semantics
+### HTML and Semantics
 
-HTML tags can be styled to look any way you want - they convey _meaning_ to the content that makes up the document and help make it understandable. HTML tags can be made to look anyway you want. They are [semantically](https://en.wikipedia.org/wiki/Semantic_HTML) - not stylistically - important.
+HTML tags convey _meaning_ to the content that makes up the document to help make it understandable. HTML tags can be made to look anyway you want. They are [semantically](https://en.wikipedia.org/wiki/Semantic_HTML) - not stylistically - important.
 
 Try:
 
-- Use the inspector to change the `div` tag to an `article` tag
+- Use the inspector to change the `div` tag to an `article` or aside tag
 
 There are only a small [number](https://www.w3schools.com/tags/) of html tags but each has a meaning.
 
@@ -113,9 +113,9 @@ The paragraph tag `<p>` creates a box and by default has space above and below i
 
 A `<div>` tag is a block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. `div` tags are useful but don't say anything about the content inside them. Use HTML5 [semantic tags](https://www.w3schools.com/html/html5_semantic_elements.asp) whenever possible.
 
-<!-- Try:
+Try:
 
-- Use a completely fabricated html tag and set its display property to block in the CSS -->
+- Use a completely fabricated html tag and set its display property to block in the CSS
 
 ### HTML, CSS and JavaScript Comments
 
@@ -253,9 +253,20 @@ By keeping an eye on the inspector you will quickly see when something has gone 
 - bad logic
 - and more
 
-## Exercise - Converting to Standards
+## Hands On Exercise - Sushi
 
-Open the `Sushi` folder and `before.html` in an editor and examine the HTML. This is often referred to as tag soup as it makes little sense to humans looking at the code.
+In this exercise we begin looking at layout with the following properties:
+
+- Containers
+- Display
+- Floats
+- Overflow
+- Position
+- Visibility
+- Z-Index
+
+
+Open the `Sushi` folder and `before.html` in an editor and examine the HTML. This is often referred to as tag soup as it makes little sense to humans looking at the code. Note the preponderance of visual markup code in the file.
 
 Open `index.html`. This is an html5 document that uses HTML tags semantically. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
