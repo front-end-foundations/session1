@@ -283,7 +283,7 @@ body {
 and link it to `index.html` in the head:
 
 ```html
-<link href="css/styles.css" media="all" />
+<link rel="stylesheet" href="css/styles.css" media="all" />
 ```
 
 ## Google fonts
@@ -298,17 +298,15 @@ We will use [Lato](https://fonts.google.com/specimen/Lato) for our main text and
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
 ```
 
-Add this to the top of our css (@import statements should always come first) to use the font within our stylesheet.
+Add this to the _top_ of our css (@import statements should always come first) to use the font within our stylesheet.
 
-Add to the body css rule:
+Edit the body css rule:
 
 ```css
 font-family: 'Lato', Verdana, Arial, sans-serif;
 ```
 
-### Linking to a css file from html
-
-THe html link tag:
+Link to the Google fonts css file from html:
 
 ```html
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
@@ -323,47 +321,26 @@ header {
 }
 ```
 
-Note: the bold property belongs to the `h1` tag, not the `header` tag.
+Note: `h1` tags are bold by default but Lobster has no bold version. Thus we use `font-weight: normal` to keep the browser from applying bold.
 
 ```css
 header h1,
 header h2 {
-  font-weight: normal;
   font-size: 3rem;
+  margin: 8px 0;
 }
 header h2 {
   font-size: 2rem;
 }
 ```
 
-Note margin collapsing.
+Here we apply the same properties to multiple items using a comma in the selector and then override one of the properties. The application of font family to the entire header region is an example of the "C" in CSS - [the cascade](https://css-tricks.com/the-c-in-css-the-cascade/). In order to use the cascade effectively we will look at _specificity_ as we proceed.
 
-```css
-header h1,
-header h2 {
-  font-weight: normal;
-  font-size: 3rem;
-  margin: 8px 0;
-}
-```
-
-Note the use of weights in Lato:
-
-```css
-@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
-```
-
-Use 400:
-
-```css
-h2 {
-  font-weight: 400;
-}
-```
+Note the _margin collapsing_ beween the H1 and H2 tags.
 
 ## Formatting the Navigation
 
-Add a _class_ to the `<ul>` that will form the navigation for our page.
+Note that we have two unordered lists in our page. Add a _class_ to the `<ul>` that will form the navigation for our page so we have a name space that will allow us to target it exclusively.
 
 ```html
 <ul class="nav">
@@ -372,7 +349,7 @@ Add a _class_ to the `<ul>` that will form the navigation for our page.
 </ul>
 ```
 
-By doing so we have created a name space that allows us to differentiate the two `<ul>` lists in `start.html` and apply two different styles.
+We have created a name space that allows us to differentiate the two `<ul>` lists in `start.html` and apply different styles.
 
 Add the following to our style block:
 
@@ -398,9 +375,11 @@ Add the following to our style block:
 }
 ```
 
-Examine display options for making the buttons horizontal using block, float, inline-block, and flex.
+We will examine display options for making the navigation elements horizontal using float and flex.
 
-Examine the inspector's color picker. Note the ability to force element hover state.
+Note the use of a colon to target the hover state. This is an example of a _pseudo_ selector. So called because, unlike other selectors, it doesn't really target an HTML tag. 
+
+Examine the inspector's color picker. Also, note again the ability to force element hover state.
 
 Add css to `nav a`:
 
@@ -408,15 +387,15 @@ Add css to `nav a`:
 transition: all 0.5s linear;
 ```
 
-Edit the animation using the inspector's animation settings.
+Transition is another CSS [short cut](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions). Try editing the animation's timing using the inspector's animation settings.
 
-To animate only one difference specify it instead of `all`:
+Note: to animate only one difference specify it instead of `all`:
 
 ```css
 transition: background-color 0.5s linear;
 ```
 
-## Absolutely Positioning the Navigation
+## Absolute Positioning
 
 _Edit_ the nav CSS rule to position it
 
@@ -429,6 +408,8 @@ _Edit_ the nav CSS rule to position it
   top: 12px;
 }
 ```
+
+Examine the nav ul in the inspector. Note the coordinate system.
 
 Add an `<aside>` tag around the table and list then add the following CSS:
 
@@ -496,7 +477,7 @@ article img {
 
 Note the float property and how the text wraps around it before and after we have defined a width. By default, the floated container shrinks to the width determined by the content.
 
-Take a moment to resize the browser. Toggle the device button in the developer tools. Note: this is not a responsive design.
+Take a moment to resize the browser. Toggle the device button in the developer tools. 
 
 Add the device meta tag:
 
@@ -504,11 +485,11 @@ Add the device meta tag:
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
 
-Toggle the device button in the developer tools again.
+Toggle the device button in the developer tools again. Note: this is not a responsive design.
 
 ## Converting the document to fixed width
 
-Currently our document flexes as we make the browser wider to makes use of all the available horizontal space. While flexibility is generally a good practice, many sites still use fixed widths to improve readability. cf [Wikipedia](https://en.wikipedia.org/wiki/Line_length) vs [The Guardian](https://www.theguardian.com)
+Currently our document flexes as we make the browser wider to makes use of all the available horizontal space. While flexibility is a good practice, we need to understand more about the drawbacks of fixed widths.
 
 Add wrapper `<div id="wrapper">` to entire content area (after the `<body>` tag and close it before the closing `</body>` tag) and add the following to our CSS style block.
 
