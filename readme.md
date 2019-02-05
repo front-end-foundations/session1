@@ -751,7 +751,13 @@ At the bottom of the stylesheet
     display: none !important;
   }
 }
+```
 
+Try printing the document.
+
+We will use `max-width` and add CSS that overrides undesirable features on smaller devices.
+
+```css
 @media all and (max-width: 800px) {
   body {
     margin: 0;
