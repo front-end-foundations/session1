@@ -191,7 +191,7 @@ Refresh the page and inspect the paragraph again. Note the changes in the inspec
 
 - Setting the height to 4px with `overflow: hidden;` and `overflow: auto;` -->
 
-Note the drop down (triangle) next to padding, margin and border properties in the inspector. This indicate CSS shortcuts. Our border property could also be written in long form.
+Note the drop down (triangle) next to padding, margin and border properties in the inspector. This indicates a CSS shortcut. Click on it. Our border property could also be written in long form.
 
 ```css
 border-style: solid;
@@ -205,7 +205,7 @@ Try:
 
 ### Box Sizing
 
-Examine the paragraphs in the inspector. Boxes are additive by default - the amount of space they take up in the browser will be a combination of width, padding and border properties (margins are outside the box model).
+Examine the paragraphs in the inspector. Box dimensions are additive by default - the amount of space they take up in the browser will be a combination of the amount of content, width, padding and border properties (margins are outside the box model).
 
 There is another sizing method called `border-box`. This method calculates the border and padding within the width and is simpler to work with.
 
