@@ -606,7 +606,7 @@ header h2 {
 article h2 {
   font-weight: 600;
   color: #600;
-  border-bottom: 1px solid #600;
+  border-bottom: 1px dotted #600;
 }
 ```
 
