@@ -604,7 +604,7 @@ article h2 {
 }
 ```
 
-Note - selector strength here. Note that the lack of namespacing allows this to effect the Matsu text as well.
+Note - selector strength here. Note that the lack of namespacing allows this to effect the "Geido" text as well.
 
 Format elements in the list and table
 
