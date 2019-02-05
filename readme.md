@@ -6,17 +6,27 @@
 
 [Syllabus](http://daniel.deverell.com/syllabus.pdf) - `http://daniel.deverell.com/syllabus.pdf`
 
-[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for _all files_ used in this class. Each class's activities will be documented in the readme file. Please keep the readme open during class for reference and in order to copy and paste code. The edited files as they existed at the end of class can be downloaded from the `*-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
+### Github
 
-[Text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) - _HTML5 and CSS3: Building Responsive Websites_ is available in paperback [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats. This text is optional but recommended for those who would like some additional material. Additional online reading and videos will be assigned.
+[Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for _all files_ used in this class. Each class's activities will be documented in the readme file.
+
+Please keep the page open in a tab during class for reference and in order to copy and paste code. 
+
+The edited files as they existed at the end of class can be downloaded from the `*-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
+
+### Textbook (optional)
+
+A [text Book](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) - _HTML5 and CSS3: Building Responsive Websites_ is available in paperback [online](https://www.packtpub.com/web-development/html5-and-css3-building-responsive-websites) in a variety of formats. _This text is optional but recommended for those who would like some additional material._ Online reading and videos will be assigned.
 
 ### NYU Server
 
-[Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. Your username will be the first seven letters of your last name + the first letter of first name. e.g `jdoe`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
+[Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. 
 
-Test to see if your account is active by entering `http://oit2.scps.nyu.edu/~<username>` into a browser (note the tilde`~`, be sure to replace `<username>` with your username).
+Your username will be the first seven letters of your last name + the first letter of first name. e.g `jdoe`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
 
-Your password is your first initial plus your last initial plus 123890. e.g. `dd123890` and the computer name is `oit2.scps.nyu.edu`
+First, test to see if your account is active by entering `http://oit2.scps.nyu.edu/~<username>` into a browser (note the tilde`~`, be sure to replace `<username>` with your username).
+
+Your password is your first initial plus your last initial plus 123890. e.g. `dd123890` and the computer name is `oit2.scps.nyu.edu`.
 
 You can upload and download files using SFTP (Secure File Transfer Protocol). Recommended free SFTP clients include [Cyberduck](https://cyberduck.io) and [Filezilla](https://filezilla-project.org). Note - you _must_ use port 22 or SFTP in order to connect via SFTP.
 
@@ -26,13 +36,17 @@ Do not leave original copies of material on the server as accounts are deleted a
 
 ## Homework
 
+Homework should be handed in by uploading the files to the NYU server and alerting me via email.
+
 <!-- 1. Download Sublime text and install [Package Control](https://packagecontrol.io/)
 1. Install [Emmet](https://packagecontrol.io/packages/Emmet) into Sublime text using Package Control -->
+
+## This Week's Homework
 
 1. Download the files as distributed in class from Github and, using the notes below, try to recreate the design we did in class from scratch
 1. Examine the provided homework samples (in the `home-work-samples` folder) using Chrome's developer tools. Pick two or three visual formatting features that appeal to you and apply them to your page. Be sure to Google any CSS properties you are unfamiliar with.
 
-As noted above, the "end state" (the files I was working as they were at the end of class) can be downloaded from the `fall2019-done` branch of the repo for reference. Be sure to select the branch on Github _before_ downloading the zip.
+As noted above, the "end state" files (the files I was working as they were at the end of class) can be downloaded from the `fall2019-done` branch of the repo for reference. Be sure to select the branch on Github _before_ downloading the zip.
 
 ### Additional Reading
 
@@ -56,32 +70,39 @@ In order to extend Sublime Text you need to install [Package Control](https://pa
 
 ## Developer Tools
 
-Open the folder (`cmd-o`) `session1` in the text editor.
+Download the zip file from this page using the green download button.
 
-Open `box-model-inspector/index.html` in Chrome. Right click on any text and choose `Inspect`.
+Open the folder (`cmd-o`) `session1-master` in the text editor.
+
+Open `box-model-inspector/index.html` in Google Chrome. Right click on any text and choose `Inspect`.
 
 No matter which browser you are working in, the inspector is your first line of defense when troubleshooting and should be kept open _at all times_ when you are working - seriously.
 
 The shortcut for opening the developer tools is `command-shift-c`.
 
-## The Three Pillars of Web Design
+## Three Pillars of Web Design
 
-- Content (HTML) - uses HTML tags to _semantically_ markup the contents
+This simple page illustrates the three pillars of the web - content, appreance and behavior - and together with the accompanying CSS and JavaScript, is an example of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) - an important principle in programming.
+
+- Content (HTML) - uses HTML to _semantically_ markup the contents
 - Appearance (CSS) - uses CSS to determine how the content will appear to the user
 - Behavior (JavaScript) - uses JavaScript to control how the pages works and allow the user to interact with the content
 
 Try:
 
-- Click on the cat picture and note the changes in the document, how the Elements inspector displays the number, and what happens in the Console tab in the inspector
+- Examine elements in the browser with the Elements and Styles dev tools panels open
+- Click on the cat picture and note the changes in the document, how the Elements inspector displays the number, and what happens in the Console tab
 - Click on the link and note the change in the browser's address bar
 - Force the link to hover using the inspector
-- Use multiple cursors to change a variable
+<!-- - Use multiple cursors to change a variable -->
 
-## Separation of Concerns
+Note that the CSS is linked in the head of the document and the JavaScript is the last item in the HTML just above the closing body tag.
+
+<!-- ## Separation of Concerns
 
 This sample page illustrates the three pillars of the web and comprise an example of the [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) - an important principle in programming.
 
-<!-- Another example of the separation of concerns might be MVC (model, view, controller) which corresponds to database, interface, and business logic.
+Another example of the separation of concerns might be MVC (model, view, controller) which corresponds to database, interface, and business logic.
 
 Concerns here are the different aspects of software functionality. For instance, in MVC, the business logic or _controller_ is a concern, and the interface or _view_ through which a person uses this logic is another. Changing the interface should not require changing the business logic, and vice versa. This makes it possible to assign different roles and responsibilities to each area for a large organization. -->
 
@@ -97,7 +118,7 @@ There are only a small [number](https://www.w3schools.com/tags/) of html tags bu
 
 ### User Agent Styles
 
-`User agent styles` are the default styles for HTML elements. By default the browser places margins above and below the header, paragraph and on all four sides of the body. These default styles make sure that the content is understandable even in the absence of a style sheet.
+`User agent styles` are the default styles for HTML elements. By default the browser places margins above and below the header, paragraph and on all four sides of the body. These default styles make sure that the content is understandable even in the absence of a style sheet. You will typically build on top of these.
 
 ### Block vs Inline
 
@@ -105,17 +126,13 @@ Most HTML tags or elements all have a default `display` property set to `block` 
 
 The "opposite" of block in HTML is inline. An example might be a piece of italicized text `<em>` or a link `<a>`. A `<span>` tag is used to create arbitrary inline elements.
 
-Try:
-
-- Use the inspector to set the em tag to `display: block`
-
-The paragraph tag `<p>` creates a box and by default has space above and below it while the italicized text does not and simply flows along with the rest of the text.
+The paragraph tag `<p>` creates a box (block) and by default has space above and below it while the italicized text (inline) does not and simply flows along with the rest of the text.
 
 A `<div>` tag is a block tag which is used to create a logical division in your code. It creates an arbitrary box in a browser but other than that has no display characteristics. `div` tags are useful but don't say anything about the content inside them. Use HTML5 [semantic tags](https://www.w3schools.com/html/html5_semantic_elements.asp) whenever possible.
 
 Try:
 
-- Use a completely fabricated html tag and set its display property to block in the CSS
+- Use the inspector to set the em tag to `display: block`
 
 ### HTML, CSS and JavaScript Comments
 
@@ -128,6 +145,8 @@ In most editors the keyboard shortcut `cmd-/` will comment out a line or lines w
 Try:
 
 - Comment on and off the meta tag in the HTML file and viewing the result in the browser with the Toggle device button on and off
+- Comment out a CSS property and a CSS rule
+- Comment out the first line of JavaScript - click on the kitten and note the error
 
 ### The Box Model
 
@@ -135,8 +154,7 @@ Block elements are interpreted as a box in the browser. Boxes have properties su
 
 Try:
 
-- Viewing and adjusting a box in the inspector
-- Adding `margin`, `padding` and `height` to the `em` tag with and without `display: block` and `display: inline-block`
+- Adding `margin`, `padding` and `height` to the `em` tag with and without `display: block` and `display: inline-block` noting the box model graphic in the inspector
 
 ## CSS Syntax
 
@@ -250,14 +268,15 @@ By keeping an eye on the inspector you will quickly see when something has gone 
 - misspelling
 - bad or inapropriate selectors
 - missing units
-- bad logic
 - and more
 
 ## Hands On Exercise - Sushi
 
+A finished version of this exercise can be [viewed here](http://oit2.scps.nyu.edu/~devereld/session1/Sushi/). Be sure to resize the browser to see the responsive features.
+
 In this exercise we use the contents of the Sushi folder to begin looking at layout with the following properties:
 
-- Containers
+- Margin and Padding
 - Display
 - Floats
 - Overflow
