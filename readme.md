@@ -306,7 +306,7 @@ and link it to `index.html` in the head:
 
 ## Google fonts
 
-Google has a CDN (Content Delivery Network) offering [free fonts](https://fonts.google.com) for use in HTML documents. We'll use this as an example of using external stylesheets via @import and the `<link>` tag.
+Google has a CDN (Content Delivery Network) offering [free fonts](https://fonts.google.com) for use in HTML documents. We'll use this as an example of using external stylesheets via @import vs the `<link>` tag.
 
 We will use [Lato](https://fonts.google.com/specimen/Lato) for our main text and [Lobster](https://fonts.google.com/specimen/Lobster) for our branding.
 
@@ -352,6 +352,8 @@ header h2 {
 }
 ```
 
+`header h1` is a _descendant selector_.
+
 Here we apply the same properties to multiple items using a comma in the selector and then override one of the properties. The application of font family to the entire header region is an example of the "C" in CSS - [the cascade](https://css-tricks.com/the-c-in-css-the-cascade/). In order to use the cascade effectively we will look at _specificity_ as we proceed.
 
 Note the _margin collapsing_ beween the H1 and H2 tags.
@@ -393,7 +395,7 @@ Add the following to our style block:
 }
 ```
 
-We will examine display options for making the navigation elements horizontal using float and flex.
+<!-- We will examine display options for making the navigation elements horizontal using float and flex. -->
 
 Note the use of a colon to target the hover state. This is an example of a _pseudo_ selector. So called because, unlike other selectors, it doesn't really target an HTML tag.
 
@@ -423,19 +425,21 @@ _Edit_ the nav CSS rule to position it
   padding: 0;
   position: absolute;
   right: 0;
-  top: 12px;
+  top: 24px;
 }
 ```
 
 Examine the nav ul in the inspector. Note the coordinate system.
 
-Add an `<aside>` tag around the table and list then add the following CSS:
+Tooggle the position property on and off in the inspector.
+
+Add an `<aside>` tag around the table and the unordered list then add the following CSS:
 
 ```css
 aside {
   position: absolute;
   top: 200px;
-  left: 10px;
+  left: 24px;
   width: 180px;
   background-color: #f0dfb4;
   padding: 6px;
@@ -578,12 +582,13 @@ Let's add a white background to wrapper.
 
 ```css
 #wrapper {
-  ... background-color: #fff;
+  background-color: #fff;
   margin: 12px;
+  ... 
 }
 ```
 
-Change margin to padding. Why is margin a poor choice here?
+Change `margin` to `padding`. Why is margin a poor choice here?
 
 Note the body background color is grayed out in the inspector. Neither it nor the margin are inherited by other elements.
 
@@ -594,23 +599,25 @@ Note the h1's margin outside the containing elements (not part of the box model)
 ```css
 header h1,
 header h2 {
-  ... color: #600;
+  color: #600;
+  ... 
 }
 
 article h2 {
-  font-weight: 400;
+  font-weight: 600;
   color: #600;
   border-bottom: 1px solid #600;
 }
 ```
 
-Note - selector strength here. Note that the lack of namespacing allows this to effect the "Geido" text as well.
+<!-- Note - selector strength here. Note that the lack of namespacing allows this to effect the "Geido" text as well. -->
 
 Format elements in the list and table
 
 ```css
 aside {
-  ... font-size: 0.875rem;
+  font-size: 0.875rem;
+  ... 
 }
 
 aside th {
@@ -624,16 +631,21 @@ aside ul {
 }
 ```
 
-### Inline, In Page & External CSS
+### A Note on Inline CSS
 
-We've already seen the link tag and @import methods of adding css to our document. Let's examine all the ways to add CSS to an HTML document:
+We've already seen the link tag and @import methods of adding css to our document. 
 
-- Inline via the HTML `style=` attribute
-- In page via the HTML `<style>` tag
 - As an external .CSS file via linking (HTML `<link>` tag)
 - As an external .CSS file via importing (CSS `@import` statements)
 
-Inline styles are inefficient:
+Here are some additional ways to add CSS to an HTML document:
+
+- Inline via the HTML `style=` attribute
+- In page via the HTML `<style>` tag
+
+The style tag applies to a specific page only. Since we are coding a single page here we could have used a `<style>` block in the head of our document.
+
+Inline styles are inefficient because they apply to a single element on a single page:
 
 ```html
 <p style="margin-top: 12px;"></p>
@@ -645,31 +657,38 @@ Try using the inspector to inspect a dynamic page (such as [http://www.w3schools
 
 Ideally, all your stylesheets should be located in a single file to reduce the number of requests the browser needs to make to the server (a major cause of slow loading sites).
 
-## Some simple CSS3 Enhancements
+## Some Simple CSS3 Enhancements
 
-As work on a new version of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee [http://W3C.org](http://W3C.org) decided to break the process into modules. (For compatibility and advice see [http://CanIuse.com](http://CanIuse.com).)
+As work on new versions of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee [http://W3C.org](http://W3C.org) decided to break the process into modules. (For compatibility and advice see [http://CanIuse.com](http://CanIuse.com).)
 
-Some of the earlier CSS 3 specifications include provisions for visual effects such as rounded corners, drop shadows and gradients. A useful page that allows you to become familiar with these enhancements is [http://css3generator.com/](http://css3generator.com/).
+Some of the earlier CSS 3 specifications included provisions for visual effects such as rounded corners, drop shadows and gradients. A useful page that allows you to become familiar with these enhancements is [http://css3generator.com/](http://css3generator.com/).
+
+Newer CSS modules that we will look at include CSS Grids and Flexbox.
 
 Add rounded corners to the info div and buttons. (See [https://developer.mozilla.org/en/CSS/border-radius](https://developer.mozilla.org/en/CSS/border-radius) for specifications.)
 
 ```css
 aside {
-  ... border-radius: 6px;
+  border-radius: 6px;
+  ... 
 }
 ```
+
+Note: setting border-radius to 50% - `border-radius: 50%;` - creates a circle.
 
 ```css
 nav a {
-  ... border-radius: 3px;
+  border-radius: 3px;
+  ... 
 }
 ```
 
-Add a drop shadow to the CSS for the info div using the inspector (...).
+Add a [drop shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) to the CSS for the info div:
 
 ```css
 aside {
-  ... box-shadow: 3px 4px 3px 2px #d6d6d6;
+  box-shadow: 3px 4px 6px #d6d6d6;
+  ... 
 }
 ```
 
@@ -739,14 +758,18 @@ At the bottom of the stylesheet
   }
   header h1 {
     line-height: 1;
+    margin-top: 1rem;
   }
   .nav {
-    position: static;
+    position: fixed;
+    top: 0;
+    left: 0;
     margin: 0;
     display: flex;
   }
   .nav li {
     margin: 0;
+    flex-grow: 1;
   }
   .nav li a {
     border-radius: 0;
@@ -767,7 +790,7 @@ At the bottom of the stylesheet
 }
 ```
 
-### Using Flexbox (optional - demo only)
+<!-- ### Using Flexbox (optional - demo only)
 
 ```css
 .nav {
@@ -784,4 +807,4 @@ At the bottom of the stylesheet
 ### Notes
 
 slack
-daniel.deverell@nyu.edu
+daniel.deverell@nyu.edu -->
