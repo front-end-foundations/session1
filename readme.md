@@ -195,7 +195,7 @@ Note the drop down (triangle) next to padding, margin and border properties in t
 
 ```css
 border-style: solid;
-border-color: #333;
+border-color: #333333;
 border-width: 3px;
 ```
 
