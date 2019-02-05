@@ -255,7 +255,7 @@ By keeping an eye on the inspector you will quickly see when something has gone 
 
 ## Hands On Exercise - Sushi
 
-In this exercise we begin looking at layout with the following properties:
+In this exercise we use the contents of the Sushi folder to begin looking at layout with the following properties:
 
 - Containers
 - Display
@@ -265,8 +265,7 @@ In this exercise we begin looking at layout with the following properties:
 - Visibility
 - Z-Index
 
-
-Open the `Sushi` folder and `before.html` in an editor and examine the HTML. This is often referred to as tag soup as it makes little sense to humans looking at the code. Note the preponderance of visual markup code in the file.
+Examine `before.html`. This is often referred to as tag soup as it makes little sense to humans looking at the code. Note the preponderance of visual markup code in the file. This is how html was written from the late 90's to about a decade ago.
 
 Open `index.html`. This is an html5 document that uses HTML tags semantically. Note the defaults for margins and padding used to display the body and the unordered list (`<ul>`).
 
@@ -377,7 +376,7 @@ Add the following to our style block:
 
 We will examine display options for making the navigation elements horizontal using float and flex.
 
-Note the use of a colon to target the hover state. This is an example of a _pseudo_ selector. So called because, unlike other selectors, it doesn't really target an HTML tag. 
+Note the use of a colon to target the hover state. This is an example of a _pseudo_ selector. So called because, unlike other selectors, it doesn't really target an HTML tag.
 
 Examine the inspector's color picker. Also, note again the ability to force element hover state.
 
@@ -467,7 +466,6 @@ Format the pull quote and image:
 blockquote {
   float: right;
   width: 40%;
-  padding: 8px;
   font-size: 24px;
 }
 article img {
@@ -475,9 +473,11 @@ article img {
 }
 ```
 
-Note the float property and how the text wraps around it before and after we have defined a width. By default, the floated container shrinks to the width determined by the content.
+Note the float property and how the text wraps around it before and after we have defined a width. By default, the floated container shrinks to the width determined by the content. [Live example](https://theintercept.com/2019/02/04/google-ai-project-maven-figure-eight/) - use the inspector to examine the blockquote.
 
-## Pseudo Selectors vs Pseudo Classes
+## Pseudo Elements vs Pseudo Classes
+
+A pseudo-class is a selector that assists in the selection of something that cannot be expressed by a simple selector, for example `:hover`. A pseudo-element allows you to create items that do not normally exist in the document tree such as `::before` or `::first-line`.
 
 ```css
 blockquote::before {
@@ -491,17 +491,13 @@ blockquote::before {
 }
 ```
 
-## A Quick Reality Check
+Or
 
-Take a moment to resize the browser. Toggle the device button in the developer tools. 
-
-Add the device meta tag:
-
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```css
+article p::first-line {
+  font-weight: bold;
+}
 ```
-
-Toggle the device button in the developer tools again. This is not a responsive design.
 
 ## Relative Positioning
 
@@ -563,8 +559,7 @@ Let's add a white background to wrapper.
 
 ```css
 #wrapper {
-  ... 
-  background-color: #fff;
+  ... background-color: #fff;
   margin: 12px;
 }
 ```
@@ -580,8 +575,7 @@ Note the h1's margin outside the containing elements (not part of the box model)
 ```css
 header h1,
 header h2 {
-  ...
-  color: #600;
+  ... color: #600;
 }
 
 article h2 {
@@ -597,8 +591,7 @@ Format elements in the list and table
 
 ```css
 aside {
-  ...
-  font-size: 0.875rem;
+  ... font-size: 0.875rem;
 }
 
 aside th {
@@ -643,15 +636,13 @@ Add rounded corners to the info div and buttons. (See [https://developer.mozilla
 
 ```css
 aside {
-  ... 
-  border-radius: 6px;
+  ... border-radius: 6px;
 }
 ```
 
 ```css
 nav a {
-  ...
-  border-radius: 3px;
+  ... border-radius: 3px;
 }
 ```
 
@@ -659,8 +650,7 @@ Add a drop shadow to the CSS for the info div using the inspector (...).
 
 ```css
 aside {
-  ...
-  box-shadow: 3px 4px 3px 2px #d6d6d6;
+  ... box-shadow: 3px 4px 3px 2px #d6d6d6;
 }
 ```
 
@@ -699,6 +689,20 @@ A simple way to create navigation on a web site.
 
 Note that the tab is now highlighted. -->
 
+## A Quick Reality Check
+
+Take a moment to resize the browser.
+
+Toggle the device button in the developer tools.
+
+Add the device meta tag:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+Toggle the device button in the developer tools again. This is not a responsive design.
+
 ### Adding Simple Responsiveness
 
 At the bottom of the stylesheet
@@ -710,24 +714,20 @@ At the bottom of the stylesheet
   }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 800px) {
   body {
     margin: 0;
   }
   header h1 {
     line-height: 1;
-    margin-top: 1rem;
   }
   .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: static;
     margin: 0;
     display: flex;
   }
   .nav li {
     margin: 0;
-    flex-grow: 1;
   }
   .nav li a {
     border-radius: 0;
