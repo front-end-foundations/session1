@@ -733,7 +733,7 @@ Take a moment to resize the browser.
 
 Toggle the device button in the developer tools.
 
-Add the device meta tag:
+Add the device meta tag to the head of the HTML:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -743,7 +743,11 @@ Toggle the device button in the developer tools again. This is not a responsive 
 
 ### Adding Simple Responsiveness
 
-At the bottom of the stylesheet
+Responsive design uses media queries in conjunction with a flexible layout to allow us to adapt the page to various devices.
+
+The first media query for most designers was the _print_ media query.
+
+Copy and paste this at the bottom of the stylesheet:
 
 ```css
 @media print {
@@ -753,9 +757,9 @@ At the bottom of the stylesheet
 }
 ```
 
-Try printing the document.
+Try printing the document to see what happens.
 
-We will use `max-width` and add CSS that overrides undesirable features on smaller devices.
+We will use `max-width` and add CSS that overrides undesirable features to correct the display on smaller devices.
 
 ```css
 @media all and (max-width: 800px) {
