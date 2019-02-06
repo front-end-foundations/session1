@@ -1,0 +1,83 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+body {
+	margin: 12px;
+	color: #333;
+	font-family: Lato, Verdana, Arial, sans-serif;
+}
+
+#wrapper {
+	max-width: 840px;
+	margin: 0 auto;
+	position: relative;
+}
+
+header {
+	font-family: Lobster, sans-serif;
+}
+
+header h1,
+header h2 {
+	font-weight: normal;
+	font-size: 4rem;
+	margin: 8px 0;
+}
+header h2 {
+	font-size: 2rem;
+}
+
+ul.nav {
+	list-style: none;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 24px;
+}
+.nav li {
+	display: inline-block;
+	margin-right: 10px;
+}
+.nav a {
+	text-decoration: none;
+	background-color: #600;
+	color: #fff;
+	padding: 4px;
+	display: block;
+	transition: background-color 0.25s linear;
+}
+.nav a:hover {
+	color: #222;
+	background-color: #f0dfb4;
+}
+aside {
+	position: absolute;
+	top: 200px;
+	left: 24px;
+	width: 180px;
+	background-color: #f0dfb4;
+	padding: 6px;
+	border: 1px solid #600;
+}
+
+article {
+	margin: 0 20px 0 240px;
+}
+
+article img {
+	float: right;
+}
+
+blockquote {
+	float: right;
+	width: 40%;
+	font-size: 24px;
+}
+blockquote::before {
+	content: '“';
+	font-size: 4rem;
+	font-family: serif;
+	color: #333;
+	line-height: 0.1em;
+	vertical-align: -0.4em;
+	color: #600;
+}
