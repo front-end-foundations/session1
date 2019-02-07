@@ -870,8 +870,87 @@ Add adjustments to the aside, article and blockquote:
   list-style: none;
 }
 ```
+-->
 
 ### Notes
 
-slack
-daniel.deverell@nyu.edu -->
+CodePen [Intro-position](https://codepen.io/DannyBoyNYC/pen/YBYyoq)
+
+```html
+<div class="container">
+  <div class="inner"></div>
+</div>
+```
+
+```css
+div {
+  width: 200px;
+  height: 200px;
+  border: 20px solid;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.inner {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  border-color: red;
+}
+```
+
+CodePen [Intro-float](https://codepen.io/DannyBoyNYC/pen/pGpgyQ)
+
+```html
+<div class="container">
+  <div class="inner">Hello</div>
+</div>
+```
+
+```css
+div {
+  width: 200px;
+  border: 20px solid;
+}
+
+.inner {
+  width: 100px;
+  height: 100px;
+  border-color: red;
+  float: right;
+}
+```
+
+CodePen [Intro-flexbox](https://codepen.io/DannyBoyNYC/pen/QYaNab)
+
+```html
+<div class="container">
+  <nav>
+    <ul>
+      <li><a href="#">Cuisines</a></li>
+      <li><a href="#">Recipes</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Delivery</a></li>
+    </ul>
+  </nav>
+</div>
+```
+
+```css
+ul {
+  margin: 0;
+  padding: 6px;
+  /*   display: flex; */
+}
+
+ul li {
+  display: inline;
+  /*   flex-grow: 1 */
+}
+
+ul a {
+  padding: 8px;
+  border: 1px solid #333;
+}
+```
