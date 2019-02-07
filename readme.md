@@ -874,6 +874,31 @@ Add adjustments to the aside, article and blockquote:
 
 ### Notes
 
+CodePen [Intro-margin-auto]()
+
+```html
+<div class="container">
+  <div class="inner">
+  Hello
+  </div>
+</div>
+```
+
+```css
+.container {
+  width: 300px;
+  height: 200px;
+  border: 3px solid red;
+  margin: 0 auto;
+}
+.inner {
+  width: 150px;
+  height: 100px;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+```
+
 CodePen [Intro-position](https://codepen.io/DannyBoyNYC/pen/YBYyoq)
 
 ```html
