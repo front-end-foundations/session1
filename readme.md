@@ -10,7 +10,7 @@
 
 [Github](https://github.com/front-end-foundations) - `https://github.com/front-end-foundations`, is the source for _all files_ used in this class. Each class's activities will be documented in the readme file.
 
-Please keep the page open in a tab during class for reference and in order to copy and paste code. 
+Please keep the page open in a tab during class for reference and in order to copy and paste code.
 
 The edited files as they existed at the end of class can be downloaded from the `*-done` branch of this and all subsequent Github repositories (_"repos"_). Be sure to select the branch on Github _before_ downloading the zip.
 
@@ -20,7 +20,7 @@ A [text Book](https://www.packtpub.com/web-development/html5-and-css3-building-r
 
 ### NYU Server
 
-[Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server. 
+[Server Space](http://oit2.scps.nyu.edu) - `http://oit2.scps.nyu.edu`, you will be provided with server space on an NYU web server.
 
 Your username will be the first seven letters of your last name + the first letter of first name. e.g `jdoe`. (If your name is less than 7 characters, your username is your entire last name plus the first letter of your first name.)
 
@@ -94,7 +94,7 @@ Try:
 - Click on the cat picture and note the changes in the document, how the Elements inspector displays the number, and what happens in the Console tab
 - Click on the link and note the change in the browser's address bar
 - Force the link to hover using the inspector
-<!-- - Use multiple cursors to change a variable -->
+  <!-- - Use multiple cursors to change a variable -->
 
 Note that the CSS is linked in the head of the document and the JavaScript is the last item in the HTML just above the closing body tag.
 
@@ -584,7 +584,7 @@ Let's add a white background to wrapper.
 #wrapper {
   background-color: #fff;
   padding: 12px;
-  ...
+  ...;
 }
 ```
 
@@ -599,30 +599,32 @@ Add a box shadow to the wrapper CSS:
 }
 ```
 
+Note the chip in the styles inspector that allows you to finesse the box shadow.
+
 Make it a glow:
 
 ```css
 #wrapper {
-  box-shadow: 0px 0px 20px #999;
+  box-shadow: 0px 0px 6px 2px #aaa;
   ...;
 }
 ```
 
 ## Formatting the content
 
-Note the h1's margin outside the containing elements (not part of the box model).
+<!-- Note the h1's margin outside the containing elements (not part of the box model). -->
 
 ```css
 header h1,
 header h2 {
   color: #600;
-  ... 
+  ...;
 }
 
 article h2 {
   font-weight: 600;
   color: #600;
-  border-bottom: 1px solid #600;
+  border-bottom: 1px dotted #600;
 }
 ```
 
@@ -635,7 +637,7 @@ aside {
   font-size: 0.875rem;
   box-shadow: 3px 3px 3px #ddd;
   border-radius: 4px;
-  ... 
+  ...;
 }
 
 aside th {
@@ -651,7 +653,7 @@ aside ul {
 
 ### A Note on Inline CSS
 
-We've already seen the link tag and @import methods of adding css to our document. 
+We've already seen the link tag and @import methods of adding css to our document.
 
 - As an external .CSS file via linking (HTML `<link>` tag)
 - As an external .CSS file via importing (CSS `@import` statements)
@@ -675,7 +677,7 @@ Try using the inspector to inspect a dynamic page (such as [http://www.w3schools
 
 Ideally, all your stylesheets should be located in a single file to reduce the number of requests the browser needs to make to the server (a major cause of slow loading sites).
 
-## Some Simple CSS3 Enhancements
+<!-- ## Additional CSS3 Enhancements
 
 As work on new versions of CSS progressed it was found that releasing an entirely new specification would be too cumbersome so the standards committee [http://W3C.org](http://W3C.org) decided to break the process into modules. (For compatibility and advice see [http://CanIuse.com](http://CanIuse.com).)
 
@@ -688,25 +690,23 @@ Add rounded corners to the info div and buttons. (See [https://developer.mozilla
 ```css
 aside {
   border-radius: 6px;
-  ... 
+  ...;
 }
-```
+``` -->
 
-Note: setting border-radius to 50% - `border-radius: 50%;` - creates a circle.
-
-```css
+<!-- ```css
 nav a {
   border-radius: 3px;
-  ... 
+  ...;
 }
-```
+``` -->
 
-Add a [drop shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) to the CSS for the info div:
+<!-- Add a [drop shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) to the CSS for the info div:
 
 ```css
 aside {
   box-shadow: 3px 4px 6px #d6d6d6;
-  ... 
+  ...;
 }
 ```
 
@@ -714,7 +714,7 @@ Add a box shadow to the `wrapper`'s CSS:
 
 ```css
 box-shadow: 10px 10px 20px #aaa;
-```
+``` -->
 
 <!-- Add CSS 3 Gradients. (See: http://www.colorzilla.com/gradient-editor/) -->
 
@@ -778,6 +778,45 @@ Copy and paste this at the bottom of the stylesheet:
 Try printing the document to see what happens.
 
 We will use `max-width` and add CSS that overrides undesirable features to correct the display on smaller devices.
+
+Begin by removing the margin from the body and fixing the nav to the top of the screen.
+
+```css
+@media all and (max-width: 800px) {
+  body {
+    margin: 0;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+}
+```
+
+Use the flexbox CSS module on the nav:
+
+```css
+@media all and (max-width: 800px) {
+  body {
+    margin: 0;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: flex;
+  }
+  .nav li {
+    margin: 0;
+    flex-grow: 1;
+  }
+}
+```
+
+Add adjustments to the aside, article and blockquote:
 
 ```css
 @media all and (max-width: 800px) {
