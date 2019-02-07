@@ -583,14 +583,30 @@ Let's add a white background to wrapper.
 ```css
 #wrapper {
   background-color: #fff;
-  margin: 12px;
-  ... 
+  padding: 12px;
+  ...
 }
 ```
 
-Change `margin` to `padding`. Why is margin a poor choice here?
-
 Note the body background color is grayed out in the inspector. Neither it nor the margin are inherited by other elements.
+
+Add a box shadow to the wrapper CSS:
+
+```css
+#wrapper {
+  box-shadow: 6px 6px 10px #999;
+  ...;
+}
+```
+
+Make it a glow:
+
+```css
+#wrapper {
+  box-shadow: 0px 0px 20px #999;
+  ...;
+}
+```
 
 ## Formatting the content
 
@@ -612,11 +628,13 @@ article h2 {
 
 <!-- Note - selector strength here. Note that the lack of namespacing allows this to effect the "Geido" text as well. -->
 
-Format elements in the list and table
+Format elements in the list and table:
 
 ```css
 aside {
   font-size: 0.875rem;
+  box-shadow: 3px 3px 3px #ddd;
+  border-radius: 4px;
   ... 
 }
 
