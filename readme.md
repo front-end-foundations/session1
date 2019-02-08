@@ -874,6 +874,8 @@ Add adjustments to the aside, article and blockquote:
 
 ### Notes
 
+Below are some demos of the major layout features covered in this session.
+
 CodePen [Intro-margin-auto]()
 
 ```html
