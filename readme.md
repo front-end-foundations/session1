@@ -797,10 +797,9 @@ Begin by removing the margin from the body and fixing the nav to the top of the 
 }
 ```
 
-Note that `position: static` is _supposed_ to anchor the menu at the top of the page (or where ever we have positioned it) but doesn't work here. Inspect the `<ul>` to see if the position property is being applied and you wil find it is being overridden by the `position: absolute` property. This is due to selector strength - `ul.nav` is more powerful than `.nav`. Edit the CSS to change `ul.nav` to 
-`.nav` and refresh.
+Note that `position: static` is _supposed_ to anchor the menu at the top of the page (or where ever we have positioned it) but doesn't work here. Inspect the `<ul>` to see if the position property is being applied and you'll find it is being overridden by the `position: absolute` property. This is due to selector strength - `ul.nav` is more selective and therefore more powerful than `.nav`. Edit the CSS to change `ul.nav` to `.nav` and refresh.
 
-Selector strength is a very important factor in creating a good style sheet. Try to keep your selectors to a minimum to avoid issues.
+Selector strength is a very important factor in creating and maintaining a good style sheet. Try to keep your selectors to a minimum to avoid issues. See [this guide](https://stuffandnonsense.co.uk/archives/css_specificity_wars.html) to selector strength for more information.
 
 Use the flexbox CSS module on the nav:
 
