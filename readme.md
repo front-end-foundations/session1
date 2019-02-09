@@ -876,6 +876,8 @@ Add adjustments to the aside, article and blockquote:
 
 Below are some demos of the major layout features covered in this session.
 
+[Front end foundations collection](https://codepen.io/collection/nZyrPj/) on Codepen.io.
+
 CodePen [Intro-margin-auto](https://codepen.io/DannyBoyNYC/pen/qgpVaL)
 
 ```html
