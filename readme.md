@@ -985,3 +985,5 @@ ul a {
   border: 1px solid #333;
 }
 ```
+
+See also - [Pseudo](https://codepen.io/DannyBoyNYC/pen/ZwrwoQ).
