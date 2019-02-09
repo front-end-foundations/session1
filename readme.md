@@ -522,6 +522,8 @@ article p::first-line {
 }
 ```
 
+A complete list of pseudo classes and pseudo elements is located [on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements).
+
 ## Relative Positioning
 
 Currently our document flexes as we make the browser wider to make use of all the available horizontal space. While flexibility is a good practice, we need to understand more about the drawbacks of fixed widths.
