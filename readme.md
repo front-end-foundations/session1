@@ -781,12 +781,15 @@ Try printing the document to see what happens.
 
 We will use `max-width` and add CSS that overrides undesirable features to correct the display on smaller devices.
 
-Begin by removing the margin from the body and fixing the nav to the top of the screen.
+Begin by removing the margin from the body and article and fixing the nav to the top of the screen.
 
 ```css
 @media all and (max-width: 800px) {
   body {
     margin: 0;
+  }
+  article {
+    margin-left: 0;
   }
   .nav {
     position: fixed;
@@ -797,42 +800,17 @@ Begin by removing the margin from the body and fixing the nav to the top of the 
 }
 ```
 
-Note that `position: static` is _supposed_ to anchor the menu at the top of the page (or where ever we have positioned it) but doesn't work here. Inspect the `<ul>` to see if the position property is being applied and you'll find it is being overridden by the `position: absolute` property. This is due to selector strength - `ul.nav` is more selective and therefore more powerful than `.nav`. Edit the CSS to change `ul.nav` to `.nav` and refresh.
+Note that `position: static` is _supposed_ to anchor the menu at the top of the page (or where ever we have positioned it) but doesn't work here. 
+
+Inspect the `<ul>` to see if the position property is being applied and you'll find it is being overridden by the `position: absolute` property. This is due to selector strength - `ul.nav` is more selective and therefore more powerful than `.nav`. Edit the CSS to change `ul.nav` to `.nav` and refresh.
 
 Selector strength is a very important factor in creating and maintaining a good style sheet. Try to keep your selectors to a minimum to avoid issues. See [this guide](https://stuffandnonsense.co.uk/archives/css_specificity_wars.html) to selector strength for more information.
 
-Use the flexbox CSS module on the nav:
+Use the [flexbox CSS module](https://codepen.io/DannyBoyNYC/pen/QYaNab) on the nav:
 
 ```css
 @media all and (max-width: 800px) {
-  body {
-    margin: 0;
-  }
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    display: flex;
-  }
-  .nav li {
-    margin: 0;
-    flex-grow: 1;
-  }
-}
-```
-
-Add adjustments to the aside, article and blockquote:
-
-```css
-@media all and (max-width: 800px) {
-  body {
-    margin: 0;
-  }
-  header h1 {
-    line-height: 1;
-    margin-top: 1rem;
-  }
+  ...
   .nav {
     position: fixed;
     top: 0;
@@ -847,21 +825,44 @@ Add adjustments to the aside, article and blockquote:
   .nav li a {
     border-radius: 0;
   }
+}
+```
+
+Note that the absolutely positioned aside region scrolls _over the top_ of the navbar. Normally you'd use `z-index` to control this.
+
+Revert aside's position property to `static` (the default). 
+
+```css
+@media all and (max-width: 800px) {
+  ...
   aside {
     position: static;
     float: none;
     margin-right: 20px;
   }
-  article {
-    margin-left: 0;
-  }
+}
+```
+
+Add adjustments to the image and blockquote:
+
+```css
+@media all and (max-width: 800px) {
+  ...
   blockquote {
     width: 100%;
     float: none;
     margin: 0;
   }
+  img {
+    float: none;
+  }
 }
 ```
+
+Try:
+
+- The new image CSS is not working. How would you fix it?
+- if the CSS we just wrote for responsiveness was at the top of the stylesheet what would you see?
 
 <!-- ### Using Flexbox (optional - demo only)
 
