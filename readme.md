@@ -524,12 +524,7 @@ article p::first-line {
 
 A complete list of pseudo classes and pseudo elements is located [on MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements).
 
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="css,result" data-user="DannyBoyNYC" data-slug-hash="ZwrwoQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Intro-pseudo">
-  <span>See the Pen <a href="https://codepen.io/DannyBoyNYC/pen/ZwrwoQ/">
-  Intro-pseudo</a> by Daniel Deverell (<a href="https://codepen.io/DannyBoyNYC">@DannyBoyNYC</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+See the Pen <a href="https://codepen.io/DannyBoyNYC/pen/ZwrwoQ/">Intro-pseudo</a> on <a href="https://codepen.io">CodePen</a>.
 
 ## Relative Positioning
 
