@@ -526,11 +526,6 @@ A complete list of pseudo classes and pseudo elements is located [on MDN](https:
 
 See the Pen <a href="https://codepen.io/DannyBoyNYC/pen/ZwrwoQ/">Intro-pseudo</a> on <a href="https://codepen.io">CodePen</a>.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Intro-pseudo" src="//codepen.io/DannyBoyNYC/embed/ZwrwoQ/?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/DannyBoyNYC/pen/ZwrwoQ/'>Intro-pseudo</a> by Daniel Deverell
-  (<a href='https://codepen.io/DannyBoyNYC'>@DannyBoyNYC</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
 ## Relative Positioning
 
 Currently our document flexes as we make the browser wider to make use of all the available horizontal space. While flexibility is a good practice, we need to understand more about the drawbacks of fixed widths.
