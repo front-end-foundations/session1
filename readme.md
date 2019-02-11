@@ -225,6 +225,8 @@ Try:
 - Setting the width of the paragraphs to 400px
 - Then comment out the box sizing property and examine the width and height using the inspector
 
+See this [sample](https://codepen.io/DannyBoyNYC/pen/gqeKqd) on Codepen.
+
 ### Media Queries Demo
 
 Add a media query to `styles.css`:
@@ -993,4 +995,5 @@ ul a {
 }
 ```
 
-See also - [Pseudo](https://codepen.io/DannyBoyNYC/pen/ZwrwoQ).
+See also - [Pseudo Classes](https://codepen.io/DannyBoyNYC/pen/ZwrwoQ).
+See also - [Border Box Model](https://codepen.io/DannyBoyNYC/pen/gqeKqd)
